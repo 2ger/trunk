@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><input data-date-format="yyyy-mm-dd" class="form-control input-date" type="text" name="flow_field_<?php echo ($id); ?>" id="flow_field_<?php echo ($id); ?>" value="<?php echo ($val); ?>" <?php if(!empty($validate)): ?>check="<?php echo ($validate); ?>" msg="<?php echo ($msg); ?>"<?php endif; ?>  >

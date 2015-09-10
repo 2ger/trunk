@@ -86,9 +86,9 @@
 								待办事项
                                 </div>
 							<ul>
-                            <volist name="zz" id="zzlc">
+                            <volist name="todo_flow_list" id="vo">
 								<li>
-                            <a href="{:U('flow/read')}?id={$zzlc.id}">       【{$zzlc.user_name}】<font color="#000000">{$zzlc.name}</font>({$zzlc.create_time|date='Y-m-d',###})</a>
+                            <a href="{:U('flow/read')}?id={$vo.id}">       【{$vo.user_name}】<font color="#000000">{$vo.name}</font>({$vo.create_time|date='Y-m-d',###})</a>
 								</li>
                                 </volist>
 							

@@ -147,21 +147,31 @@ class HomeAction extends CommonAction {
 		$this -> assign('unread_mail_list', $unread_mail_list);
 	}
 
+public function test(){
+//带审批的列表
+		$emp_no = get_emp_no();
+		$FlowLog = M("FlowLog");
+		$model = D('Flow');
+		$where['result'] = 3;
+		$where['emp_no'] = $emp_no;
+		$log_list = $FlowLog -> where($where) -> getField('flow_id id,flow_id');
+		$map['id'] = array('in', $log_list);
+		$todo_flow_list = $model -> where($map) -> limit(6) -> order("create_time desc") -> select();
+		dump($todo_flow_list);
+			}
 	protected function _flow_list() {
 		$user_id = get_user_id();
 		$emp_no = get_emp_no();
 		$model = D('Flow');
-		//带审批的列表
+		//待审批的列表
 		$FlowLog = M("FlowLog");
+		$model = D('Flow');
+		$where['result'] = 3;
 		$where['emp_no'] = $emp_no;
-		$where['_string'] = "result is null";
-		$log_list = $FlowLog -> where($where) -> field('flow_id') -> select();
-		$log_list = rotate($log_list);
-		if (!empty($log_list)) {
-			$map['id'] = array('in', $log_list['flow_id']);
-			$todo_flow_list = $model -> where($map) -> field("id,name,create_time") -> limit(6) -> order("create_time desc") -> select();
-			$this -> assign("todo_flow_list", $todo_flow_list);
-		}
+		$log_list = $FlowLog -> where($where) -> getField('flow_id id,flow_id');
+		$map['id'] = array('in', $log_list);
+		$todo_flow_list = $model -> where($map) -> limit(6) -> order("create_time desc") -> select();
+		$this -> assign("todo_flow_list", $todo_flow_list);
 		//已提交
 		$map = array();
 		$map['user_id'] = $user_id;

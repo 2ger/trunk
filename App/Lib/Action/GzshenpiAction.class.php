@@ -36,21 +36,25 @@ class GzshenpiAction extends CommonAction {
 		$this->assign("flowlist",$flowlist);
 
 		$flow=M("flow");
-		//$data01['dept_id']=(int) get_user_id();
-		//'status=1 AND name="thinkphp"'
 		//追踪流程
 		$this->show=$flow->where('user_id ="'.(int) get_user_id().'" AND (type=69 or type=70 or type=71 or type=72 or type=73)')->limit(50)->select();
         //已审批
 		$this->show1=$flow->where('user_id ="'.(int) get_user_id().'" AND (type=69 or type=70 or type=71 or type=72 or type=73) AND step=40')->limit(50)->select();
 
-        $flow_log=M('flow_log');
+        //待审批的列表
+		$user_id = get_user_id();
+		$emp_no = get_emp_no();
+		$FlowLog = M("FlowLog");
+		$model = D('Flow');
+		$where['emp_no'] = $emp_no;
+		$where['result'] = 3;
+		$log_list = $FlowLog -> where($where) -> getField('flow_id id,flow_id');
+	//	dump($where);
+		$map['id'] = array('in', $log_list);
+		$map['type'] = array('in','69,70,71,72,73');
+		$todo_flow_list = $model -> where($map) -> limit(50) -> order("create_time desc") -> select();
+		$this -> assign("todo_flow_list", $todo_flow_list);
 
-		$flow_id=$flow_log->where('user_id='.(int) get_user_id().'')->getField("flow_id");
-	   $zz=$flow->where('id='.$flow_id)->limit(50)->select();
-		$this->assign("zz",$zz);
-
-		//dump($show1);
-		//die();
 		$this -> display();
 	}
 
