@@ -1,0 +1,636 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gbk">
+<title>广西科技大学体育学院</title>
+<link rel="stylesheet" type="text/css" href="Content/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="Content/css_public.css">
+<link rel="stylesheet" type="text/css" href="Content/teacher.css">
+<link rel="stylesheet" type="text/css" href="Content/tahiti.css">
+<script src="Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+<script>
+    function fastoperateOpen(tittle,url,w){
+        TahitiModWin.init({
+            position:'center',
+            wintitle:tittle,
+            winStyle:{width:w,height:'460'},
+            frameAttr:{type:'full',src:url,scrolling:'no',scroll_X:false,scroll_Y:true},
+            btns:[{type:'close',name:'关闭',classname:'MW_btn2'},{type:'in',name:'保存',fn:'CheckForm',classname:'MW_btn4'}]
+        }); 
+    }
+</script>
+<style>
+    #myModal {margin-left:-400px}    
+</style>
+</head>
+<body style="position: relative">
+	<div class="teacher_main">
+    	<div class="page_head">
+        	<div class="btn_line no_select">
+            	<a href="index.php"><div class="ph_btn first_btn" id="index"><div class="btn_text">我的主页</div></div></a>
+                <a href="kecheng.php"><div class="ph_btn" id="kecheng"><div class="btn_text">我的课程</div></div></a>
+                <a href="jiaowu.php"><div class="ph_btn" id="jiaowu"><div class="btn_text">教务工作</div></div></a>
+                <a href="banwu.php"><div class="ph_btn" id="banwu"><div class="btn_text">班务工作</div></div></a>
+                <a href="tongzhi.php"><div class="ph_btn" id="tongzhi"><div class="btn_text">公告通知</div></div></a>
+                <a href="parents.php"><div class="ph_btn" id="parents"><div class="btn_text">学生家长</div></div></a>
+            </div>
+            <div class="page_head_title">
+            	<div class="bg">
+                	<div class="logo"></div>
+                </div>
+                <div class="user_head"><img src="Picture/0.png" width="57" height="57" alt=""/></div>
+                <div class="user_name showUserInfo">
+                    李佳<p>您的积分为：10</p>                </div>
+                <div class="showUserInfo showUserInfo_mask"></div>       	
+            </div>
+            <div class="page_head_btn">
+            	<div class="btn1" onclick="logout()" title="退出"><div class="text">退出系统</div></div>
+                <div class="btn2" onclick="loginoa('1')" title="进入OA"><div class="text">进入OA</div></div>
+                                    <!--<div class="btn3" onclick="loginoa('4')" title="进入任课教师空间"><div class="text">空间切换</div></div>-->
+                                    <div class="btn3" onclick="loginoa('2')" title="进入领导空间"><div class="text">空间切换</div></div>
+                            </div>
+            <div class="logo" style='background:url(<span id="banner_text" style="">&nbsp;Office Anywhere 2013 增强版</span>); background-repeat:no-repeat; background-position:89px 0px'></div>
+        </div>
+        <div class="sys_message">
+        	<div class="messages_div">
+                <div class="messages">
+                    <div class='message'><span>无信息</span></div><div class='message'><span>无信息</span></div><div class='message'><span>无信息</span></div><script>
+    /**
+     * @PARAM DELETE_STR
+     * @param SMS_TYPE 事务提醒来自OA系统还是EDU，值为1表示来自OA，为2表示来自EDU
+     */
+    function changesms(DELETE_STR, SMS_TYPE)
+    {       
+        jQuery.get("/portal/school/readsms.php?sms_type="+SMS_TYPE,{DELETE_STR:DELETE_STR},function(data){  
+            
+        });
+        //url = url=window.location.href;
+        //pos = url.indexOf(".php");
+        //str = url.substr(0, pos);
+        //$("#content_frame", parent.document).attr("src","str?tap="+TAP);
+        location.reload();
+    }    
+</script>                    <div class="message num4 no_select" onclick="showMoreInfo('tongzhi.php','./tongzhi/ggtz_list.php')">更多>></div>
+                </div>
+            </div>
+        </div>
+    <div class="fastoperate no_select">
+        <div class="my_nav nav_wid headtitle">
+            <div class="mybtn active">快捷发布</div>
+            <div class="mybtn">快速查看</div>
+        </div>
+        <div class="my_nav_divs">
+            <div class="switch on">
+                <ul>
+                    <li><span data-tit="发布教学资料" data-url="kecheng/kczl_new.php" data-ModeWin data-w="900">教学资料</span></li>
+                    <li><span onclick="window.open('/general/edu/score/edit.php','成绩导入','height=600,width=1020,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=50,resizable=yes')">成绩录入</span></li>
+                    <li><span onclick="window.open('/general/edu/homework/index.php','学生作业','height=600,width=1020,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=50,resizable=yes');jQuery(this).unbind('click');">作业发布</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/banwu.php?sebtn=0'">考勤审批</span></li>
+                    <li><span data-tit="学生奖惩" data-url="/general/edu/reward/edit.php" data-ModeWin data-w="900">学生奖惩</span></li>
+                    <li><span onclick="window.open('./banwu/tpdc_list.php','投票调查','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');jQuery(this).unbind('click');">投票调查</span></li>
+                    <li><span onclick="window.open('./tongzhi/mobile_sms.php','手机短信通知','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');jQuery(this).unbind('click');">手机短信通知</span></li>
+                    <li><span onclick="window.open('./tongzhi/edu_sms.php','EXCEL发信息','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');jQuery(this).unbind('click');">EXCEL发信息</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/parents.php?sebtn=0'">问题回复</span></li>
+                    <li><span data-tit="发布教育分享" data-url="parents/wdjyfx_new.php" data-ModeWin data-w="750">教育分享</span></li>
+                </ul>        
+            </div>
+            <div class="switch">
+                <ul>
+                    <li><span onclick="window.location.href='/portal/school/teacher/kecheng.php?sebtn=1'">课程资料</span></li>
+                    <li><span onclick="window.open('/general/edu/homework/index.php','学生作业','height=600,width=1020,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=50,resizable=yes');jQuery(this).unbind('click');">学生作业</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/jiaowu.php?sebtn=3'">实践活动</span></li>
+                                             <li><span onclick="window.location.href='/portal/school/teacher/banwu.php?sebtn=1'">视频教室</span></li>
+                                       
+                    <li><span onclick="window.location.href='/portal/school/teacher/tongzhi.php?sebtn=0'">学校通知</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/tongzhi.php?sebtn=1'">事务信息</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/parents.php?sebtn=2'">班级文章</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/parents.php?sebtn=3'">班级照片</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/parents.php?sebtn=4'">教育分享</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/kecheng.php?sebtn=0'">我的课表</span></li>
+                    <li><span onclick="window.location.href='/portal/school/teacher/jiaowu.php?sebtn=4'">电子校历</span></li>
+                </ul>        
+            </div>            
+        </div>
+    </div>        <div class="main_page">
+        	<div class="main_page_divs">
+            	<div class="teacher_l">
+                	<!--课程表-->
+                	<div class="teacher_schedule_div" id="switchdiv1">
+                    	<div class="div_title no_select">课程表</div>
+                    	<div class="div_title3 no_select">
+                        	<div class="switch_btn">上午</div>
+                            <div class="switch_btn divnum2">下午</div>
+                        </div>                        
+                        <div class="schedule_divs">
+                        	<div class="schedule_am switch_">
+                                <table>
+                                    <tr class="firstline">
+                                       <!-- <td class="first_row"></td>-->
+                                        <td>周一</td>
+                                        <td>周二</td>
+                                        <td>周三</td>
+                                        <td>周四</td>
+                                        <td>周五</td>
+                                        <td>周六</td>
+                                        <td>周日</td>
+                                    </tr>
+                                    
+                                                                            <tr>
+                                            <!--<td class="stage">上午</td>-->
+                                    <td>&nbsp;</td><td>&nbsp;</td><td class='tdBGcolor3' title='上课地点：A203'>四年级一班<br/><i>[语文]</i></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>                                        <tr>
+                                            <!--<td class="stage">上午</td>-->
+                                    <td class='tdBGcolor1' title='上课地点：A203'>四年级一班<br/><i>[语文]</i></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>                                        <tr>
+                                            <!--<td class="stage">上午</td>-->
+                                                                                <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">上午</td>-->
+                                                                                <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">上午</td>-->
+                                                                                <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>                                </table>
+                            </div>
+                        	<div class="schedule_pm switch_">
+                                <table>
+                                    <tr class="firstline">
+                                        <!--<td class="first_row"></td>-->
+                                        <td>周一</td>
+                                        <td>周二</td>
+                                        <td>周三</td>
+                                        <td>周四</td>
+                                        <td>周五</td>
+                                        <td>周六</td>
+                                        <td>周日</td>
+                                    </tr>
+                                                                            <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                        <tr>
+                                            <!--<td class="stage">下午</td>-->
+                                    
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--请假审批-->
+                    <div class="teacher_score_div">
+                    	<div class="div_title no_select">请假审批 <span onclick="showMoreInfo('banwu.php','')">更多>></span></div>
+                        <ul class="ul_style1">
+                            
+                            	
+                                    <li><a href="javascript:;">暂无需要审批的请假申请！</a></li>
+                                                    </ul>                         
+                    </div>
+                    <!--最新问题-->
+                    <div class="teacher_score_div">
+                    	<div class="div_title no_select">最新问题 <span onclick="showMoreInfo('parents.php','')">更多>></span></div>
+                        <ul class="ul_style1">
+                         	
+                                    <li><a href="##">暂无最新的问题！</a></li>
+                                                    </ul>                         
+                    </div> 
+                </div>
+                <div class="teacher_r">
+                	<!--学校通知-->
+                	<div class="teacher_notice_div">
+                    	<div class="div_title no_select">学校通知 <span onclick="showMoreInfo('tongzhi.php','')">更多>></span></div>
+                        <ul class="ul_style1">
+                        	                                <li>
+                                	<a href="javascript:;" onClick="window.open('/general/notify/show/read_notify.php?NOTIFY_ID=19','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');" title="">
+                                		测试数据111111发布11111                              		 	<span class="time_right" style="float:right;margin-right:20px">
+                                    	[2014-11-18]                                    </span>
+                                	</a>
+                                </li>
+                                                        <li>
+                                	<a href="javascript:;" onClick="window.open('/general/notify/show/read_notify.php?NOTIFY_ID=14','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');" title="">
+                                		测试数据                              		 	<span class="time_right" style="float:right;margin-right:20px">
+                                    	[2014-11-13]                                    </span>
+                                	</a>
+                                </li>
+                                                        <li>
+                                	<a href="javascript:;" onClick="window.open('/general/notify/show/read_notify.php?NOTIFY_ID=17','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');" title="">
+                                		hhjgfh                              		 	<span class="time_right" style="float:right;margin-right:20px">
+                                    	[2014-10-17]                                    </span>
+                                	</a>
+                                </li>
+                                                        <li>
+                                	<a href="javascript:;" onClick="window.open('/general/notify/show/read_notify.php?NOTIFY_ID=16','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');" title="">
+                                		jxw-09                              		 	<span class="time_right" style="float:right;margin-right:20px">
+                                    	[2014-10-11]                                    </span>
+                                	</a>
+                                </li>
+                                                        <li>
+                                	<a href="javascript:;" onClick="window.open('/general/notify/show/read_notify.php?NOTIFY_ID=15','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');" title="">
+                                		测试数据111111                              		 	<span class="time_right" style="float:right;margin-right:20px">
+                                    	[2014-09-26]                                    </span>
+                                	</a>
+                                </li>
+                                                </ul>                         
+                    </div>
+                    <!--最新作业-->
+                    <div class="teacher_homework_div">
+                        <div class="div_title no_select">最新作业 <span><a style="color:#1FBBD5" href="/general/edu/homework/index.php" target="_black">更多>></a></span></div>
+                        <ul class="ul_style1">
+                        		
+                                    <li><a href="javascript:;">暂无需要审批的作业！</a></li>
+                                                    </ul>                         
+                    </div>
+                    <!--最新家长分享-->
+                    <div class="teacher_score_div">
+                    	<div class="div_title no_select">家长分享 <span onclick="showMoreInfo('parents.php','parents/jzjyfx_list.php')">更多>></span></div>
+                        <ul class="ul_style1">
+                                                    <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=107','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            不当教书匠，要当教育者			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[2015-04-27]                                  </span>
+                              </a>
+                            </li>
+                                                        <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=106','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            浅谈教师如何教育学生			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[2015-04-27]                                  </span>
+                              </a>
+                            </li>
+                                                        <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=105','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            浅谈教师如何教育学生			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[1970-01-01]                                  </span>
+                              </a>
+                            </li>
+                                                        <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=104','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            优秀家长教子心得4			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[1970-01-01]                                  </span>
+                              </a>
+                            </li>
+                                                        <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=103','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            优秀家长教子心得3			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[1970-01-01]                                  </span>
+                              </a>
+                            </li>
+                                                        <li>
+                            	<a href="javascript:;" onclick="window.open('wdjyfx_detail.php?id=102','','height=500,width=820,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,left=200,top=100,resizable=yes');">
+                            优秀家长教子心得2			                            <span class="time_right" style="float:right;margin-right:20px">
+                                  	[1970-01-01]                                  </span>
+                              </a>
+                            </li>
+                                                    </ul>                         
+                    </div>
+                </div>
+            </div>
+          </div>
+     <div class="page_head_userinfo" id="_showUserInfo">
+        	<div class="point">
+            <ul>
+                <div class="edit_userinfo no_select"><a role="button" onclick="showModal()">编辑</a></div>
+                <li class="line1">李佳(男)&nbsp;&nbsp;&nbsp;&nbsp;一班&nbsp;&nbsp;校领导</li>
+                <li><div class="r1">QQ：00000000</div><div class="r2">生日：1985-10-18</div><div class="r3">所教科目：语文</div></li>
+                <li><div class="r1">手机：15117950070</div><div class="r2">联系电话：</div><div class="r3">邮箱：nimei@nimei.com</div></li>
+                <li><div class="r5">座右铭：</div><!--<div class="r4">现住址：</div>--></li>
+                <!--<li><div class="r5">个人简介:</div></li>-->
+            </ul>
+            </div>
+        </div> 
+        
+        <!--编辑个人资料的模态窗口-->
+    <div class="tahitiMdiv_main" data-id="modal_container_bianji" data-title="编辑个人资料">
+    	<div style="width:450px; padding:0 20px;">
+            <form enctype="multipart/form-data" action="update_userinfo.php"  method="post" name="form1">
+                <fieldset>
+                     <label>邮箱：</label>
+                     <input type="text" name="email" value="nimei@nimei.com" /> 
+                      <label>QQ号：</label>
+                     <input type="text" name="qq" value="00000000" /> 
+                     <label>手机号：</label>
+                     <input type="text" name="mobile" value="15117950070" /> 
+                     <label>工作电话：</label>
+                     <input type="text" name="tel_dept" value="" /> 
+                     <label>个性签名：</label>
+                     <textarea rows="3" style="width: 380px;" cols="40" name="my_status"></textarea>
+                     <label>小头像：</label>
+                     <input type="file" name="AVATAR" size="50" class="BigInput" title="选择附件文件" value=""><br>
+    小头像文件要求是gif、jpg、png格式，大小不能超过128*128像素。                     <label>大头像：</label>
+                     <input type="file" name="PHOTO" size="50" class="BigInput" title="选择附件文件" value=""><br>
+    大头像文件要求是gif、jpg、png格式，大小不能超过200*300像素。<br>
+    大头像主要用于主页显示。                     <label><input type="checkbox" name="check_up_pass" id="check_up_pass" />是否要修改密码：</label>
+                     <label>密码：</label>
+                     <input type="password" name="password" id="password"  disabled="disabled" value="" /> 
+                </fieldset>
+            </form>        
+     	</div>
+      <div class="MW_btnLine">
+          <button class="MW_Buttom_btn MW_btn4" onclick="CheckForm()">保存</button>   
+          <button class="MW_Buttom_btn MW_btn2 btnLine_close" >关闭</button>          
+      </div>        
+     </div>     
+<!--        <div id="modal_container_bianji" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">
+                    编辑个人资料
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <form enctype="multipart/form-data" action="update_userinfo.php"  method="post" name="form1">
+                                <fieldset>
+                                     <label>邮箱：</label>
+                                     <input type="text" name="email" value="nimei@nimei.com" /> 
+                                      <label>QQ号：</label>
+                                     <input type="text" name="qq" value="00000000" /> 
+                                     <label>手机号：</label>
+                                     <input type="text" name="mobile" value="15117950070" /> 
+                                     <label>工作电话：</label>
+                                     <input type="text" name="tel_dept" value="" /> 
+                                     <label>个性签名：</label>
+                                     <textarea rows="3" cols="40" name="my_status"></textarea>
+                                     <label>小头像：</label>
+                                     <input type="file" name="AVATAR" size="50" class="BigInput" title="选择附件文件" value=""><br>
+                小头像文件要求是gif、jpg、png格式，大小不能超过128*128像素。                                     <label>大头像：</label>
+                                     <input type="file" name="PHOTO" size="50" class="BigInput" title="选择附件文件" value=""><br>
+                大头像文件要求是gif、jpg、png格式，大小不能超过200*300像素。<br>
+                大头像主要用于主页显示。                                     <label><input type="checkbox" name="check_up_pass" id="check_up_pass" />是否要修改密码：</label>
+                                     <label>密码：</label>
+                                     <input type="password" name="password" id="password"  disabled="disabled" value="" /> 
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="modal-footer">
+                 <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button> <button class="btn btn-primary" onClick="CheckForm();">保存设置</button>
+            </div>
+            <script>
+                $("#check_up_pass").click(function(){    
+                    if(this.checked){
+                    //通过设置disabled的boolean属性将第三个text输入框disabled属性置为true
+                        $("#password").attr("disabled",false);
+                    }else{
+                    //通过将第三个text输入框disabled属性置为false来移除disabled属性
+                        $("#password").attr("disabled",true);
+                    }
+
+                });   
+
+                $("#check_up_pass").click(function () {
+                    $(this).next().removeAttr("disabled");
+                });
+                function submit_new()
+                {
+                    document.getElementById('iframe_new').contentWindow.CheckForm();
+                    //frames["iframe_new"].document.getElementById("form1").submit();
+                } 
+            </script>
+        </div>-->
+
+
+
+        <div class="alert_new_window" id="new_popup1">
+        	<div class="window_head">
+            	<span class="title"></span>
+                <div class="btn no_select" onClick="studentPage.loseWriteArticles()">×</div>
+            </div>
+            <iframe id="new_window_iframe" width="100%" frameborder="0" src=""></iframe>
+        </div>
+        
+        <!--尾部-->
+        <div class="line6">
+            <div class="linklogo"></div>
+            <div class="links">
+                                <div class="link"><div><a href="http://www.moe.gov.cn/" title="中华人民共和国教育部"  target="_blank" >中华人民共和国教育部</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A06/index.html" title="教育部基础教育一司"  target="_blank" >教育部基础教育一司</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A26/index.html" title="教育部基础教育二司"  target="_blank" >教育部基础教育二司</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A10/index.html" title="教育版教师工作司"  target="_blank" >教育版教师工作司</a></div></div><div class="link"><div><a href="http://www.ict.edu.cn/" title="中国教育信息化网"  target="_blank" >中国教育信息化网</a></div></div><div class="link"><div><a href="http://www.eol.cn/" title="中国教育在线"  target="_blank" >中国教育在线</a></div></div><div class="link"><div><a href="http://www.wei.moe.edu.cn/zh/" title="世界教育信息网"  target="_blank" >世界教育信息网</a></div></div><div class="link"><div><a href="http://www.cetv.edu.cn/" title="中国教育网络电视台"  target="_blank" >中国教育网络电视台</a></div></div><div class="link"><div><a href="http://www.csc.edu.cn/" title="国家留学网"  target="_blank" >国家留学网</a></div></div><div class="link"><div><a href="http://www.cbern.gov.cn/derscn/portal/index.html" title="国家基础教育资源网"  target="_blank" >国家基础教育资源网</a></div></div><div class="link"><div><a href="http://yuer.cbern.gov.cn/" title="科学育儿网"  target="_blank" >科学育儿网</a></div></div><div class="link"><div><a href="http://www.jyb.cn/" title="中国教育新闻网"  target="_blank" >中国教育新闻网</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/business/htmlfiles/moe/s5174/index.html" title="中华人民共和国教育部高等教育司"  target="_blank" >中华人民共和国教育部高等教育司</a></div></div>            </div>
+        </div> 
+                <div class="line7">
+            <div id="unit">
+                柳州微度网络科技<br>
+                地址：&nbsp;&nbsp;柳州市桂中大道 阳光100 二号楼 7-3室 &nbsp;&nbsp;&nbsp;微度网络服电话:&nbsp;&nbsp;15078252920           </div> 
+    </div>
+</body>
+<script type="text/javascript" src="Scripts/tahiti.js"></script>
+<script type="text/javascript" src="Scripts/js_lang.js"></script>
+<script src="Scripts/js_public.js"></script>
+<script src="Scripts/teacher_surface.js"></script>
+<script>
+    //退出登录
+    var loginUser = {uid:12, user_id:"lijia", user_name:"李佳"};
+    var logoutText = "轻轻的您走了，正如您轻轻的来……";
+    function logout()
+    {
+       var msg = sprintf(td_lang.inc.msg_109, '李佳') + "\n" + sprintf(td_lang.inc.msg_110, logoutText + "\n\n");
+		confirm(msg,function(){
+			relogin=1;
+			window.location="/general/relogin.php";			
+		})
+/*       if(window.confirm(msg))
+       {
+         relogin=1;
+         window.location="/general/relogin.php";
+       }*/
+    }
+    //进入OA
+    //type 1：进入oa ； 2：领导空间；3：教师空间；4：任课教师空间
+    function loginoa(type)
+    {
+        if(type=="2")
+        {
+            window.location="/portal/school/leader/";
+        }
+        else if(type=="3")
+        {
+            window.location="/portal/school/teacher/";
+        }
+        else if(type=="4")
+        {
+            window.location="/portal/school/classroom_teacher/";
+        }
+        else
+        {
+            window.location="/general/";
+        }
+    }
+    
+    //iframe中内容跳转
+    function iframe_url (iframe_id, new_iframe_url) {
+        document.getElementById(iframe_id).src = new_iframe_url;
+    }
+    function open_module(url,title){
+        url='/general/'+url;	
+        window.open(url,title);
+        return false;
+    }
+    function submit_new()
+    {
+        document.getElementById('iframe_new').contentWindow.CheckForm();
+        //frames["iframe_new"].document.getElementById("form1").submit();
+    } 
+    //点击导航栏跳转
+    function changeMenu (url) {
+        window.location.href = url;
+    }
+    //导航栏样式显示
+    function navShow(now_page){
+        $('#'+now_page).addClass('_btn');
+        $('#'+now_page).prevAll().addClass('ph_btn_hover');
+        $('#'+now_page).nextAll().addClass('ph_btn_hover');
+        $('#'+now_page).removeClass('ph_btn_hover');
+        $('#'+now_page).find('.btn_text').addClass('_btn_text');
+    }
+    //主页上点击更多时跳转页面与参数信息
+    function showMoreInfo (url, iframeUrl) {
+        window.location.href = url+"?iframeUrl="+iframeUrl;
+    }
+    navShow("index");
+    //打开用户修改个人信息模态窗口
+    function showModal () {
+       // $('#modal_container_bianji').modal();
+	   TahitiModDiv.show("modal_container_bianji");
+    }
+    //用户修改个人基本信息表单验证
+    function CheckForm()
+    {
+        var email = $("input[name='email']");  
+
+        var pattern = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;  
+        if (email.val() !='' && !pattern.test(email.val())) {  
+            alert("请输入正确的邮箱地址。");  
+            email.focus();  
+            return false;  
+        }
+
+        var mobile = $("input[name='mobile']");
+        var pattern = /^0{0,1}(13[1-9]|15[1-9]|18[1-9])[0-9]{8}$/;  
+        if (mobile.val() !='' && !pattern.test(mobile.val())) {  
+            alert("请输入正确的手机号。");  
+            mobile.focus();
+            return false;
+        }
+        form1.submit();
+    }    
+	
+	function onloadSetIframeH(iframe){
+		
+		if(typeof(iframe)=="undefined");
+		
+			iframe=document.getElementById("content_frame");
+			
+		var seDiv=$(".se_main_page_divs")[0];
+		
+		var inh=iframe.contentWindow.document.body.offsetHeight;
+		
+		iframe.style.height=inh+"px";
+		
+		seDiv.style.height=(inh+170)+"px";
+		
+		iframe=null;
+		
+		seDiv=null;	
+		
+	}
+	window.onload=function(){
+		var iframe=document.getElementById("content_frame");
+		
+		if(iframe!=null)
+		{
+			if(iframe.attachEvent)
+			{
+				iframe.attachEvent("onload",function(){
+					onloadSetIframeH(iframe);
+				})
+			}
+			else
+			{
+				iframe.onload=function(){
+					onloadSetIframeH(iframe);				
+				}
+			}
+		}			
+	};
+  </script>
+</html>

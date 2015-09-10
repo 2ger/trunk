@@ -1,0 +1,110 @@
+@charset "gb2312";
+/* CSS Document */
+* { margin:0; padding:0;}
+.tahiti_ok_btn{ position:relative; margin:10px auto 0 auto; width:30px; height:30px; background-color:#4bd663; border-radius:16px; background-image:url(../Images/ok_btn.png); background-repeat:no-repeat; cursor:pointer;
+transition: background-color 0.4s; -webkit-transition: background-color 0.4s; -o-transition: background-color 0.4s; -ms-transition: background-color 0.4s;}
+.tahiti_ok_btn:hover{background-color: #67F780;}
+.tahiti_cancel_btn{position:relative; margin:10px auto 0 auto; width:30px; height:30px; background-color:#4bd663; border-radius:16px; background-image:url(../Images/cancel_btn.png); background-repeat:no-repeat; cursor:pointer;
+transition: background-color 0.4s; -webkit-transition: background-color 0.4s; -o-transition: background-color 0.4s; -ms-transition: background-color 0.4s;}
+.tahiti_cancel_btn:hover{background-color: #67F780;}
+.alert_window,.confirm_window{position:fixed; top:50%; left:50%; max-width:400px; height:auto; background:#FFFFFF; border:#D8D8D8 solid 1px;word-break: break-all; word-wrap:break-word;  z-index:2000;border-radius:5px; box-shadow:0px 0px 10px 0px #848484; text-align:center; padding:10px 20px 5px 20px; font-size:16px; opacity:0;
+transform:scale(0.8,0.8); -webkit-transform:scale(0.8,0.8); -moz-transform:scale(0.8,0.8); -o-transform:scale(0.8,0.8); -ms-transform:scale(0.8,0.8);
+transition:opacity 0.3s,transform 0.3s;}
+.confirm_window{ min-width:200px;}
+.confirm_window .btn_group{ width:75px; height:30px; position:relative; margin:10px auto 0 auto;}
+.confirm_window .btn_group .tahiti_ok_btn{ margin:0; float:left;}
+.confirm_window .btn_group .tahiti_cancel_btn{ margin:0; float:right;}
+.window_old{border:none;}
+.window_old .top_left{ background:url(../Images/win_left_top.png) no-repeat; width:17px; height:17px; position:absolute; top:-17px; left:-17px;}
+.window_old .top_right{ background:url(../Images/win_right_top.png) no-repeat; width:17px; height:17px; position:absolute; top:-17px; right:-17px;}
+.window_old .top{position:absolute; top:-17px; left:0px; width:100%; height:17px; background:url(../Images/win_top.png) repeat-x}
+.window_old .right{ position:absolute; top:0px; right:-17px; width:17px; height:100%; background:url(../Images/win_right.png) repeat-y;}
+.window_old .bottom_right{ position:absolute; bottom:-17px; right:-17px; width:17px; height:17px; background:url(../Images/win_right_bottom.png) no-repeat;}
+.window_old .bottom{ position:absolute; bottom:-17px; left:0px; width:100%; height:17px; background:url(../Images/win_bottom.png) repeat-x;}
+.window_old .bottom_left{ position:absolute; bottom:-17px; left:-17px; height:17px; width:17px; background:url(../Images/win_left_bottom.png) no-repeat;}
+.window_old .left{ position:absolute; left:-17px; bottom:0px; height:100%; width:17px; background:url(../Images/win_left.png) repeat-y;}
+.window_old .tahiti_ok_btn{ overflow:hidden;}
+.window_old .btn_mask{ position:absolute; top:-5px; left:-5px; width:40px; height:40px; background:url(../Images/btn_mask30.png) no-repeat;}
+/*遮罩*/
+#tahiti_full_mask{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#000000; opacity:0; z-index:-1000; transition:opacity 0.7s; -webkit-transition:opacity 0.7s; -moz-transition:opacity 0.7s; -o-transition:opacity 0.7s;}
+
+/*模态窗口*/
+.MWindowBox{ position:fixed; width:100%; height:100%; top:0px; left:0px; z-index:1000; opacity:0;
+perspective-origin:50% 50%; -moz-perspective-origin:50% 50%; -webkit-perspective-origin:50% 50%; -ms-perspective-origin:50% 50%; -o-perspective-origin:50% 50%;
+perspective: 2000; -webkit-perspective:2000; transform-style: preserve-3d; -webkit-transform-style: preserve-3d;}
+#tahiti_Mod_win{ position:absolute; background:#FFFFFF;border-radius:5px; box-shadow:0px 0px 10px 0px #848484; opacity:0;
+-webkit-transform:rotateX(20deg) translateY(-150px); -moz-transform:rotateX(20deg) translateY(-150px);
+transform:rotateX(20deg) translateY(-150px); -o-transform:rotateX(20deg) translateY(-150px);
+transition:opacity 0.4s , transform 0.4s;
+-webkit-transitio:opacity  0.4s ,transform 0.4s;
+-o-transition:opacity 0.4s , transform 0.4s;
+-ms-transition:opacity 0.4s , transform 0.5s;}
+.tahiti_modW_center{ left:50%; top:50%;}
+#tahiti_Mod_win .MW_title{ position:relative; left:0px; height:30px; font-size:18px; font-weight:600; line-height:30px; text-indent:10px; cursor:default;}
+#tahiti_Mod_win .MW_close_btn{ position:absolute; right:5px; top:5px; height:20px; width:20px; background:url(../Images/close_btn.png) no-repeat; cursor:pointer;}
+#tahiti_Mod_win .MW_close_btn:hover{ background:url(../Images/close_btn_hover.png) no-repeat;}
+#tahiti_Mod_win #MW_head_line{ position:absolute; top:30px; width:100%; height:1px; background:#EFEFEF; z-index:1; }
+#tahiti_Mod_win .MW_btnLine .MW_Buttom_btn{ position:absolute; padding:5px; height:30px;}
+#tahiti_Mod_win .MW_frame{ position:relative; margin-top:1px; padding:0px; overflow-x:hidden; overflow-y:hidden;}
+#tahiti_Mod_win .MW_btnLine{ position:relative; height:30px;
+background: linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -o-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -ms-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -moz-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -webkit-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+}
+#tahiti_Mod_win .MW_btnLine .MW_Buttom_btn{ position:relative; float:right; margin:0 15px 0 0; height:25px; text-align:center; border:none; top:5px; padding:0 10px; border-radius:4px;
+transition: background-color 0.4s; -webkit-transition: background-color 0.4s; -o-transition: background-color 0.4s; -ms-transition: background-color 0.4s;
+}
+/*按钮大小*/
+#tahiti_Mod_win .MW_btnLine .MW_btn2{ color:#FFFFFF; background:#4bd663; font-size:14px;}
+#tahiti_Mod_win .MW_btnLine .MW_btn2:hover{ background:#67F780;}
+#tahiti_Mod_win .MW_btnLine .MW_btn4{ color:#000000; border:#D9D9D9 solid	1px; background:#FFFFFF;}
+#tahiti_Mod_win .MW_btnLine .MW_btn4:hover{ background:#F4F4F4;}
+
+
+#tahiti_Mod_win .MW_loading{ position:absolute; left:50%; top:50%; margin:-25px 0 0 -25px; width:50px; height:50px; background:url(../Images/loading.gif) no-repeat; z-index:200;}
+.window_old .MW_close_btn{ margin-top:-7px; margin-right:-7px;}
+.window_old .MW_title{ margin-top:-3px;}
+
+
+
+
+/*模态层*/
+.tahitiMdiv_main{ display:none;}
+.tahiti_Mod_div{ position:fixed; top:50%;  background:#FFFFFF;border-radius:5px; box-shadow:0px 0px 10px 0px #848484;  left:50%; z-index:100; display:none; opacity:0; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); z-index:-1;
+-webkit-transform:translateY(-150px); -moz-transform:translateY(-150px);
+transform:translateY(-150px); -o-transform:translateY(-150px);
+transition:opacity 0.5s , transform 0.5s;
+-webkit-transitio:opacity  0.5s ,transform 0.5s;
+-o-transition:opacity 0.5s , transform 0.5s;
+-ms-transition:opacity 0.5s , transform 0.5s;}
+.tahiti_Mod_div textarea{ resize:none;}
+.tahiti_Mod_div .MW_title{ position:relative; left:0px; height:30px; font-size:18px; font-weight:600; line-height:30px; text-indent:10px; cursor:default;}
+.tahiti_Mod_div .MW_close_btn{ position:absolute; right:5px; top:5px; height:20px; width:20px; background:url(../Images/close_btn.png) no-repeat; cursor:pointer;}
+.tahiti_Mod_div .MW_close_btn:hover{ background:url(../Images/close_btn_hover.png) no-repeat;}
+.tahiti_Mod_div #MW_head_line{ position:absolute; top:30px; width:100%; height:1px; background:#EFEFEF; z-index:1;}
+.tahiti_Mod_div .MW_btnLine .MW_Buttom_btn{ position:absolute; padding:5px; height:30px;}
+.tahiti_Mod_div .MW_frame{ position:relative; margin-top:1px; padding:0px; overflow-x:hidden; overflow-y:hidden;}
+.tahiti_Mod_div .MW_frame .tahiti_MDiv{ padding:10px; max-height:325px; overflow-y:auto; overflow-x:hidden;}
+.tahiti_Mod_div .MW_frame .tahiti_MDiv form{ margin:0; padding:0;}
+.tahiti_Mod_div .MW_btnLine{ position:relative; height:30px; margin-bottom:5px;
+background: linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -o-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -ms-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -moz-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+background: -webkit-linear-gradient(top , rgba(255, 255, 255, 0) 1% , rgba(255, 254, 254, 0.972549) 99%);
+}
+.tahiti_Mod_div .MW_btnLine .MW_Buttom_btn{ position:relative; float:right; margin:0 15px 0 0; height:25px; text-align:center; border:none; top:5px; padding:0 10px; border-radius:4px;
+transition: background-color 0.4s; -webkit-transition: background-color 0.4s; -o-transition: background-color 0.4s; -ms-transition: background-color 0.4s;
+}
+/*按钮大小*/
+.tahiti_Mod_div .MW_btnLine .MW_btn2{ color:#FFFFFF; background:#4bd663; font-size:14px;}
+.tahiti_Mod_div .MW_btnLine .MW_btn2:hover{ background:#67F780;}
+.tahiti_Mod_div .MW_btnLine .MW_btn4{ color:#000000; border:#D9D9D9 solid	1px; background:#FFFFFF;}
+.tahiti_Mod_div .MW_btnLine .MW_btn4:hover{ background:#F4F4F4;}
+
+
+.tahiti_Mod_div.window_old #MW_head_line{ margin-top:-7px; margin-left:-7px; padding-right:14px;}
+/*.tahiti_Mod_div .window_old .MW_close_btn{ margin-top:-7px; margin-right:-7px;}
+.tahiti_Mod_div .window_old .MW_title{ margin-top:0px;}*/

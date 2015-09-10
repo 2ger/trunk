@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+<html>
+<!--<![endif]-->
+<head>
+<title>个人桌面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<link rel="stylesheet" type="text/css" href="static/theme/99/style.css">
+<script type="text/javascript" src="static/js/ccorrect_btn.js"></script>
+<script type="text/javascript">
+   var MYOA_JS_SERVER = "";
+   var MYOA_STATIC_SERVER = "";
+</script>
+<link rel="stylesheet" type="text/css" href="static/theme/99/portal_index.css">
+<script type="text/javascript" src="static/js/js_lang.php"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.min.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.plugins.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery-ui.custom.min.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ui.draggable.min.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ui.sortable.min.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ux.borderlayout.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ui.droppable.min.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ux.slidebox.js"></script><script type="text/javascript" src="static/js/jquery-1.5.1/jquery.ux.simulatemouse.js"></script><script type="text/javascript" src="static/js/portal/personal.js"></script><script type="text/javascript" src="static/js/sys_function_7a682d434e.js"></script><script type="text/javascript">
+var monInterval = 3;
+var moduleIdStr = '';
+var funcIdStr = '15619,5,147,4,10,148,62,9,7,8,1,15621,15601,15604,15603,15606,15607,15613,15635,15608,21,1042,1045,22,63,115,42,123,123,24,80,|196,185,3,11,87,17,86,91,92,105,15610,54,119,235,76,227,15,130,131,18,19,15646,179,15651,15652,|16,97,28,199,29,39,488,506,507,508,512,491,15609,60,61,120';
+var ostheme = '99';
+var static_server = '';
+//-- 一级菜单 --
+var first_array = ["01","10","20","30","50","b0","c0","c2","c3","c4","c5","c6","c7","c8"];
+
+//-- 二级菜单 --
+var second_array = [];
+second_array["m01"] = ["1","3","42","4","147","148","7","8","9","10","16","11","15646"];
+second_array["m10"] = ["130","5","131"];
+second_array["m20"] = ["24","196","105","119","80","96","126","51","85","43"];
+second_array["m30"] = ["15","76","115","185","235"];
+second_array["m50"] = ["27","502","26","122","55","511","224","252"];
+second_array["mb0"] = ["62","63","46","227"];
+second_array["mc0"] = ["15601","15604","15609","15610","15613","15603","15605","15606","15607","15619","15621","15625","15659","15658"];
+second_array["mc2"] = ["15602","15624","15608","15611","15612","15627","15629"];
+second_array["mc3"] = ["15600","15614","15618"];
+second_array["mc4"] = ["15615","15616","15628","15617","15654"];
+second_array["mc5"] = ["15631","15632","15633","15634"];
+second_array["mc6"] = ["15635","1042","1043","1045","15653"];
+second_array["mc7"] = ["15647","15648","15649"];
+second_array["mc8"] = ["15651","15652"];
+
+//-- 三级菜单 --
+var third_array = [];
+third_array["f96"] = ["97"];
+third_array["f126"] = ["179","199"];
+third_array["f51"] = ["54"];
+third_array["f85"] = ["86","87"];
+third_array["f43"] = ["17","18","19"];
+third_array["f27"] = ["60","61","481","482","483","484","485","486","487","488","489","490","491","492","120"];
+third_array["f502"] = ["503","505","504"];
+third_array["f26"] = ["506","507","508","515","537"];
+third_array["f122"] = ["123","124","628","125"];
+third_array["f55"] = ["514","509","29","28","129","510"];
+third_array["f224"] = ["39","512","513"];
+third_array["f252"] = ["230","231","232","629","233","234"];
+third_array["f46"] = ["21","22"];
+third_array["f15625"] = ["15626","15645"];
+third_array["f15659"] = ["15660","15661"];
+
+//-- 互联网自定义 --
+func_array["extWebApp"] = ["ewp23","ewp24","ewp25","ewp26","ewp27","ewp28","ewp29","ewp30","ewp31","ewp32","ewp33","ewp34","ewp35","ewp36"];
+func_array["fewp23"] = ["百度搜索","http://baidu.com","ewp_baidu.png"];
+func_array["fewp24"] = ["新浪网","http://www.sina.com.cn","ewp_sina.png"];
+func_array["fewp25"] = ["58同城","http://www.58.com","ewp_58.png"];
+func_array["fewp26"] = ["天气预报","http://xapp.baidu.com/apps/baidu-weather/app.html","ewp_weather.png"];
+func_array["fewp27"] = ["奇艺网","http://qiyi.com","ewp_qiyi.png"];
+func_array["fewp28"] = ["中国政府网","http://www.gov.cn","ewp_gov.png"];
+func_array["fewp29"] = ["天涯社区","http://www.tianya.cn","ewp_tianya.png"];
+func_array["fewp30"] = ["淘宝网","http://www.taobao.com","ewp_taobao.png"];
+func_array["fewp31"] = ["优酷网","http://www.youku.com","ewp_youku.png"];
+func_array["fewp32"] = ["百度贴吧","http://tieba.baidu.com","ewp_bdtieba.png"];
+func_array["fewp33"] = ["新浪体育","http://sports.sina.com.cn","ewp_sinas.png"];
+func_array["fewp34"] = ["新浪新闻","http://news.sina.com.cn","ewp_sinanews.png"];
+func_array["fewp35"] = ["百度mp3","http://mp3.baidu.com","ewp_bdmp3.png"];
+func_array["fewp36"] = ["虾米音乐","http://xiami.com","ewp_xiami.png"];
+
+//-- 个人收藏 --
+func_array["extFav"] = [];
+
+//-- 可用菜单 --
+var fmenu = typeof(first_array) == 'object' ? first_array : top.first_array;
+var smenu = typeof(second_array) == 'object' ? second_array : top.second_array;
+var tmenu = typeof(third_array) == 'object' ? third_array : top.third_array;
+var funcarray = typeof(func_array) == 'object' ? func_array : top.func_array;
+</script>
+</head>
+
+<body>
+
+<div style="width: 1330px;" id="control">
+  <table align="center">
+    <tbody>
+      <tr>
+        <td class="control-l"></td>
+        <td class="control-c"><a class="btn active" hidefocus="hidefocus" href="javascript:void(0)"></a><a class="btn" hidefocus="hidefocus" href="javascript:void(0)"></a><a class="btn" hidefocus="hidefocus" href="javascript:void(0)"></a></td>
+        <td class="control-r"><a id="openAppBox" title="打开应用盒子" href="javascript: void(0)" class="cfg"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="slidebox">
+  <div class="ui-droppable" id="trash"></div>
+  <div style="height: 802px; width: 1330px; position: relative; left: 0px; margin-left: 0px;" id="container">
+    <div style="left: 0px; top: 0px; position: absolute; width: 100%; height: 100%;" class="screen">
+      <ul class="ui-sortable">
+        <li style="margin-left: 14px; margin-right: 14px;" index="15619" title="缴费管理" id="block_15619" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15619" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>缴费管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="5" title="我的工作" id="block_5" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/workflow.png"></p>
+            <div id="count_5" class="count count10"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>我的工作</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="147" title="学校新闻" id="block_147" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/news.png"></p>
+            <div id="count_147" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学校新闻</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="4" title="公告通知" id="block_4" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/notify.png"></p>
+            <div id="count_4" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>公告通知</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="10" title="通讯簿" id="block_10" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/address.png"></p>
+            <div id="count_10" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>通讯簿</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="148" title="投票" id="block_148" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/vote.png"></p>
+            <div id="count_148" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>投票</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="62" title="讨论区" id="block_62" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/bbs.png"></p>
+            <div id="count_62" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>讨论区</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="9" title="工作日志" id="block_9" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/diary.png"></p>
+            <div id="count_9" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>工作日志</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="7" title="个人考勤" id="block_7" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/attendance.png"></p>
+            <div id="count_7" class="count count2"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>个人考勤</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="8" title="日程安排" id="block_8" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/calendar.png"></p>
+            <div id="count_8" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>日程安排</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="1" title="电子邮件" id="block_1" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/email.png"></p>
+            <div id="count_1" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>电子邮件</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15621" title="电子校历" id="block_15621" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15621" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>电子校历</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15601" title="课程建设" id="block_15601" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15601" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>课程建设</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15604" title="课表管理" id="block_15604" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15604" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>课表管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15603" title="成绩管理" id="block_15603" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15603" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>成绩管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15606" title="任课老师" id="block_15606" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15606" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>任课老师</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15607" title="班委管理" id="block_15607" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15607" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>班委管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15613" title="考试管理" id="block_15613" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15613" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考试管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15635" title="学籍信息" id="block_15635" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15635" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学籍信息</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15608" title="学生奖惩" id="block_15608" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15608" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学生奖惩</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="21" title="电话区号查询" id="block_21" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/info.png"></p>
+            <div id="count_21" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>电话区号查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="1042" title="学籍查询" id="block_1042" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_1042" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学籍查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="1045" title="学籍代码设置" id="block_1045" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_1045" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学籍代码设置</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="22" title="邮政编码查询" id="block_22" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/info.png"></p>
+            <div id="count_22" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>邮政编码查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="63" title="论坛" id="block_63" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_63" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>论坛</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="115" title="图片浏览" id="block_115" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/picture.png"></p>
+            <div id="count_115" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>图片浏览</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="42" title="手机短信" id="block_42" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_42" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>手机短信</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="123" title="考核项目设定" id="block_123" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/score.png"></p>
+            <div id="count_123" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考核项目设定</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="123" title="考核项目设定" id="block_123" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/score.png"></p>
+            <div id="count_123" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考核项目设定</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="24" title="公告通知管理" id="block_24" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/notify.png"></p>
+            <div id="count_24" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>公告通知管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="80" title="日程安排查询" id="block_80" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/calendar.png"></p>
+            <div id="count_80" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>日程安排查询</span></a></li>
+      </ul>
+    </div>
+    <div style="left: 1330px; top: 0px; position: absolute; width: 100%; height: 100%;" class="screen">
+      <ul class="ui-sortable">
+        <li style="margin-left: 14px; margin-right: 14px;" index="196" title="公告通知审批" id="block_196" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/notify.png"></p>
+            <div id="count_196" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>公告通知审批</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="185" title="教育知道" id="block_185" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_185" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>教育知道</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="3" title="消息管理" id="block_3" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/sms.png"></p>
+            <div id="count_3" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>消息管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="11" title="控制面板" id="block_11" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/person_info.png"></p>
+            <div id="count_11" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>控制面板</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="87" title="会议查询" id="block_87" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/meeting.png"></p>
+            <div id="count_87" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>会议查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="17" title="单位信息查询" id="block_17" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/info.png"></p>
+            <div id="count_17" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>单位信息查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="86" title="会议申请" id="block_86" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/meeting.png"></p>
+            <div id="count_86" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>会议申请</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="91" title="车辆使用申请" id="block_91" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/vehicle.png"></p>
+            <div id="count_91" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>车辆使用申请</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="92" title="车辆使用查询" id="block_92" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/vehicle.png"></p>
+            <div id="count_92" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>车辆使用查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="105" title="新闻管理" id="block_105" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/news.png"></p>
+            <div id="count_105" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>新闻管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15610" title="学生管理" id="block_15610" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15610" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>学生管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="54" title="图书查询" id="block_54" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/book.png"></p>
+            <div id="count_54" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>图书查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="119" title="投票管理" id="block_119" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/vote.png"></p>
+            <div id="count_119" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>投票管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="235" title="教育维基百科" id="block_235" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/wiki.png"></p>
+            <div id="count_235" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>教育维基百科</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="76" title="网络硬盘" id="block_76" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/netdisk.png"></p>
+            <div id="count_76" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>网络硬盘</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="227" title="即时通讯" id="block_227" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_227" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>即时通讯</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15" title="公共文件柜" id="block_15" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15" class="count count10"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>公共文件柜</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="130" title="新建工作" id="block_130" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/workflow.png"></p>
+            <div id="count_130" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>新建工作</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="131" title="工作查询" id="block_131" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/workflow.png"></p>
+            <div id="count_131" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>工作查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="18" title="部门信息查询" id="block_18" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/info.png"></p>
+            <div id="count_18" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>部门信息查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="19" title="用户信息查询" id="block_19" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/info.png"></p>
+            <div id="count_19" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>用户信息查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15646" title="单点登录" id="block_15646" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15646" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>单点登录</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="179" title="办公用品信息查询" id="block_179" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_179" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>办公用品信息查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15651" title="积分管理" id="block_15651" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15651" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>积分管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15652" title="积分统计" id="block_15652" class="block">
+          <div class="img">
+            <p><img src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15652" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>积分统计</span></a></li>
+      </ul>
+    </div>
+    <div style="left: 2660px; top: 0px; position: absolute; width: 100%; height: 100%;" class="screen">
+      <ul class="ui-sortable">
+        <li style="margin-left: 14px; margin-right: 14px;" index="16" title="个人文件柜" id="block_16" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/file_folder.png"></p>
+            <div id="count_16" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>个人文件柜</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="97" title="工作计划查询" id="block_97" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/work_plan.png"></p>
+            <div id="count_97" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>工作计划查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="28" title="财务工资录入" id="block_28" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_28" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>财务工资录入</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="199" title="个人办公用品登记" id="block_199" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_199" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>个人办公用品登记</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="29" title="工资流程管理" id="block_29" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_29" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>工资流程管理</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="39" title="考勤设置" id="block_39" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_39" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考勤设置</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="488" title="人事调动" id="block_488" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_488" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>人事调动</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="506" title="考勤审批" id="block_506" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/attendance.png"></p>
+            <div id="count_506" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考勤审批</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="507" title="考勤记录" id="block_507" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/attendance.png"></p>
+            <div id="count_507" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考勤记录</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="508" title="考勤统计" id="block_508" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/attendance.png"></p>
+            <div id="count_508" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>考勤统计</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="512" title="人力资源管理员" id="block_512" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_512" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>人力资源管理员</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="491" title="职称评定" id="block_491" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_491" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>职称评定</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="15609" title="年级班级" id="block_15609" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/default.png"></p>
+            <div id="count_15609" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>年级班级</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="60" title="人事档案" id="block_60" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_60" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>人事档案</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="61" title="档案查询" id="block_61" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_61" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>档案查询</span></a></li>
+        <li style="margin-left: 14px; margin-right: 14px;" index="120" title="人事分析" id="block_120" class="block">
+          <div class="img">
+            <p><img src="static/images/transparent.gif" _src="static/theme/99/images/app_icons/hr.png"></p>
+            <div id="count_120" class="count"></div>
+          </div>
+          <a class="icon-text" href="javascript: void(0)"><span>人事分析</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div style="height: 802px;" id="overlay"></div>
+<div class="background"></div>
+</body>
+</html>

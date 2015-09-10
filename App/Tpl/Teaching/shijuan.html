@@ -1,0 +1,212 @@
+<layout name='Layout/ace_layout' />
+<div id="content" style="height:750px">
+  <div class="blocks" style="left:0;  width: 100%;">
+    <div class="block email gong">
+      <div class="main">
+        <div class="div_title no_select"> 发起任务(公体) 
+                                <span>
+ 								   <eq name="user_rank" value="22">
+ 								  	 <a href="{:U('task/add?type=8')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
+ 								   </eq>
+ 								  	 <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>老师提交成绩单</a>
+                                   
+								</span>
+                                </div>
+        <table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+         
+									<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn  btn-lg  btn-primary" >出试卷</a> <i class="fa fa-arrow-right"></i>
+										
+						
+											<switch name="isfa" >
+									   <case value="1" > <a href="{:U('task/read')}?id={$taskId}" class="btn {$btn1}">教务秘书</a> </case>
+									   <default />
+										   <eq name="user_rank" value="22">
+										  	 <a href="{:U('task/add?type=8')}" class="btn {$btn21}">教务秘书</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="btn">教务秘书</a>
+										   </eq>
+									   </switch>
+											 
+										<i class="fa fa-arrow-right"></i>
+ 										<eq name="iszhuan" value="1">
+ 											<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn2}">
+ 											<else/>
+ 											<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn2}">
+ 										</eq>
+										 老师出题</a>
+										 
+										<i class="fa fa-arrow-right"></i>
+										
+									<eq name="iswan" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn3}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn3}">
+									</eq>
+	  								  教研室主任审核</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+
+
+
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn  btn-lg  btn-primary" >老师提交成绩</a> <i class="fa fa-arrow-right"></i>
+										
+										
+ 										<eq name="tj" value="1">
+ 											<a href="{:U('flow/read')}?id={$flowid}" class="btn {$btn21}">
+ 											<else/>
+ 											<a href="{:U('flow/add')}?type=76') " class="btn {$btn21}">
+ 										</eq>
+										 老师提交成绩单</a>
+										 
+										<i class="fa fa-arrow-right"></i>
+										
+									<eq name="jxms" value="1">
+										<a href="{:U('flow/read')}?id={$flowid}'" class="btn {$btn22}">
+										<else/>
+										<a href="{:U('flow/read')}?id={$flowid}" class="btn {$btn22}">
+									</eq>
+	  								  教学秘书审核</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+        </table>
+      </div>
+    </div>
+    <div class="block email zhuan">
+      <div class="main">
+        <div class="div_title no_select"> 发起任务(专业) 
+        
+                                <span>
+ 								   <eq name="user_rank" value="22">
+ 								  	 <a href="{:U('task/add?type=8')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
+ 								   </eq>
+ 								  	 <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>老师提交成绩单</a>
+								</span>
+                                </div>
+							<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn  btn-lg  btn-primary" >出试卷</a> <i class="fa fa-arrow-right"></i>
+										
+						
+											<switch name="isfa" >
+									   <case value="1" > <a href="{:U('task/read')}?id={$taskId}" class="btn {$btn1}">教务秘书</a> </case>
+									   <default />
+										   <eq name="user_rank" value="22">
+										  	 <a href="{:U('task/add?type=8')}" class="btn {$btn1}">教务秘书</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="btn ">教务秘书</a>
+										   </eq>
+									   </switch>
+											 
+										<i class="fa fa-arrow-right"></i>
+										
+										
+ 										<eq name="lc" value="1">
+ 											<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn2}">
+ 											<else/>
+ 											<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn2}">
+ 										</eq>
+										 老师出题</a>
+										 
+										<i class="fa fa-arrow-right"></i>
+										
+									<eq name="iswan" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn3}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn3}">
+									</eq>
+	  								  教研室主任审核</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn  btn-lg  btn-primary" >老师提交成绩</a> <i class="fa fa-arrow-right"></i>
+										
+										
+ 										<eq name="tj" value="1">
+ 											<a href="{:U('flow/read')}?id={$flowid}" class="btn {$btn21}">
+ 											<else/>
+ 											<a href="{:U('flow/add')}?type=76') " class="btn {$btn21}">
+ 										</eq>
+										 老师提交成绩单</a>
+										 
+										<i class="fa fa-arrow-right"></i>
+										
+									<eq name="jxms" value="1">
+										<a href="{:U('flow/read')}?id={$flowid}'" class="btn {$btn22}">
+										<else/>
+										<a href="{:U('flow/read')}?id={$flowid}" class="btn {$btn22}">
+									</eq>
+	  								  教学秘书审核</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+      
+      </div>
+    </div>
+    <div class="block work gong" id="switchdiv1" style="overflow: hidden; z-index: 3;">
+      <div class="main">
+        <div class="div_title1 no_select">
+          <div class="switch_btn divBG2 divBG1"> 待办 </div>
+          <div class="switch_btn divBG2"> 等待中 </div>
+          <div class="switch_btn divBG2"> 完成任务 </div>
+        </div>
+
+		<div class="worklist">
+			<div class="wait switch_" style="z-index: 2; left: 0px; opacity: 1;">
+				<ul>
+					{$todo} 
+				</ul>
+			</div>
+			<div class="already switch_" style="left: 771px; opacity: 0; z-index: 1;">
+				<ul>
+					{$doing} 
+				</ul>
+			</div>
+
+			<div class="already switch_" style="left: 1000px; opacity: 0; z-index: 1;">
+				<ul>
+					{$done} 
+				</ul>
+			</div>
+		</div>
+      </div>
+    </div>
+
+
+
+     <div class="block work zhuan" id="switchdiv2" style="overflow: hidden; z-index: 3;">
+      <div class="main">
+             <div class="div_title1 no_select">
+          <div class="switch_btn divBG2 divBG1"> 待办 </div>
+          <div class="switch_btn divBG2"> 等待中 </div>
+          <div class="switch_btn divBG2"> 完成任务 </div>
+        </div>
+
+		<div class="worklist">
+			<div class="wait switch_" style="z-index: 2; left: 0px; opacity: 1;">
+				<ul>
+					{$todo} 
+				</ul>
+			</div>
+			<div class="already switch_" style="left: 771px; opacity: 0; z-index: 1;">
+				<ul>
+					{$doing} 
+				</ul>
+			</div>
+
+			<div class="already switch_" style="left: 1000px; opacity: 0; z-index: 1;">
+				<ul>
+					{$done} 
+				</ul>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>

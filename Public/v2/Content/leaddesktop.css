@@ -1,0 +1,280 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family:"微软雅黑";
+}
+body{min-width:1300px;}
+.blocks{}
+table{ border:none; border-collapse: collapse;}
+td{overflow:hidden; height:auto; border:#dcdcdc solid 1px; text-align:center;}
+#ClCache{display: none;}
+#content ul{ position:relative; top:30px; width:100%;}
+#content li{    list-style: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #4993b3;
+    height: 35px;
+    line-height: 35px;
+   /* float: left;*/}
+#content li span{ position:relative; }
+#content li a{ text-decoration:none; color:inherit;}
+#content li a:hover{color:#0064FF; text-decoration:underline; }
+/************************************
+header
+**************************************/
+#header{position: relative; height:145px; width:100%; background:#448caa;}
+#header .logos{ position:relative; float:left; height:90px; width:320px; margin:25px 0 0 20px;}
+#header .logos div{ height:inherit; position:relative; float:left;}
+#header .logos .tdlogo{ width:310px;}
+#header .logos .leadlogo{ width:140px; margin-left:10px;}
+#header .btns{ position:absolute; left:357px; top:40px; height:65px;}
+#header .btns a{ width:50px; height:50px; position:relative; float:left;  border:#4993b3 solid 1px; margin:0 10px; cursor:pointer;}
+#header .btns a:hover{ border:#EBEBEB solid 1px; border-radius:5px;}
+#header .btns a img{ width:50px; height:50px;}
+#header .btns .text{ position:absolute; left:-5px; color:#FFFFFF; font-size:12px; width:57px; margin:5px 0 0 0; border:none; text-align:center; height:20px; line-height:20px; bottom: -25px;}
+#header .btns .text:hover{ border:none;}
+#header .user_head_ico{position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 185px;
+    top: 33px;}
+#header .user_head_ico img{ width:60px; height:60px;}
+#header .title_div{position:absolute;    width: 280px; height: inherit; right:0px; top:0px; overflow: hidden; background: url(../Images/head_photobg60px.png) no-repeat;}
+#header .title_div .logo{     position: absolute;
+    width: 150px;
+    height: 90px;
+    right: 10px;
+    top: 27.5px;}
+#header .title_div .username{ position:absolute; width:130px; top:100px; height:20px; font-size: 12px; color: #FFFFFF; text-align:center;} 
+/*************************************
+content
+**************************************/
+#content{ position:relative; height:auto; background:#eeeeee; overflow:hidden;}
+#content .blocks{position:absolute;  background:url(../Images/page_bg.png) no-repeat; background-position:-200px bottom;  padding-bottom:40px; border:none;}
+#content .block{ position:relative; float:left; margin-top:40px; overflow:hidden;}
+#content .blocks .main{ border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
+#content .blocks .work{  height:315px; width:50%;}
+#content .blocks .work .main{width:auto; height:100%; background:#FFFFFF; margin-left:45px; margin-right:45px;  border-left:#d64136 solid 5px;}
+#content .blocks .work .main .worklist { position:relative; width:100%; height:255px;  top:15px; overflow:hidden;}
+#content .blocks .work .main .worklist .wait,.already{ position:absolute; width:inherit; height:inherit; }
+#content .blocks .work .main .worklist ul{ position:relative; top:20px; width:100%;}
+#content .blocks .work .main .worklist ul li{ height:35px; line-height:35px;}
+#content .blocks .work .main .worklist ul li font{ color:#4993b3; font-weight:600; font-size:15px;}
+
+#content .blocks .schedule{ height:315px; width:50%;}
+#content .blocks .schedule .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:45px;  overflow:hidden; border-left:#9d48a1 solid 5px;}
+#content .blocks .schedule .main select{ position:relative; float:right; width:100px; height:30px; font-size:95%; line-height:30px; margin-top:3px; border:#dadada solid 1px;}
+#content .blocks .schedule .main table{ position:relative; width:90%; margin:30px auto 0 auto; opacity:0;}
+#content .blocks .schedule .main table td{ font-weight:600; font-size:100%; color:#4993b3; height:inherit; line-height:30px; cursor:default;}
+#content .blocks .schedule .main table td div{ width:100%; height:inherit; line-height:inherit;}
+#content .blocks .schedule .main table .td_head td{ color:#131313;}
+#content .blocks .schedule .main table .gray{ color:#d5d5d5 !important;}
+#content .blocks .schedule .main table .gray1{ color:#8d8d8d;}
+#content .blocks .schedule .main table .calendatextbg{ background:url(../Images/calendatextbg.png) no-repeat; background-position:center center; color:#FFFFFF;}
+#content .blocks .schedule .main table td .eventpoint{ background:url(../Images/enentpoint.png) no-repeat; background-position:right top; cursor:pointer;}
+#content .blocks .schedule .main .schedule_info{ position:relative; top:11px; width:100%; height:260px; background:url(../Images/scheduleinfobg.png) repeat; opacity:0;}
+#content .blocks .schedule .main .schedule_info .head{ position:relative; width:100%; height:20px;}
+#content .blocks .schedule .main .schedule_info .head .close_btn{ position:relative; width:20px; height:30px; float:right; margin-right:5px; color:#E5E5E5; font-size:20px; line-height:20px; font-weight:600;}
+#content .blocks .schedule .main .schedule_info .head .close_btn span{width: 100%; height: 100%; position: absolute; text-align: center; line-height: 30px; font-size: 20px;}
+#content .blocks .schedule .main .schedule_info .head .close_btn *{ cursor:pointer;}
+#content .blocks .schedule .main .schedule_info .head .more{ position:relative; width:55px; height:30px; float:right; margin-right:15px;  margin-top: 5px; color:#BDBDBD; font-size:95%; line-height:20px; display:none;}
+#content .blocks .schedule .main .schedule_info .head .more *{cursor:pointer;}
+#content .blocks .schedule .main .schedule_info .head .more a{ text-decoration:none; color:inherit;}
+#content .blocks .schedule .main .schedule_info .title{ position:absolute; top:0px; height:20px; font-size:95%; color:#BDBDBD; float:left; margin-left:10px; margin-top:5px;}
+#content .blocks .schedule .main .schedule_info ul{ position:absolute; top:35px; width:100%;}
+#content .blocks .schedule .main .schedule_info ul li{ width:85%; margin:0 auto 0 auto; color:#BFBFBF; line-height: 35px;
+height: 35px;}
+
+
+
+#content .blocks .email{ height:315px; width:50%}
+#content .blocks .notice{ height:315px; width:50%}
+#content .blocks .news{ height:315px;  width:50%}
+#content .blocks .meeting{ height:315px;  width:50%}
+#content .blocks  .main{width:auto; height:100%; background:#FFFFFF;padding-top:10px; margin-left:40px; margin-right:45px;border-left:#2ddc5a solid 5px;    overflow-y: auto;
+    overflow-x: hidden;}
+.feimenu{position: absolute;
+    bottom: 0;
+    left: 300px;}
+.feimenu a{ 
+	position: relative;
+	font-size:16px;
+  border-radius: 0 125px 0 0px;
+  border:none !important;
+  border-left: none !important;
+  padding:6px 20px 6px 35px;
+  color: #000 !important;
+  background-color: #F5F5F5 !important;
+  box-shadow: 10px 2px 10px #ccc !important;
+}
+
+a.pa{
+	z-index: 11;
+	left: 10px;
+	padding:6px 20px;
+	border-radius: 20px 128px 0 0;
+}
+a.pos_top
+{    
+	right: 25px;
+	z-index: 10;
+}
+a.pos_ty
+{   
+	z-index: 9;
+	right: 60px;
+}
+a.pos_kx
+{ z-index: 8;
+	right: 90px;
+}
+a.pos_xk
+{ z-index: 7;
+	right: 120px;
+}
+a.pos_xz
+{  
+	z-index: 6;
+	right: 150px;
+}
+a.pos_gz
+{  
+	z-index: 5;
+	right: 180px;
+}
+a.pos_bg
+{ 
+	z-index: 4;
+	right: 210px;
+	box-shadow:2px 2px 10px #ccc !important;
+}
+.main .btn{margin: 5px 1px;}
+
+.main .taskflow{clear:both}
+/*第二页的*/
+#content .blocks .depmeting{ width:50%; height:315px;}
+#content .blocks .depmeting .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:5px; border-left:#d64136 solid 5px;}
+#content .blocks .worknum{ height:315px; width:50%;}
+#content .blocks .worknum .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:45px; border-left: #9d48a1 solid 5px;}
+#content .blocks .hotnews{ width:50%; height:315px;}
+#content .blocks .hotnews .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:5px; border-left: #1ba1e2 solid 5px;}
+#content .blocks .error{ height:315px; width:50%;}
+#content .blocks .error .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:45px; border-left: #d80073 solid 5px;}
+/*chart*/
+#content .blocks .main .depmeting_charts,.worknum_charts,.hotnews_charts,.error_charts{ position:relative; width:95%; height:270px; margin:20px auto 0 auto;}
+
+/*第三页*/
+#content .blocks .fileblock{ height:265px; width:50%;}
+#content .blocks .fileblock .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:5px; border-left: #1ba1e2 solid 5px;}
+#content .blocks .fileblock1{ height:265px; width:50%;}
+#content .blocks .fileblock1 .main{width:auto; height:100%; background:#FFFFFF; margin-left:40px; margin-right:45px; border-left: #1ba1e2 solid 5px;}
+
+
+/*************************************
+sidebar
+**************************************/
+#sidebar{ position:absolute; width:190px; background:#e7e7e7; height:100%; color:#767676; border:none;}
+#sidebar a{ text-decoration:none; color:#333;height:55px; line-height:55px}
+#sidebar .first{ margin-top:40px;}
+#sidebar .btn_div{ width:100%; height:55px; line-height:55px; transition:background 0.5s;-moz-transition:background 0.5s;-o-transition:background 0.5s; -webkit-transition:background 0.5s;}
+#sidebar .btn_div_select{background:#82b428; cursor:pointer; color:#F1F1F1 !important; border-left: #EFFF00 solid 5px; width: 175px;}
+#sidebar .btn_div:hover{ background:#82b428; cursor:pointer; color:#F1F1F1;  border-left: #ffffff solid 5px; width: 175px;}
+#sidebar .btn_div div{ width:120px; margin:0 auto 0 auto;}
+#sidebar .btn_div span{ margin-left:40px; font-size:100%; color:inherit;}
+#sidebar .btn_div_select .btn1{ background:url(../Images/desk2.png) no-repeat !important;}
+#sidebar .btn_div_select .btn2{ background:url(../Images/data2.png) no-repeat !important;}
+#sidebar .btn_div_select .btn3{ background:url(../Images/file2.png) no-repeat !important;}
+#sidebar .btn_div .btn1{ background:url(../Images/desk1.png) no-repeat;}
+#sidebar .btn_div .btn1:hover{ background:url(../Images/desk2.png) no-repeat;}
+#sidebar .btn_div .btn2{ background:url(../Images/data1.png) no-repeat;}
+#sidebar .btn_div .btn2:hover{ background:url(../Images/data2.png) no-repeat;}
+#sidebar .btn_div .btn3{ background:url(../Images/file1.png) no-repeat;}
+#sidebar .btn_div .btn3:hover{ background:url(../Images/file2.png) no-repeat;}
+/*************************************
+footer
+**************************************/
+#footer a{ text-decoration:none; }
+#footer{ position:relative; width:100%; height:auto; background:#eeeeee; }
+#footer .info{ position:relative; width:100%; font-size:80%; color:#F8F8F8; text-align:center; line-height:24px; padding-bottom:10px;}
+.line6 .linklogo{ margin-top:0px;}
+/*#footer .line6{ position:relative; top:10px; height:auto; width:1300px; margin:0 auto 0 auto; margin-bottom:30px;}
+#footer .line6 .linklogo{ position:relative; width: 1130px; height:20px; color:#FFFFFF; margin:0 auto 0 auto; top:0px;padding-bottom:5px;}
+#footer .line6 .links { position:relative; width:1130px; height:auto; margin:0 auto 0 auto; overflow:hidden;  border:#cdcdcd solid 1px; }
+#footer .line6 .links  a{ text-decoration:none; font-size:15px;}
+#footer .line6 .links div{ position:relative; float:left;  text-align:center; height:25px; line-height:25px; font-size:14px; font-weight:600; color:#1899dc; width:188px; }
+*/
+
+/*标题样式1*/
+.div_title{     position: static;
+    background: url(../Images/title_bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 36px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 36px;
+    cursor: default;
+    padding-left: 10px;}
+.div_title span{ position:relative; float:right; color:#1fa9a7; font-size:14px; padding-right:60px; line-height:36px; cursor:pointer;}
+.div_title span{ position:absolute; right:0px; color:#1fa9a7; font-size:14px; line-height:36px; cursor:pointer;}
+/*标题样式2*/
+.div_title1{ position:relative; top:15px;  width:90%; height:45px; cursor:default; }
+.div_title1 div{ position:relative; float:left; width:100px; height:inherit; font-size:17px; text-align:center; padding-top:5px; font-weight:600; cursor:pointer;}
+.div_title1 div:nth-child(2){ margin-left:0px;}
+.div_title1 .divBG1{ background:url(../Images/title_bg1.png) no-repeat !important; color:#FFFFFF !important;}
+.div_title1 .divBG2{ background:url(../Images/title_bg2.png) no-repeat; color:#7fadc3;}
+.div_title1 span{ position:relative; float:right; color:#1fa9a7; font-size:14px; line-height:36px; cursor:pointer;}
+
+.no_select{
+	-moz-user-select: none; /*火狐*/
+   -webkit-user-select: none;  /*webkit浏览器*/
+   -ms-user-select: none;   /*IE10*/
+   -khtml-user-select: none; /*早期浏览器*/
+   user-select: none;
+}
+
+.button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+		
+	    .button-xsmall {
+	             font-size: 70%;
+	         }
+
+	         .button-small {
+	             font-size: 85%;
+	         }
+
+	         .button-large {
+	             font-size: 110%;
+	         }
+
+	         .button-xlarge {
+	             font-size: 125%;
+	         }

@@ -1,0 +1,57 @@
+/* CSS Document */
+
+@media screen and (max-width: 640px){
+body{min-width:0px;}
+#header{ height:60px;}
+#header .logos{ height:30px; width:240px; margin:15px 0 0 5px;}
+#header .logos .tdlogo{ width:155px;}
+#header .logos .leadlogo{ width:70px; margin-left:5px;}
+#header .title_div{ display:none;}
+#header .user_head_ico{ position:absolute; width:35px; height:35px; right:5px; top:12.5px; border-radius:50%; overflow:hidden;}
+#header .user_head_ico img{ width:35px; height:35px;}
+#header .btns{ display:none;}
+/*#header .btns div{ width:18px; height:18px; position:relative; float:left;  border:#4993b3 solid 1px; margin:0;}
+#header .btns div img{ width:18px; height:18px;}
+#header .btns .text{ display:none;}*/
+
+
+#sidebar{ position:relative;  height:60px; width:100%;}
+#content .blocks{ position:relative; left:0px;  width:100%; background-position:-250px bottom;  margin-left:0; top:10px;}
+#content .blocks .main{ border:none !important; border-radius:0px;}
+#content .blocks .block{width:100%; margin-top: 20px;}
+#content .blocks .work{ margin-top:0px;}
+#content .blocks .work .main{width:auto; height:100%; margin-left:0px; margin-right:0px;}
+#content .blocks .schedule .main{width:auto; height:100%;  margin-left:0px; margin-right:0px; overflow:hidden;}
+#content .blocks .email .main{width:auto; height:100%; margin-left:0px; margin-right:0px;}
+#content .blocks .news .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+#content .blocks .meeting .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+#content .blocks .notice .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+#content .blocks .hotnews .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+#content .blocks .error .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+/*第二�?/
+#content .blocks .depmeting{ margin-top:0px;}
+#content .blocks .depmeting .main{width:auto; height:100%; margin-left:0px; margin-right:0px;}
+#content .blocks .worknum .main{width:auto; height:100%; margin-left:0px; margin-right:0px;}
+/*第三�?/
+#content .blocks .fileblock{ margin-top:0px;}
+#content .blocks .fileblock .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+#content .blocks .fileblock1 .main{width:auto; height:100%;  margin-left:0px; margin-right:0px;}
+
+
+#sidebar{ height:30px;}
+#sidebar .btn_div{ position:relative; float:left; width:33.3%; height:30px; line-height:30px; margin:0 0 0 0; font-size:80%; border:none !important;}
+#sidebar .btn_div:hover{ border:none !important;}
+#sidebar .btn_div .btn1{ background-position:5px -12px;}
+#sidebar .btn_div .btn2{ background-position:5px -12px;}
+#sidebar .btn_div .btn3{ background-position:5px -11px;}
+#sidebar .btn_div .btn1:hover{ background-position:5px -12px;}
+#sidebar .btn_div .btn2:hover{ background-position:5px -12px;}
+#sidebar .btn_div .btn3:hover{ background-position:5px -11px;}
+#sidebar .btn_div_select .btn1{ background-position:5px -12px !important;}
+#sidebar .btn_div_select .btn2{ background-position:5px -12px !important;}
+#sidebar .btn_div_select .btn3{ background-position:5px -11px !important;}
+
+#footer{ display:none;}
+/*#footer{ height:120px;}
+#footer .line6{ display:none;}
+#footer .info{ position:relative; top:30px; width:100%; margin:0px auto 0 auto; font-size:40%; color:#F8F8F8; text-align:center; line-height:14px;}*/

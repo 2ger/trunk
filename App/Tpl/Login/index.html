@@ -1,0 +1,81 @@
+<layout name='Layout/ace_page' />
+<style type="text/css" media="screen">
+body{background:url('__PUBLIC__/v2/Images/bg.jpg') #659dcc repeat-x ;}
+</style>
+<div class="container" style="width:1132px;height:660px;background:url('__PUBLIC__/v2/Images/bg-b.jpg');position: relative;">
+	<!-- /container -->
+	<div class="row">
+		<div class="col-xs-12 hidden-xs" style="margin-top:120px;"> </div>
+	</div>
+	<div class="row" >
+		<div class="col-sm-8 hidden-xs hidden">
+			<div class="img"></div>
+		</div>
+		
+		<div style="     width: 220px;
+    position: absolute;
+    left: 645px;
+    top: 280px;
+    color: #fff;    text-shadow: 1px 1px #333;"  >
+			<div style="margin-bottom:44px;margin-top:20px;" >
+				<h1 class="text-center"></h1>
+			</div>
+			<form method="post" id="form_login" class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-4  control-label" for="emp_no">编号：</label>
+					<div class="col-sm-8">
+						<input class="form-control" id="emp_no" name="emp_no"  vlaue="admin"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-4  control-label" for="password">密码：</label>
+					<div class="col-sm-8">
+						<input class="form-control" id="password" type="password" name="password" vlaue="admin"/>
+					</div>
+				</div>
+				<notempty name="is_verify_code">
+					<div class="form-group">
+						<label class="col-sm-3  control-label" for="verify">验证码：</label>
+						<div class="col-sm-9 row">
+							<div class="col-xs-8">
+								<input class="form-control" id="verify" name="verify" />
+							</div>
+							<div class="col-xs-4">
+								<img src='__URL__/verify' / style='cursor:pointer' title='刷新验证码' id='verifyImg' onclick='freshVerify()'>
+							</div>
+						</div>
+					</div>
+				</notempty>
+				<div class="form-group display-none hidden" >
+					<span class="col-sm-3  control-label"> </span>
+					<div class="col-sm-9">
+						<label class="inline pull-left col-5">
+							<input class="ace" type="checkbox" name="remember" value="" />
+							<span class="lbl"> </span> </label>
+						<label for="remember-me">记住我的登录状态</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<style type="text/css" media="screen">
+					.btn-info, .btn-info:focus {
+					    background-color: #5c87ba!important;
+						border: 1px solid #547fa2!important;
+						padding:7px;
+						margin-top:30px;
+					}
+					</style>
+					<div class="col-sm-offset-3 col-sm-9">
+						<input type="button" value="登录" onclick="login();" class="btn btn-sm btn-info col-12">
+					</div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 text-center ">
+			<!-- {:get_system_config("SYSTEM_NAME")} -->
+			<a href="http://down.360safe.com/cse/360cse_8.3.0.122.exe" target="_blank" style="color: #fff;">下载系统需求web环境</a> ｜ <a href="http://www.kancloud.cn/dddasdfasdfasdf/t86xuyuanshuoming" target="_blank" style="color: #fff;">OA使用说明书</a>
+		</div>
+	</div>
+</div>

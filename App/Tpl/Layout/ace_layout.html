@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>{$title|default="smeoa"}</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- basic styles -->
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css"  />
+	<!--[if lte IE 6]>
+	    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap-ie6.css">
+	    <![endif]-->
+	    <!--[if lte IE 7]>
+	    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/ie.css">
+	    <![endif]-->
+			
+	<link rel="stylesheet" href="__PUBLIC__/css/font-awesome.min.css" />
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="__PUBLIC__/css/font-awesome-ie7.min.css" />
+	<![endif]-->
+
+	<!-- page specific plugin styles -->
+	<link rel="stylesheet" href="__PUBLIC__/css/jquery-ui-1.10.3.full.min.css" />
+	<include file="Widget:css"/>
+
+	<!-- fonts -->
+	<!-- ace styles -->
+	<link rel="stylesheet" href="__PUBLIC__/css/uncompressed/ace.css" />
+	<link rel="stylesheet" href="__PUBLIC__/css/uncompressed/ace-rtl.css" />
+	<link rel="stylesheet" href="__PUBLIC__/css/uncompressed/ace-skins.css" />
+
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="__PUBLIC__/css/uncompressed/ace-ie.css" />
+	<![endif]-->
+
+	<!-- inline styles related to this page -->
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+	<!-- ace settings handler -->
+
+	<script src="__PUBLIC__/js/ace-extra.min.js"></script>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/v2/Content/css_public.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/v2/Content/leaddesktop.css">
+		<!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/v2/Content/media-queries.css"> -->
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/v2/Content/tahiti.css">
+		<script src="__PUBLIC__/v2/Scripts/jquery.min.js" type="text/javascript">
+</script>
+		<script type="text/javascript" src="__PUBLIC__/v2/Scripts/jquery.easing.1.3.js">
+</script>
+		<script type="text/javascript" src="__PUBLIC__/v2/Scripts/lead.js">
+</script>
+		<link rel="stylesheet" href="__PUBLIC__/v2/Content/pure-min.css" type="text/css">
+
+
+		<!-- <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css" type="text/css">
+		 -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+	<!--[if lt IE 9]>
+	<script src="__PUBLIC__/js/html5shiv.js"></script>
+	<script src="__PUBLIC__/js/respond.min.js"></script>
+	<![endif]-->
+	<include file="Public:script" />
+<style type="text/css" media="screen">
+.News,.Doc,.Node,.User,.Profile{max-width:1000px;margin:auto;}
+.{$fromtype}{ 
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */ 
+	-webkit-filter: grayscale(100%); /* chrome+ */ 
+	filter: grayscale(100%); /* 未来浏览器 */ 
+	filter: gray; /* ie6-8 */ 
+	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);/*ie6-9 */ 
+}
+.page-content{background-color:#eeeeee !important;}
+.feimenu a.{$top_menu2}{ 
+  background-color: #5bc0de !important;
+}
+</style>
+</head>
+<body>
+	<div class="shade"></div>
+	<div style="display:none">
+		<include file="Layout:ace_header" />
+	</div>
+
+<div id="header" class="hidden-print">
+			<div class="logos">
+				<div class="tdlogo">
+					<img src="__PUBLIC__/v2/Images/logo.png" width="" height="80" >
+				</div>
+			</div>
+			<div class="menus feimenu">	
+				<a href="__APP__/home/index" node="301" onclick="click_top_menu(301,1)"  class="btn pa onselect top_menu301" >工作概览</a>
+				<a href="__APP__/news/folder?fid=74&from=gong" node="313" onclick="click_top_menu(313,1)" class="btn pos_top top_menu313" >公共体育</a>
+				<a href="__APP__/news/folder?fid=66&from=zhuan" node="321" onclick="click_top_menu(321,1)" class="btn pos_ty top_menu321" >体育专业</a>
+				<a href="__APP__/jianshe/index" node="329" onclick="click_top_menu(329,1)"  class="btn pos_kx top_menu329" >科学研究</a>
+				<a href="__APP__/kxjianshe/index" node="333" onclick="click_top_menu(333,1)" class="btn pos_xk top_menu333" >学科建设</a>
+				<a href="__APP__/gzshenpi/index" node="334" onclick="click_top_menu(334,1)" class="btn pos_xz top_menu334" >行政管理</a>
+				<a href="__APP__/grzhongxin/index" node="255" onclick="click_top_menu(255,1)" class="btn pos_gz top_menu255" >行政工作</a>
+				<a href="__APP__/huiyi" node="351" onclick="click_top_menu(351,1)" class="btn pos_bg top_menu351" >会议</a>
+			</div>
+			<div class="user_head_ico">
+				<img onerror="this.src='__PUBLIC__/v2/ico/3.png'" src="__PUBLIC__/people/{:get_user_id()}.jpg">
+			<a href="{:U('home/index')}" style="    position: absolute;
+    z-index: 2;
+    top: 10%;
+    right: -10px;
+}">
+					<span class="badge badge-pink"> {:getToDoNum()} </span>
+			</a>
+			</div>
+			<div class="title_div">
+				<div class="logo" style="background: none!important;">
+					<table class="table table-bordered table-condensed" style="color:#fff">
+					    <tr>
+					        <td>编号</td>
+					        <td>{:get_emp_no()}</td>
+					    </tr>
+					    <tr>
+					        <td>职务</th>
+					        <td>{:get_rank_name()}</td>
+					    </tr>
+					    <tr>
+					        <td>电话  </td>
+					        <td> {:get_user_tel()} </td>
+					    </tr>
+					</table>
+				</div>
+				<div class="username">
+					<a href="{:U('grzhongxin/index')}" style="color:#fff">{$Think.session.user_name}</a>
+					<!-- {:get_dept_name()} -->
+					 |&nbsp;
+					<a href="{:U('login/logout')}" style="color:#fff">退出</a>
+				</div>
+			</div>
+		</div><!-- #header -->
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+				<div class="sidebar" id="sidebar">	
+					<!-- <div id="user_info" class="text-center hidden-xs"  >
+						<span >当前用户：{$Think.session.user_name}</span>
+					</div> -->
+					<!-- <div id="nav_head" class="text-center"  onclick="toggle_left_menu()">
+						<span class="menu-text">{$top_menu_name}</span>
+						<b id="left_menu_icon" class="fa fa-angle-down pull-right"></b>
+					</div> -->
+					{:W('Nav',array('tree'=>$left_menu,'new_count'=>$new_count))}
+				</div>
+				<div class="main-content">
+					<div class="breadcrumbs hidden" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="fa fa-home home-icon"></i>
+								{$top_menu_name}
+							</li>
+<!--						<li>
+								{$top_menu_name}
+							</li> -->
+						</ul><!-- .breadcrumb -->
+					</div>
+
+					<div class="page-content  {$Think.MODULE_NAME}">
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+									{__CONTENT__}
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse hidden-print">
+				<i class="fa fa-double-angle-up fa-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+	<div id="push_msg"></div>
+	<iframe src="{:U('push/client2')}" class="push" id="push"></iframe>
+	<!-- basic scripts -->
+
+	<!--[if !IE]>
+	-->
+	<script type="text/javascript">
+function open_url(URL,FORMAT)
+		{
+		//URL="/index.php?s=/Admin/Article1/detail/id/"+NOTIFY_ID+".html";
+		myleft=(screen.availWidth-780)/2;
+		mytop=100
+		mywidth=950;
+		myheight=700;
+		if(FORMAT=="1")
+		{
+
+			mywidth=1000;
+			myheight=800;
+		// myleft=0;
+// 		mytop=0
+// 		mywidth=screen.availWidth-10;
+// 		myheight=screen.availHeight-40;
+		}
+		window.open(URL,"read_notify","height="+myheight+",width="+mywidth+",status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top="+mytop+",left="+myleft+",resizable=yes");
+		}
+		
+			window.jQuery || document.write("<script src='__PUBLIC__/js/jquery-2.1.0.min.js'>" + "<" + "/script>");</script>
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="__PUBLIC__/js/html5.js"></script>
+<script type="text/javascript">
+		window.jQuery || document.write("<script src='__PUBLIC__/js/jquery-1.11.0.min.js'>"+"<"+"/script>");</script>
+<![endif]-->
+<script type="text/javascript">
+			if ("ontouchend" in document)
+				document.write("<script src='__PUBLIC__/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");</script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap-ie.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/js/typeahead-bs2.min.js"></script>
+<script src="__PUBLIC__/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="__PUBLIC__/js/jquery.ui.touch-punch.min.js"></script>
+<script src="__PUBLIC__/js/jquery.slimscroll.min.js"></script>
+
+<include file="Widget:plugin"/>
+
+<!-- ace scripts -->
+<script src="__PUBLIC__/js/ace-elements.min.js"></script>
+<script src="__PUBLIC__/js/uncompressed/ace.js"></script>
+<script src="__PUBLIC__/js/common.js"></script>
+<include file="$js_file" />
+<!-- inline scripts related to this page -->
+</body>
+</html>

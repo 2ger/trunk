@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]--> 
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]--> 
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]--> 
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]--> 
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]--> 
+<!--[if (gte IE 10)|!(IE)]><!--><html><!--<![endif]-->
+ <head>
+    <title>通达OA教育版</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <meta name="renderer" content="ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+<script type="text/javascript" >
+   var MYOA_JS_SERVER = "";
+   var MYOA_STATIC_SERVER = "";
+</script>
+</head>
+<link rel="stylesheet" type="text/css" href="Content/index.css" />
+
+<script type="text/javascript">
+var cur_login_user_id="chenchangliu";
+var gz_postfix = "";
+var static_server = "";
+
+self.moveTo(0,0);
+self.resizeTo(screen.availWidth,screen.availHeight);
+self.focus();
+</script>
+<link rel="stylesheet" type="text/css" href="Content/show_guide.css" />
+<script type="text/javascript" src="Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.ui.autocomplete.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="Scripts/jquery.plugins.js"></script>
+<script type="text/javascript" src="Scripts/js_lang.js"></script>
+<script type="text/javascript" src="Scripts/sys_function_7a682d434e.js"></script>
+<script type="text/javascript" src="Scripts/plugin.js"></script>
+<script type="text/javascript" src="Scripts/index.js"></script>
+<script type="text/javascript">
+var bEmailPriv = true;
+var bSmsPriv   = true;
+var bTabStyle = true;
+var OA_TIME = new Date(2015,07,09,15,53,41);
+var bInitWeather = true;
+var weatherCity = ConvertWeatherCity("广东_广州_广州");
+var menuExpand = "";
+var shortcutArray = Array(3,1);
+var loginUser = {uid:19, user_id:"chenchangliu", user_name:"陈长流"};
+var logoutText = "轻轻的您走了，正如您轻轻的来……";
+var monInterval = {online:120,sms:30};
+var ispirit = "";
+var statusTextScroll = 60;
+var newSmsSoundHtml = "<object id='sms_sound' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='/static/js/swflash.cab' width='0' height='0'><param name='movie' value='/static/wav/4.swf'><param name=quality value=high><embed id='sms_sound' src='Flash/4.swf' width='0' height='0' quality='autohigh' wmode='opaque' type='application/x-shockwave-flash' plugspace='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash'></embed></object>";
+var show_ip = 0;
+var show_button = "0";
+var unit_name = '&nbsp;';
+var jsonURL0 = '%2Finc%2Fonline.php%3FPARA_URL2%3D%2Fgeneral%2Fipanel%2Fuser%2Fuser_info.php%26PARA_TARGET%3D_blank%26PARA_ID%3DWINDOW%26PARA_VALUE%3D1%26SHOW_IP%3D%26PWD%3D%26OP_SMS%3D1';
+var jsonURL1 = '%2Finc%2Fuser_list%2Ftree.php%3FMANAGE_FLAG%3D0%26DEPT_ID%3D1%26PARA_URL1%3D%26PARA_URL2%3D%2Fgeneral%2Fipanel%2Fuser%2Fuser_info.php%26e%3D%26PARA_TARGET%3D_blank%26PRIV_NO%3D%26PARA_ID%3DWINDOW%26PARA_VALUE%3D1%26MODULE_ID%3D2%26SHOW_IP%3D%26PWD%3D%26DEPT_PRIV%3D1%26ROLE_PRIV%3D2%26USER_TYPE%3D%26PRIV_NO_FLAG%3D0%26OP_SMS%3D1%26rand%3D211289395';
+var user_total_count = "138";
+var portalLoadArray = [{id:"12", src:"0", url:"/portal/school/?portal_id=12", title:"学校门户", closable:true},
+{id:"4", src:"3", url:"/general/mytable/intel_view/", title:"信息中心", closable:true},
+{id:"5", src:"5", url:"zhuomian.html", title:"我的桌面", closable:true}];
+
+var themeArray = [];
+themeArray["10"] = {src:"/static/images/themeswitch/theme_thumb_10.jpg", title:"宁静的思考"};
+themeArray["13"] = {src:"/static/images/themeswitch/theme_thumb_13.jpg", title:"现代或未来"};
+themeArray["99"] = {src:"/static/images/themeswitch/theme_thumb_99.jpg", title:"通达OA教育版"};
+
+//-- 一级菜单 --
+var first_array = ["01","10","20","30","50","b0","c0","c2","c3","c4","c5","c6","c7","c8"];
+
+//-- 二级菜单 --
+var second_array = [];
+second_array["m01"] = ["1","3","42","4","147","148","7","8","9","10","16","11","15646"];
+second_array["m10"] = ["130","5","131"];
+second_array["m20"] = ["24","196","105","119","80","96","126","51","85","43"];
+second_array["m30"] = ["15","76","115","185","235"];
+second_array["m50"] = ["27","502","26","122","55","511","224","252"];
+second_array["mb0"] = ["62","63","46","227"];
+second_array["mc0"] = ["15601","15604","15609","15610","15613","15603","15605","15606","15607","15619","15621","15625","15659","15658"];
+second_array["mc2"] = ["15602","15624","15608","15611","15612","15627","15629"];
+second_array["mc3"] = ["15600","15614","15618"];
+second_array["mc4"] = ["15615","15616","15628","15617","15654"];
+second_array["mc5"] = ["15631","15632","15633","15634"];
+second_array["mc6"] = ["15635","1042","1043","1045","15653"];
+second_array["mc7"] = ["15647","15648","15649"];
+second_array["mc8"] = ["15651","15652"];
+
+//-- 三级菜单 --
+var third_array = [];
+third_array["f96"] = ["97"];
+third_array["f126"] = ["179","199"];
+third_array["f51"] = ["54"];
+third_array["f85"] = ["86","87"];
+third_array["f43"] = ["17","18","19"];
+third_array["f27"] = ["60","61","481","482","483","484","485","486","487","488","489","490","491","492","120"];
+third_array["f502"] = ["503","505","504"];
+third_array["f26"] = ["506","507","508","515","537"];
+third_array["f122"] = ["123","124","628","125"];
+third_array["f55"] = ["514","509","29","28","129","510"];
+third_array["f224"] = ["39","512","513"];
+third_array["f252"] = ["230","231","232","629","233","234"];
+third_array["f46"] = ["21","22"];
+third_array["f15625"] = ["15626","15645"];
+third_array["f15659"] = ["15660","15661"];
+
+//-- 互联网自定义 --
+func_array["extWebApp"] = ["ewp23","ewp24","ewp25","ewp26","ewp27","ewp28","ewp29","ewp30","ewp31","ewp32","ewp33","ewp34","ewp35","ewp36"];
+func_array["fewp23"] = ["百度搜索","http://baidu.com","ewp_baidu.png"];
+func_array["fewp24"] = ["新浪网","http://www.sina.com.cn","ewp_sina.png"];
+func_array["fewp25"] = ["58同城","http://www.58.com","ewp_58.png"];
+func_array["fewp26"] = ["天气预报","http://xapp.baidu.com/apps/baidu-weather/app.html","ewp_weather.png"];
+func_array["fewp27"] = ["奇艺网","http://qiyi.com","ewp_qiyi.png"];
+func_array["fewp28"] = ["中国政府网","http://www.gov.cn","ewp_gov.png"];
+func_array["fewp29"] = ["天涯社区","http://www.tianya.cn","ewp_tianya.png"];
+func_array["fewp30"] = ["淘宝网","http://www.taobao.com","ewp_taobao.png"];
+func_array["fewp31"] = ["优酷网","http://www.youku.com","ewp_youku.png"];
+func_array["fewp32"] = ["百度贴吧","http://tieba.baidu.com","ewp_bdtieba.png"];
+func_array["fewp33"] = ["新浪体育","http://sports.sina.com.cn","ewp_sinas.png"];
+func_array["fewp34"] = ["新浪新闻","http://news.sina.com.cn","ewp_sinanews.png"];
+func_array["fewp35"] = ["百度mp3","http://mp3.baidu.com","ewp_bdmp3.png"];
+func_array["fewp36"] = ["虾米音乐","http://xiami.com","ewp_xiami.png"];
+
+//-- 个人收藏 --
+func_array["extFav"] = [];
+
+//-- 当前系统主题
+var ostheme = 99;
+
+</script>
+<!--显示控制面板向导-->
+<div id="guide" style="display:none">
+    <link rel="stylesheet" type="text/css" href="Content/panel.css">
+<script type="text/javascript" src="Scripts/guide.js"></script>
+<script type="text/javascript" src="Scripts/scrollable.js"></script>
+<script type="text/javascript" src="Scripts/js_lang.js"></script>
+<script type="text/javascript" src="Scripts/swfupload.js"></script>
+<script type="text/javascript" src="Scripts/swfupload.queue.js"></script>
+<script type="text/javascript" src="Scripts/fileprogress.js"></script>
+<script type="text/javascript" src="Scripts/handlers.js"></script>
+<style>
+.swfupload{
+   vertical-align: baseline;
+}
+</style>
+<script type="text/javascript">    
+var upload_limit=1,limit_type=oa_limit_type="php,php3,php4,php5,";
+var swfupload1,swfupload2;
+window.onload = function(){
+    var bkImage = "/static/modules/setting_guide/images/4_045.png";
+    var color="#000";
+    var width = 114;
+    var height = 30;
+    var paddingLeft = 30;
+    var paddingTop =7;
+    var settings = {
+        flash_url : "/module/swfupload/swfupload.swf",
+        upload_url: "/general/setting_guide/upload_avatar.php",       
+        post_params:{"PHPSESSID" : "104fd09b9dcc3e3d6fcb86ca22dd87f5"},
+        file_size_limit : "1 MB",
+        file_types : "*.*",
+        file_types_description : "所有 文件",
+        file_upload_limit : 0,
+        file_queue_limit : 0,
+        custom_settings : {
+            progressTarget : "fsUploadProgress"
+        },
+        debug: false,
+        
+        // Button Settings
+        button_image_url : bkImage,	// Relative to the SWF file
+        button_text : "<span class=\"textUpload\">选择照片</span>",
+        button_text_style : ".textUpload { color: "+color+"; }",
+        button_text_top_padding : (isNaN(paddingTop) ? 0: paddingTop),
+        button_text_left_padding : (isNaN(paddingLeft) ? 0 : paddingLeft),
+        button_placeholder_id : "AVATAR",
+        button_width: (isNaN(width) ? 70 : width),
+        button_height: (isNaN(height) ? 25 : height),
+        
+        //button_bottom_padding : 0,
+        button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+        button_cursor: SWFUpload.CURSOR.HAND,
+        button_action: SWFUpload.BUTTON_ACTION.SELECT_FILE,
+        
+        // The event handler functions are defined in handlers.js
+        file_queued_handler : fileQueued,
+        file_queue_error_handler : fileQueueError,
+        file_dialog_complete_handler : fileDialogComplete,
+        upload_start_handler : uploadStart,
+        upload_progress_handler : uploadProgress,
+        upload_error_handler : uploadError,
+        upload_success_handler : uploadSuccess,
+        upload_complete_handler : uploadComplete,
+        queue_complete_handler : queueComplete	// Queue plugin event
+    };
+var photo_settings = {
+        flash_url : "/module/swfupload/swfupload.swf",
+        upload_url: "/general/setting_guide/upload_photo.php",
+        post_params: {"PHPSESSID" : "104fd09b9dcc3e3d6fcb86ca22dd87f5"},
+        file_size_limit : "1 MB",
+        file_types : "*.*",
+        file_types_description : "所有 文件",
+        file_upload_limit : 0,
+        file_queue_limit : 0,
+        custom_settings : {
+        	progressTarget : "fsUploadProgress2"
+        },
+        debug: false,
+        
+        // Button Settings
+        button_image_url : bkImage,	// Relative to the SWF file
+        button_text : "<span class=\"textUpload\">选择照片</span>",
+        button_text_style : ".textUpload { color: "+color+"; }",
+        button_text_top_padding : (isNaN(paddingTop) ? 0: paddingTop),
+        button_text_left_padding : (isNaN(paddingLeft) ? 0 : paddingLeft),
+        button_placeholder_id : "PHOTO",
+        button_width: (isNaN(width) ? 70 : width),
+        button_height: (isNaN(height) ? 25 : height),
+        
+        //button_bottom_padding : 0,
+        button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+        button_cursor: SWFUpload.CURSOR.HAND,
+        button_action: SWFUpload.BUTTON_ACTION.SELECT_FILE,
+        
+        // The event handler functions are defined in handlers.js
+        file_queued_handler : fileQueued,
+        file_queue_error_handler : fileQueueError,
+        file_dialog_complete_handler : fileDialogComplete,
+        upload_start_handler : uploadStart,
+        upload_progress_handler : uploadProgress,
+        upload_error_handler : uploadError,
+        upload_success_handler : uploadSuccess,
+        upload_complete_handler : uploadComplete,
+        queue_complete_handler : queueComplete	// Queue plugin event
+	};    
+    swfupload1 = new SWFUpload(settings);
+    swfuplod2 = new SWFUpload(photo_settings);
+}
+     
+</script>
+<div id="personlay">&nbsp;</div>
+<div id="guide-main" style="display:">
+    <form enctype="multipart/form-data">
+        <div class="wizard">
+            <a href="javascript:void(0)" class="main-close" hidefocus="hidefocus" id="a_close"></a>
+            <ul class="status" style="display:">
+                <li class="active">欢迎 ></li>
+                <li >修改密码 ></li>
+                <li>个人资料 ></li>
+                <li>昵称与头像 ></li>
+                <li>界面主题 ></li>
+                <li>完成</li>
+            </ul>        
+            <div class="items">
+                <div class="page">
+                    <div class="first" style="position:relative;left:115px;">
+                        <div style="position:absolute;left:-95px;top:-15px;">
+                        <img src="Picture/robot.png" /></div>
+                        <div class="first-head" style="display:; font-size:38px; font-weight:bold;">个人设置向导</div>
+                        <h2 style="font-weight:normal;">通达机器人tRobot将引导您完成以下设置</h2>
+                        <div class="first-content">   
+                            <div class="first-content-list"><img src="Picture/1_15.png" /><lable class="first-font">修改密码</lable></div>
+                            <div class="first-content-list"><img src="Picture/1_16.png" /><lable class="first-font">修改个人资料</lable></div>
+                            <div class="first-content-list"><img src="Picture/1_17.png" /><lable class="first-font">设置昵称与头像</lable></div>
+                            <div class="first-content-list"><img src="Picture/1_18.png" /><lable class="first-font">设置界面主题</lable></div>
+                        </div> 
+                    </div>
+                    <div class="controll-bar-second" style=" margin-top:70px; margin-right:25px; *+ margin-top:10px;">
+                        <input type="button" class="next"  value="开始" />&nbsp;&nbsp;&nbsp;
+                        <input type="button" class="cancle"  value="关闭" />&nbsp;&nbsp;                
+                    </div>  
+                </div>
+                <div class="page">
+                    <div class="explorer-list-group list">
+                        <span class="head" style="display:none">步骤一：<lable  >修改密码</label></span>							
+                        <div class="first">
+                            <div class="second-content" >
+                                <div style="float:left"><img src="Picture/2_01.png"/></div>
+                                
+                                <table class="Guide-TableBlock">
+                                    <tr>
+                                        <td class="Guide-TableData">原 密 码：</td><td> <input type="password" name="PASS0"  id="PASS0" class="GuideInput" size="20" > </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Guide-TableData">新 密 码：</td><td> <input type="password" name="PASS1"  id="PASS1" class="GuideInput" size="20"><span >0-20位</span>  </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="Guide-TableData">确认新密码：</td><td>  <input type="password" name="PASS2"  id="PASS2" class="GuideInput" size="20"><span>0-20位 </span> </td>
+                                    </tr>
+                                    <input type="hidden" id="SEC_PASS_MIN" name="SEC_PASS_MIN" value="0">
+                                    <input type="hidden" id="SEC_PASS_MAX" name="SEC_PASS_MAX" value="20">
+                                    <input type="hidden" id="SEC_PASS_SAFE" name="SEC_PASS_SAFE" value="0">
+                                </table>
+                            </div>
+                        </div>							 							   							
+                    
+                        <div class="controll-bar-second">                                                
+                            <input type="button" class="next"  value="下一步" />&nbsp;&nbsp;
+                            <input type="button" class="cancle"  value="取消" />&nbsp;&nbsp;                
+                        </div>       				
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="explorer-list-group list" >
+                        <span class="head" style="display:none">步骤二：<lable>修改个人资料</lable></span>							
+                        <div class="first">
+                            <div class="second-content">
+                                <div style="float:left"><img src="Picture/3_01.png"/></div>
+                                <table class="Guide-TableBlock">
+                                    <tr>
+                                        <td class="Guide-TableData">工作电话：</td><td> <input type="text" name="TEL_NO_DEPT"  id="TEL_NO_DEPT" class="GuideInput" size="20" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Guide-TableData">手机：</td><td> <input type="text" name="MOBIL_NO"  id="MOBIL_NO" class="GuideInput" size="20" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Guide-TableData">电子邮箱：</td><td>  <input type="text" name="EMAIL"  id="EMAIL" class="GuideInput" size="20" maxlength="50" value=""></td>
+                                    </tr>
+                                </table>
+                            </div>						 							   							
+                        </div>
+                        <div class="controll-bar-second">                           
+                            <input type="button" class="prev"  value="上一步" />&nbsp;&nbsp;
+                            <input type="button" class="next"  value="下一步" />&nbsp;&nbsp;
+                            <input type="button" class="cancle"  value="取消" />&nbsp;&nbsp;
+                        </div>	                    
+                    </div>       		
+                </div>
+                <div class="page">
+                    <div class="explorer-list-group list" >
+                        <span class="head" style="display:none">步骤三：<lable>修改昵称与头像</lable></span>						
+                        <div class="first">
+                            <div class="second-content">
+                                <div style="float:left"><img src="Picture/4_01.png"/></div>
+                                <table class="Guide-TableBlock">
+                                    <tr>
+                                        <td class="Guide-TableData">设置昵称：</td><td> <input type="text" name="NICK_NAME"  id="NICK_NAME" class="GuideInput" size="20" maxlength="25" title="用于讨论区交流" value=""></td>
+                                    </tr>
+                     
+                                    <tr>
+                                        <td class="Guide-TableData">上传小头像：</td><td style="float:left;width:220px;height:30px; padding-top:0px;"> <span id="AVATAR" title="选择附件"></span>&nbsp;<img src="Picture/4_02.png"/>&nbsp;&nbsp;<span><img id="AVATAR1" src="" width="40px" height="40px" class="img-class"></span>
+                                        <input id="AVATAR2" name="AVATAR2" type="hidden" value=""><input id="AVATAR3" name="AVATAR3" type="hidden" value="0">
+                                        <span id="fsUploadProgress" class="flash" style="display:inline-block;"></span>
+
+                                         </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td ></td><td style="font-size:12px;height:30px">小头像文件要求是gif、jpg、png格式，大小不能超过128*128像素 </td>
+                                    </tr>                      
+                                    <tr>
+                                        <td class="Guide-TableData">上传照片：</td><td style="float:left;width:220px;height:30px;"> <span id="PHOTO" style="display:none"></span> &nbsp;<img src="Picture/4_03.png"/>&nbsp;&nbsp;<span><img id="PHOTO1" width="40px" height="40px" class="img-class"></span>
+                                            <input id="PHOTO2" name="PHOTO2" type="hidden" value=""><input id="PHOTO3" name="PHOTO3" type="hidden" value="">
+                                            <span id="fsUploadProgress2" class="flash" style="display:inline-block;"></span>                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td ></td><td style="font-size:12px;height:30px">照片文件要求是gif、jpg、png格式，大小不能超过200*300像素 </td>
+                                    </tr>
+                                 </table>	
+                            </div>
+                        </div>                       
+                        <div class="controll-bar-second">
+                            <input type="button" class="prev"  value="上一步" />&nbsp;&nbsp;
+                            <input type="button" class="next"  value="下一步" />&nbsp;&nbsp;
+                            <input type="button" class="cancle"  value="取消" />&nbsp;&nbsp;
+                        </div> 						 							   							
+                    </div>     		
+                </div>
+                <div class="page">
+                    <div class="explorer-list-group list" >
+                        <span class="head" style="display:none">步骤四：<lable>设置界面主题</lable></span>							
+                        <div class="first">
+                            <div class="second-content" style="font-size:14px">
+                                <div style="float:left"><img src="Picture/5.1_06.png"/></div>
+                                <div style="float:left;padding:20px;color:#fff">界面主题：                                   
+                                </div>
+                                <div class="theme-class">
+                                    <a  class="theme-setting " index="1"><img src="Picture/5_01.png" width="75px" height="75px" /><span >儒雅深沉</span></a>
+                                    <a  class="theme-setting "" index="2"><img src="Picture/5_02.png" /><span >清新怡然</span></a>
+                                    <a  class="theme-setting "" index="9"><img src="Picture/5_09.png" /><span >生命与自然之美</span></a>
+                                    <a  class="theme-setting "" index="10"><img src="Picture/5_10.png" width="75px" height="75px" /><span >宁静的思考</span></a>
+                                    <a  class="theme-setting current"" index="13"><img src="Picture/5_13.png" width="75px" height="75px" /><span >现代或未来</span></a>
+                                    <input type="hidden" id="THEME_VALUE" name="THEME_VALUE" value="13"/>
+                                </div>                               
+                            </div>
+                        </div>	
+                        <div class="controll-bar-second">                            
+                            <input type="button" class="prev"  value="上一步" />&nbsp;&nbsp;
+                            <input type="button" class="next"  id="sub" value="保存" />&nbsp;&nbsp;
+                            <input type="button" class="cancle"  value="取消" />&nbsp;&nbsp;
+                        </div>						 							   							
+                    </div>       		
+                </div>
+                <div class="page">
+                    <div class="explorer-list-group list" >
+                        <div class="first">
+                            <div class="second-content">
+                                <span id="submit" style="font-size: 27px;color: #fff;font-weight: bolder;">正在发送请求，请稍后</span>
+                                <span id="success" style="font-size: 27px;color: #fff;font-weight: bolder;display:none;">恭喜您完成基本设置！<br/><br/><a id="a1" href="/general/person_info" target="_blank" style="color: #F7E409;text-decoration: none;">点击进入高级设置</a></span>
+                                <span id="failed" style="font-size: 27px;color: #fff;font-weight: bolder;display:none;">数据保存失败</span>
+                            </div>
+                        </div>
+                        <div class="controll-bar-second">
+                            <input type="button" class="prev"  value="上一步" />&nbsp;&nbsp;
+                            <input type="button" class="next"  id="sub1" value="完成" />&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</div>
+<body>
+<style>
+.vmPanel{padding-left:9px;margin: 10px 0;background: url("Images/sound_bg.png") no-repeat left top;height:38px;line-height:38px;cursor:pointer;}
+.vmContent {background:url("Images/sound_bg.png") no-repeat right -38px;font-size:12px; font-weight:bold; color:#668A0D; text-align:right;padding-right: 10px;} 
+.vmContent .icoVoice, .vmContent .icoVoicePlaying, .vmContent .icoVoiceDown {float:left;width:32px;height:32px;margin-top:4px;display: inline;}
+.vmContent .icoVoice{background: url("Images/icon_sound.png") no-repeat 0 3px;}
+.vmContent .icoVoiceDown{background: url("Images/icon_download.png") no-repeat -32px 0;} 
+.vmContent .icoVoicePlaying{background: url("Images/you_voice_play.gif") no-repeat 0 4px;}
+.vmPanel.vmYou{background-position:left top;}
+.vmPanel.vmYou .vmContent{background-position:right -38px;}
+
+.vmPanel.vmMe{background-position:left -76px;}
+.vmPanel.vmMe .vmContent{background-position:right -114px;color:#9e9e9e;}
+.vmPanel.vmMe .vmContent .icoVoice{background: url("Images/icon_sound.png") no-repeat -31px 3px;}
+.vmPanel.vmMe .vmContent .icoVoiceDown{background: url("Images/icon_download.png") no-repeat 0 0;}
+.vmPanel.vmMe .vmContent .icoVoicePlaying{background: url("Images/me_voice_play.gif") no-repeat 0 5px;}
+
+.emotions{vertical-align:middle;}
+.imPanel, a.fmPanel, .lmPanel{margin:5px 0;}
+
+a.fmPanel{border-radius: 2px;display: block;width: 182px;height: 40px;line-height: 40px;background: url(Images/download.jpg) no-repeat;text-decoration:none;}
+a.fmPanel span{display: block;padding-left: 50px;background-position: 4px center;background-repeat: no-repeat;color: #9e9e9e;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+.lmPanel{display:inline-block;height: 18px;padding-left: 20px;line-height: 18px;background: url(Images/location.png) no-repeat;}
+</style>
+<script src="Scripts/ispirit.js"></script>
+<script type="text/javascript">
+(function($){
+
+var imageMsg = {
+  init: function(){
+      $(document).delegate(".imPanel[node-type='tMImage']", "click", function(e)
+      {
+          var _href = $(this).attr('node-data'); 
+          e.stopPropagation();
+
+          if(typeof(window.external.PlayVoiceMsg) == "undefined")
+          {
+              mytop=(screen.availHeight-510)/2;
+              myleft=(screen.availWidth-660)/2;
+              window.open(_href, "imageShow", "height=510, width=660, top="+mytop+", left="+myleft+",toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=no, status=no");
+          }else{
+              if(parent && parent.openURL)
+              {
+                  parent.openURL(_href);  
+              }
+          }
+          return;
+      });
+  }
+}
+
+var voiceMsg = {
+  "init": function(){
+      $(document).delegate(".vmPanel[action-type='play']", "click", function(e)
+      {
+          e.stopPropagation();
+
+          if(typeof ($(this).attr("status")) == "undefined")
+              var status = "stop";
+          else
+              var status = $(this).attr("status");
+
+          if(status == "stop")
+          {
+              $(this).attr("status", "palying");
+              voiceMsg.play($(this));
+              $(this).attr("title", "点击停止播放");
+          }else{
+              $(this).attr("status", "stop");
+              voiceMsg.stop();
+              $(this).attr("title", "点击播放");
+          }
+          return;
+      });
+     
+      $(document).delegate(".vmPanel[action-type='download']", "click", function(){voiceMsg.download($(this));});
+  },
+  "play": function(handler)
+  {
+      var voice_data = handler.attr("action-data");
+      this.stop();
+      handler.find("[un='voiceStatus']").attr("class", "icoVoicePlaying");
+      if(typeof(window.external.PlayVoiceMsg) == "undefined"){
+
+      }else{
+        window.external.PlayVoiceMsg(voice_data);  
+      }
+  },
+  "stop": function()
+  {
+      if(typeof(window.external.StopVoiceMsg) == "undefined"){     
+      }else{
+        window.external.StopVoiceMsg("");
+      }
+      StopVoiceMsg();
+  },
+  "download": function(handler){
+      var voice_data = handler.attr("action-data-url");
+      window.open(voice_data);
+  }
+}
+
+$(function(){ replaceVMDom();voiceMsg.init();imageMsg.init();});
+
+})(jQuery);
+
+function replaceVMDom()
+{
+
+  if(!window.external) return;
+  
+  if(typeof(window.external.OA_SMS) == "undefined")
+  {
+    //默认是下载不需要替换
+  }else{
+    if(!window.external.OA_SMS("", "", "GET_VERSION") || window.external.OA_SMS("", "", "GET_VERSION") < '20121210')
+    {
+      var vm = jQuery(".vmPanel");
+      vm.before("<span style='color:red'>系统提示：客户端版本过低，请升级客户端</span>");
+      vm.remove();
+    }else{
+
+      //有通过后台传值判断精灵的部分不替换
+      if(jQuery(".vmPanel").size() > 0)
+      {
+        var defaultaction = jQuery(".vmPanel").eq(0).attr("action-type");
+        if(defaultaction == "play" && typeof(window.external.PlayVoiceMsg)!="undefined") 
+          return;
+
+      }else{
+        return;
+      }
+
+      jQuery(".vmPanel").each(function()
+      {
+          jQuery(this).attr({
+              "action-type" : "play",
+              "title" : "点击播放"
+          });
+          jQuery(this).find("[un='voiceStatus']").attr("class", "icoVoice");
+      });
+    }
+  }
+}
+
+function StopVoiceMsg(){
+  jQuery("[un='voiceStatus']").attr("class", "icoVoice"); 
+}
+
+top.StopVoiceMsg = StopVoiceMsg;
+
+</script>
+   <div id="loading" class="loading" style="width:100%;height:100%;margin-top:100px;padding-top:100px;text-align:center;color:#1547b8;font-size:32px;font-family:微软雅黑,宋体;"></div>
+   <div id="north">
+      <div id="north_left">
+         <img src="Picture/product.png" align="absmiddle" />      </div>
+      <div id="north_right">
+         <div id="datetime"><div id="time_area"></div><div id="date" title="2015年7月9日">7月9日星期四</div> <div id="mdate" title="农历 五月廿四">农历五月廿四</div></div>
+         <div id="weather"></div>
+         <!-- 天气预报 -->
+         <div id="area_select">
+           <div>
+              <select id="w_province" onChange="InitCity(this.value);"></select>
+              <select id="w_city" onChange="InitCounty(this.value);"></select>
+              <select id="w_county"></select>
+           </div>
+           <div>
+              <input type="button" value="确定" class="SmallButton" onClick="GetWeather('1');">
+              <input type="button" value="取消" class="SmallButton" onClick="$('area_select').style.display='none';$('weather').style.display='block';">
+           </div>
+         </div>
+      </div>
+   </div>
+   <div id="taskbar">
+      <div id="taskbar_left">
+         <a href="javascript:;" id="start_menu" hidefocus="hidefocus" data-step="1" data-intro="<b style='display:block'>主菜单按钮的使用</b>您已进入到通达OA主操作界面，您可以点击“菜单”按钮，展开系统主菜单" data-position="right"></a>
+      </div>
+      <div id="taskbar_center">
+         <div id="tabs_left_scroll"></div>
+         <div id="tabs_container"></div>
+         <div id="tabs_right_scroll"></div>
+      </div>
+      <div id="taskbar_right">
+
+         <a id="task_center" href="javascript:;" hidefocus="hidefocus" title="任务中心" data-step="5" data-intro="<b style='display:block'>任务中心</b>点击进入“任务中心”，可以看到按时间和紧急程度排序的待办任务，并可快速建立任务" data-position="left"></a>
+         <a id="help" href="/module/help/" hidefocus="hidefocus" title="通达OA在线帮助" data-step="6" data-intro="<b style='display:block'>通达OA在线帮助</b>“通达OA在线帮助”汇集了常见的用户问题，帮助用户快速掌握软件各项功能的使用" data-position="left" target="_blank"></a>
+         <a id="person_info" href="javascript:;" hidefocus="hidefocus" title="控制面板" data-step="7" data-intro="<b style='display:block'>控制面板</b>点击进入“控制面板”，可以进行界面设置、个人信息设置、账号与安全设置" data-position="left"></a>
+         <a id="theme" href="javascript:;" hidefocus="hidefocus" title="更换界面主题" data-step="8" data-intro="<b style='display:block'>更换皮肤</b>通达OA为您提供了完备的界面换肤功能，通过“更换皮肤”按钮，一触即换" data-position="left"></a>
+         <a id="logout" href="###" hidefocus="hidefocus" title="注销登录" data-step="9" data-intro="<b style='display:block'>注销登录</b>点击“注销登录”按钮，即可注销当前用户，安全退出系统并回到登录界面" data-position="left"></a>
+         <a id="hide_topbar" href="javascript:;" hidefocus="hidefocus" title="隐藏/显示顶部" data-step="10" data-intro="<b style='display:block'>隐藏/显示顶部</b>点击“隐藏/显示顶部”按钮，即可隐藏或显示主界面顶部的栏目，便于获得更大的操作界面" data-position="left"></a>
+      </div>
+   </div>
+   <div id="funcbar">
+      <div id="funcbar_left"></div>
+      <div id="funcbar_right">
+         <div class="search" data-step="11" data-intro="<b style='display:block'>搜索框</b>通过“搜索框”，可以快速搜索用户或通达OA在线帮助" data-position="left">
+            <div class="search-body">
+               <div class="search-input"><input id="keyword" type="text" value=""></div>
+               <div id="search_clear" class="search-clear" style="display:none;" onClick="document.getElementById('keyword').value = '';this.style.display = 'none';"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   <div id="center">
+   </div>
+      <div id="south">
+      <table>
+         <tr>
+            <td class="left"><div id="online_link" onClick="ViewOnlineUser()" title="共 138 人，3 人在线">在线<span id="user_count">3</span>人</div></td>
+            <td class="left"><div id="new_sms"></div><span id="new_sms_sound" style="width:1px;height:1px;"></span></td>
+            <td class="center">
+            	<div id="status_text">Office Anywhere 2013 教育版<br>中国教育协同OA软件领跑者<br>科技为教育服务   为助力孩子快乐成长<br></div>
+            </td>        
+                        <td style="cursor:hand;" class="right">
+                            </td>
+            <td class="right">
+            	<a id="nocbox" class="ipanel_tab" href="javascript:;" panel="noc_panel" title="事务提醒" hidefocus="hidefocus" data-step="12" data-intro="<b style='display:block'>事务提醒</b>通达OA独具“事务提醒” 功能，让您快速、准确地获得各项事务的提醒消息，及时处理各项事务，工作效率倍增" data-position="top"></a>
+               <a id="smsbox" class="ipanel_tab" href="javascript:;" panel="smsbox_panel" title="微讯盒子" hidefocus="hidefocus" data-step="13" data-intro="<b style='display:block'>微讯盒子</b>通达OA内置“微讯”功能，提供人性化沟通平台，可实现浏览器、OA精灵PC客户端及手机等移动设备的统一通讯，满足随时随地沟通的需要" data-position="top"></a>
+					
+               <a id="org" class="ipanel_tab" href="javascript:;" panel="org_panel" title="组织列表" hidefocus="hidefocus" data-step="14" data-intro="<b style='display:block'>组织列表</b>组织列表，可显示在线人员和全部人员，可快速查看人员信息或与之联络" data-position="top"></a>
+            </td>
+         </tr>
+      </table>
+   </div>
+   
+   <!-- 导航菜单 -->
+   <div id="start_menu_panel">
+      <div class="panel-head"></div>
+      <!-- 登录用户信息 -->
+      <div class="panel-user">
+         <div class="avatar">
+            <img src="Picture/0.gif" align="absmiddle" />
+            <div class="status_icon status_icon_1"></div>
+            <div id="on_status">
+               <a href="javascript:;" status="1" class="on_status_1" hidefocus="hidefocus">在线</a>
+               <a href="javascript:;" status="2" class="on_status_2" hidefocus="hidefocus">忙碌</a>
+               <a href="javascript:;" status="3" class="on_status_3" hidefocus="hidefocus">离开</a>
+            </div>
+         </div>
+         <div class="name" title="部门：学校部门/教务处
+角色：教务管理员
+在线：1277小时15分">陈长流</div>
+         <div class="tools">
+            <a class="logout" href="###" onClick="logout();" hidefocus="hidefocus" title="注销"></a>
+            <a class="exit" href="###" onClick="exit();" hidefocus="hidefocus" title="退出"></a>
+         </div>
+      </div>
+      <div class="panel-menu">
+         <!-- 一级菜单 -->
+         <div id="first_panel" data-step="2" data-intro="<b style='display:block'>菜单导航</b>利用“菜单导航”功能，您可以找到所需要的功能选项" data-position="right">
+            <div class="scroll-up"></div>
+            <ul id="first_menu"></ul>
+            <div class="scroll-down"></div>
+         </div>
+         <!-- 二级级菜单 -->
+         <div id="second_panel">
+            <div class="second-panel-head"></div>
+            <div class="second-panel-menu" data-step="3" data-intro="<b style='display:block'>功能子菜单</b>点击某一菜单类别后，可以展开“功能子菜单”，用户可选择进入相应的功能" data-position="right"><ul id="second_menu"></ul></div>
+            <div class="second-panel-foot"></div>
+         </div>
+         <!-- 门户菜单 -->
+         <div id="portal_panel" data-step="4" data-intro="<b style='display:block;'>门户列表</b>可以在“门户列表”区域，选择您想打开的门户" data-position="right">
+            <div class="scroll-up"></div>
+            <ul id="portal_menu">
+                <li><a href="javascript:;" onclick="createTab('portal_4', '信息中心', '/general/mytable/intel_view/', '0')"><span class="icon_3">信息中心</span></a></li><li><a href="javascript:;" onclick="createTab('portal_12', '学校门户', '/portal/school/?portal_id=12', '0')"><span class="icon_0">学校门户</span></a></li><li><a href="javascript:;" onclick="createTab('portal_5', '我的桌面', '/portal/personal/', '0')"><span class="icon_5">我的桌面</span></a></li>            </ul>
+            <div class="scroll-down"></div>
+         </div>
+      </div>
+      <div class="panel-foot"></div>
+   </div>
+   <div id="overlay_startmenu"></div>
+
+   <!-- 事务提醒 -->
+   <div id="new_sms_mask"></div>
+   <div id="new_sms_panel">
+      <div class="button">
+         <a class="btn-white-big" href="javascript:;" onClick="ViewNewSms();" hidefocus="hidefocus">打开</a>&nbsp;&nbsp;
+         <a class="btn-white-big" href="javascript:;" onClick="CloseRemind();" hidefocus="hidefocus">关闭</a>
+      </div>
+   </div>
+   
+   <!-- 事务提醒 -->
+   <div id="new_noc_panel">
+   	<div id="new_noc_title">
+   			<span class="noc_iterm_num">共&nbsp;<span></span>&nbsp;条提醒</span>
+   			<span class="noc_iterm_close"></span>
+            <span class="noc_iterm_history"><a id="check_remind_histroy" href="javascript:;" hidefocus="hidefocus">查看历史记录</a></span>
+   	</div> 
+   	<div id="nocbox_tips"></div>
+   	<div id="new_noc_list"></div>
+   	<div class="button">
+         <a id="ViewAllNoc" class="btn-white-big" href="javascript:;" hidefocus="hidefocus">全部已阅</a>
+         <a id="ViewDetail" class="btn-white-big" href="javascript:;" hidefocus="hidefocus">全部详情</a>
+         <a id="CloseBtn" class="btn-white-big" href="javascript:;" hidefocus="hidefocus">关闭</a>
+      </div>					
+   </div>
+   
+   <!-- 短信箱 -->
+   <div id="smsbox_panel" class="dialog" >
+      <div class="head">
+         <div class="head-left"></div>
+         <div class="head-center">
+            <div class="head-title">微讯盒子</div>
+            <div class="head-close"></div>
+         </div>
+         <div class="head-right"></div>
+      </div>
+      <div class="center">
+         <div class="center-left">
+            <div id="smsbox_op_all">
+               <a href="javascript:;" id="smsbox_read_all" hidefocus="hidefocus">全部已阅</a>
+            </div>
+            <div id="smsbox_scroll_up"></div>
+            <div id="smsbox_list">
+               <div id="smsbox_list_container" class="list-container"></div>
+            </div>
+            <div id="smsbox_scroll_down"></div>
+         </div>
+         <div class="center-right">
+            <div class="center-toolbar">
+               <a href="javascript:;" id="smsbox_toolbar_read" hidefocus="hidefocus" title="已阅以下微讯">已阅</a>
+               <a href="javascript:;" id="smsbox_toolbar_delete" hidefocus="hidefocus" title="删除以下微讯">删除</a>
+            </div>
+            <div id="smsbox_msg_container" class="center-chat"></div>
+            <div class="rapid-reply">
+            	 <select id="smsbox_rapid_reply" class="SmallInput" title="请到系统管理->系统代码->微讯快捷回复 进行设置">
+            	 	<option value="">快捷回复</option>
+            	 	            	 </select>
+            </div>
+            <div class="center-reply">
+               <textarea id="smsbox_textarea"></textarea>
+               <a id="smsbox_send_msg" href="javascript:;" hidefocus="hidefocus">发送</a>
+            </div>
+         </div>
+         <div id="smsbox_tips" class="center-tips"></div>
+         <div id="no_sms">
+            <div class="no-msg" title="暂无新微讯">
+               <div class="close-tips">本窗口 <span id="smsbox_close_countdown">3</span> 秒后自动关闭</div>
+               <a class="btn-white-big" href="javascript:;" onClick="send_msg('', '');jQuery('#smsbox').click();" hidefocus="hidefocus">发微讯</a>&nbsp;&nbsp;
+               <a class="btn-white-big" href="javascript:;" onClick="jQuery('#smsbox').click();" hidefocus="hidefocus">关闭</a>
+            </div>
+         </div>
+      </div>
+      <div class="foot">
+         <div class="foot-left"></div>
+         <div class="foot-center"></div>
+         <div class="foot-right"></div>
+      </div>
+      <div class="corner"></div>
+   </div>
+
+   <!-- 组织机构 -->
+   <div id="org_panel" class="ipanel"></div>
+   
+   <!-- 主题切换 -->
+   <div id="theme_panel" class="over-mask-layer">
+      <div class="top">
+         <div class="title">更换界面主题</div>
+      </div>
+      <div class="center">
+         <div class="theme" id="theme_slider"></div>
+         <div class="close">
+            <a class="btn-black-a" href="javascript:;" onClick="jQuery('#theme').click();" hidefocus="hidefocus">关闭</a>
+         </div>
+      </div>
+      <div class="bottom"></div>
+   </div>
+   <div id="overlay_theme"></div>
+      <div id="overlay"></div>
+   <div style="display:none;">
+   </div>
+</body>
+</html>

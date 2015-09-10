@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>广西科技大学体育学院</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="Content/css_public.css">
+<link rel="stylesheet" type="text/css" href="Content/leaddesktop.css">
+<link rel="stylesheet" type="text/css" href="Content/media-queries.css">
+<link rel="stylesheet" type="text/css" href="Content/tahiti.css">
+<script src="Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="Scripts/lead.js"></script>
+
+
+</head>
+
+<body>
+	<div id="header">
+    	<div class="logos">
+        	<div class="tdlogo"><img src="Images/logo.png" width="" height="90" alt=""/></div>
+        </div>
+
+        <div class="btns">
+			<div class="login" onclick="logout()" title="退出"><img src="Picture/logout.png" alt=""/><div class="text">退出系统</div></div>          
+			<div class="logout" onclick="loginoa()" title="进入OA"><img src="Picture/login.png" alt=""/><div class="text">进入OA</div></div>                    
+                            <div class="logout" onclick="loginoa('3')" title="进入班主任空间"><img src="Picture/switch.png" alt=""/><div class="text">空间切换</div></div>
+                    
+                
+        </div>
+        <div class="user_head_ico"><img src="Picture/0.png"/></div>
+        <div class="title_div">
+        	<div class="logo"></div>
+            <div class="username">李佳</div>
+        </div>
+    </div><script >
+function open_emails(EMAIL_ID,BODY_ID,IS_WEB)
+{
+	if(IS_WEB==1)
+	  URL="/general/email/inbox/read_email/read_webemail.php?EMAIL_ID="+EMAIL_ID+"&BOX_ID=0&BODY_ID="+BODY_ID+"&BTN_CLOSE=1";
+	else
+	  URL="/general/email/inbox/read_email/read_email.php?EMAIL_ID="+EMAIL_ID+"&BOX_ID=0&BODY_ID="+BODY_ID+"&BTN_CLOSE=1"; 
+    myleft=0;
+    mytop=0
+    mywidth=screen.availWidth-10;
+    myheight=screen.availHeight-40;
+ 	window.open(URL,"read_email"+EMAIL_ID,"height="+myheight+",width="+mywidth+",status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top="+mytop+",left="+myleft+",resizable=yes");
+}
+
+function send_email2(FROM_ID,FROM_NAME)
+{
+    var top = (screen.availHeight-600)/2;
+    var left= (screen.availWidth-800)/2;
+    window.open("/general/email/new/?TO_ID="+FROM_ID+"&TO_NAME="+FROM_NAME,"","height=600,width=800,status=0,toolbar=no,menubar=no,location=no,scrollbars=no,top="+top+",left="+left+",resizable=yes");
+}
+
+function send_email(FROM_ID,FROM_NAME)
+{
+    var top = (screen.availHeight-600)/2;
+    var left= (screen.availWidth-800)/2;
+    window.open("/general/email/new/?TO_ID="+FROM_ID+"&TO_NAME="+FROM_NAME,"","height=600,width=800,status=0,toolbar=no,menubar=no,location=no,scrollbars=no,top="+top+",left="+left+",resizable=yes");
+}
+
+function open_notify(NOTIFY_ID,FORMAT)
+{
+ URL="/general/notify/show/read_notify.php?NOTIFY_ID="+NOTIFY_ID;
+ myleft=(screen.availWidth-780)/2;
+ mytop=100
+ mywidth=780;
+ myheight=500;
+ if(FORMAT=="1")
+ {
+    myleft=0;
+    mytop=0
+    mywidth=screen.availWidth-10;
+    myheight=screen.availHeight-40;
+ }
+ window.open(URL,"read_notify"+NOTIFY_ID,"height="+myheight+",width="+mywidth+",status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top="+mytop+",left="+myleft+",resizable=yes");
+}
+function open_news(NEWS_ID,FORMAT)
+{
+ URL="/general/news/show/read_news.php?NEWS_ID="+NEWS_ID;
+ myleft=(screen.availWidth-780)/2;
+ mytop=100
+ mywidth=780;
+ myheight=500;
+ if(FORMAT=="1")
+ {
+    myleft=0;
+    mytop=0
+    mywidth=screen.availWidth-10;
+    myheight=screen.availHeight-40;
+ }
+ window.open(URL,"read_news"+NEWS_ID,"height="+myheight+",width="+mywidth+",status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top="+mytop+",left="+myleft+",resizable=yes");
+}
+function re_news(NEWS_ID)
+{
+ URL="/general/news/show/re_news.php?NEWS_ID="+NEWS_ID;
+ myleft=(screen.availWidth-500)/2;
+ window.open(URL,"re_news"+NEWS_ID,"height=400,width=550,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top=150,left="+myleft+",resizable=yes");
+}
+</script>
+        <div id="content" style="height:1105px">
+        <div id="sidebar" class="no_select">
+        	<a href="#"><div class="btn_div first btn_div_select"><div class="btn1"><span>办公桌面</span></div></div></a>
+            <a href="datadesktop.php"><div class="btn_div "><div class="btn2"><span>数据统计</span></div></div></a>
+            <a href="filedesktop.php"><div class="btn_div "><div class="btn3"><span>文件柜</span></div></div></a>
+        </div>
+    	<div class="blocks">
+            <div class="block work" id="switchdiv1">
+            	<div class="main">
+                    <div class="div_title1 no_select">
+                        <div class="switch_btn">待批工作</div>
+                        <div class="switch_btn">已批工作</div>
+                        <span onclick="view_more('workflow','工作流','/general/workflow/list/')" >更多>></span>
+                    </div>
+                    <div class="worklist">
+                    	<div class="wait switch_">                        	
+                            	<ul><li><a href="/general/workflow/list/?FLOW_ID=147">[设备归还]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=606&FLOW_ID=147&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1798" target="_blank">设备归还(2015-07-08 10:03:04) 申请人申请 </a></li><li><a href="/general/workflow/list/?FLOW_ID=134">[个人上网账号申请]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=605&FLOW_ID=134&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1797" target="_blank">校领导-李佳-个人上网账号申请-2015年07月-0043 申请 </a></li><li><a href="/general/workflow/list/?FLOW_ID=130">[收文登记流程]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=597&FLOW_ID=130&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1788" target="_blank">收文2015-1905/ 填写公文基本信息 </a></li><li><a href="/general/workflow/list/?FLOW_ID=130">[收文登记流程]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=600&FLOW_ID=130&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1791" target="_blank">收文2015-1906/ 填写公文基本信息 </a></li><li><a href="/general/workflow/list/?FLOW_ID=148">[设备维修]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=599&FLOW_ID=148&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1790" target="_blank">设备维修(2015-07-03 10:07:48) 申请人申请 </a></li><li><a href="/general/workflow/list/?FLOW_ID=148">[设备维修]</a><img src='Picture/email_open.gif' width=16 height=16 alt='已接收' align='absmiddle'><a href="/general/workflow/list/input_form/?RUN_ID=598&FLOW_ID=148&PRCS_ID=1&FLOW_PRCS=1&PRCS_KEY_ID=1789" target="_blank">设备维修(2015-07-03 09:40:06) 申请人申请 </a></li></ul>                            
+                        </div>
+                        <div class="already switch_">
+                        	    <ul><li><a href="/general/workflow/list/print/?RUN_ID=572&FLOW_ID=138&PRCS_KEY_ID=1760" target="_blank">[工作请示]【学校部门/校领导】报修单【2015-0093】</a></li><li><a href="/general/workflow/list/print/?RUN_ID=567&FLOW_ID=131&PRCS_KEY_ID=1751" target="_blank">[发文登记流程]发文[2015-0041]</a></li><li><a href="/general/workflow/list/print/?RUN_ID=558&FLOW_ID=138&PRCS_KEY_ID=1738" target="_blank">[工作请示]【学校部门/校领导】报修单【2015-0090】</a></li><li><a href="/general/workflow/list/print/?RUN_ID=542&FLOW_ID=149&PRCS_KEY_ID=1718" target="_blank">[设备变更]设备变更(2015-06-11 22:22:32)</a></li><li><a href="/general/workflow/list/print/?RUN_ID=141&FLOW_ID=148&PRCS_KEY_ID=1648" target="_blank">[设备维修]设备维修(2014-11-28 09:30:31)</a></li><li><a href="/general/workflow/list/print/?RUN_ID=479&FLOW_ID=130&PRCS_KEY_ID=1640" target="_blank">[收文登记流程]收文2015-1873/</a></li><ul>                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="block schedule">
+            	<div class="main">
+                	<div class="div_title no_select">领导日程
+                    	<span>
+                   			<select onChange="calenda.change()" id="calenda1">                            	
+                            </select>
+                        </span>
+                    </div>
+                    <table class="no_select">
+                    	<tr height="50" class="td_head">
+                        	<td class="gray1">星期日</td>
+                            <td>星期一</td>
+                            <td>星期二</td>
+                            <td>星期三</td>
+                            <td>星期四</td>
+                            <td>星期五</td>
+                            <td class="gray1">星期六</td>
+                        </tr>                                                
+                    </table>
+                    <div class="schedule_info">
+                    	<div class="head">
+                        	<div class="close_btn no_select"><span onClick="calenda.hideinfo()">×</span></div>
+                            <div class="more no_select"><span onClick="view_more('calendar','日程安排','/general/calendar/arrange/')">更多>></span></div>
+                            <div class="title"></div>
+                        </div>
+                        <ul>
+                        	
+                        </ul>
+                    </div>
+                </div>               
+            </div>
+
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">电子邮件<span onclick="view_more('email','电子邮件','/general/email/')">更多>></span></div>
+                    	<ul><li><a title="发送内部邮件，部门：学校部门/校领导" href="javascript:send_email('lijia','李佳')" >李佳</a> <a href="javascript:open_emails(330,80,0)"; title="">111</a></li><li><a title="发送内部邮件，部门：学校部门/校领导" href="javascript:send_email('lijia','李佳')" >李佳</a> <a href="javascript:open_emails(319,69,0)"; title="">Re:cnm</a></li><li><a title="发送内部邮件，部门：学校部门/校领导" href="javascript:send_email('lijia','李佳')" >李佳</a> <a href="javascript:open_emails(311,68,0)"; title="">Fw:jxw-test</a></li><li><a title="发送内部邮件，部门：学校部门/校领导" href="javascript:send_email('lijia','李佳')" >李佳</a> <a href="javascript:open_emails(308,67,0)"; title="">aqf</a></li><li><a title="发送内部邮件，部门：学校部门/校领导" href="javascript:send_email('lijia','李佳')" >李佳</a> <a href="javascript:open_emails(290,60,0)"; title="">cnm</a></li><li><a title="发送内部邮件，部门：学校部门/教研组/语文教研组" href="javascript:send_email('tianjia','田佳')" >田佳</a> <a href="javascript:open_emails(261,23,0)"; title="">jxw-test</a></li></ul>     
+                </div>
+            </div>
+            <div class="block notice">
+            	<div class="main">
+                	<div class="div_title no_select">公告通知<span onclick="view_more('notify','公告通知','/general/notify/show/')">更多>></span></div>
+                        <ul><li><a href="/general/notify/show/notify.php?TYPE=04">【其他】</a><a href="javascript:open_notify(19,0);" title=""><font color='#000000'>测试数据111111发布11111</font></a><label title=阅读人数:6>(6)</label>&nbsp;(2014-11-18)</li><li><a href="javascript:open_notify(17,0);" title=""><font color=''>hhjgfh</font></a><label title=阅读人数:1>(1)</label>&nbsp;(2014-10-17)</li><li><a href="/general/notify/show/notify.php?TYPE=01">【决定】</a><a href="javascript:open_notify(16,0);" title=""><font color=''>jxw-09</font></a><label title=阅读人数:2>(2)</label>&nbsp;(2014-10-11)</li><li><a href="/general/notify/show/notify.php?TYPE=04">【其他】</a><a href="javascript:open_notify(15,0);" title=""><font color=''>测试数据111111</font></a><label title=阅读人数:8>(8)</label>&nbsp;(2014-09-26)</li><li><a href="javascript:open_notify(14,0);" title=""><font color='#630098'>测试数据</font></a><label title=阅读人数:6>(6)</label>&nbsp;(2014-08-01)</li></ul>      
+                </div>
+            </div>
+            <div class="block news">
+            	<div class="main">
+               		<div class="div_title no_select">学校新闻<span onclick="view_more('news','学校新闻','/general/news/show/')">更多>></span></div>
+                        <ul><li><a href="javascript:open_news(2,0);" title=""><font color=''>111111111</font></a><label title=_("点击次数：150")>(150)</label>&nbsp;<a href="javascript:re_news(2);" style="text-decoration:underline">评论</a>(4)&nbsp;(2014-08-12)</li></ul>           
+                </div>
+            </div>
+            <div class="block meeting">
+            	<div class="main">
+                	<div class="div_title no_select">我的会议<span onclick="view_more('meeting','我的会议','/general/meeting/apply/query.php?M_STATUS=1')">更多>></span></div>
+                       <ul><li>未来7天暂无会议</li></ul>                
+                </div>
+            </div>
+         </div>
+    </div>
+    <script>
+	$(document).ready(function(e) {
+		//$("#switchdiv1").DivSwitch({id:"switchdiv1",btn:"switch_btn",btn_class0:"divBG1",btn_class1:"divBG2",detailed:"switch_",time:"500"}); 
+		$(document).click(function(){
+			calenda.hideinfo();
+		});
+		calenda.getoption();
+	    calenda.showcalenda(calenda.getNowDate().Y,calenda.getNowDate().M);
+		//calenda.addeventpoint(18)
+		calenda.geteventpoint();
+	});
+</script>
+
+ 	<!--尾部-->
+	<div id="footer">
+        <div class="line6">
+                <div class="linklogo"></div>
+            <div class="links">                                
+                            <div class="link"><div><a href="http://www.moe.gov.cn/"  title="中华人民共和国教育部"  target="_blank" >中华人民共和国教育部</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A06/index.html"  title="教育部基础教育一司"  target="_blank" >教育部基础教育一司</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A26/index.html"  title="教育部基础教育二司"  target="_blank" >教育部基础教育二司</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/A10/index.html"  title="教育版教师工作司"  target="_blank" >教育版教师工作司</a></div></div><div class="link"><div><a href="http://www.ict.edu.cn/"  title="中国教育信息化网"  target="_blank" >中国教育信息化网</a></div></div><div class="link"><div><a href="http://www.eol.cn/"  title="中国教育在线"  target="_blank" >中国教育在线</a></div></div><div class="link"><div><a href="http://www.wei.moe.edu.cn/zh/"  title="世界教育信息网"  target="_blank" >世界教育信息网</a></div></div><div class="link"><div><a href="http://www.cetv.edu.cn/"  title="中国教育网络电视台"  target="_blank" >中国教育网络电视台</a></div></div><div class="link"><div><a href="http://www.csc.edu.cn/"  title="国家留学网"  target="_blank" >国家留学网</a></div></div><div class="link"><div><a href="http://www.cbern.gov.cn/derscn/portal/index.html"  title="国家基础教育资源网"  target="_blank" >国家基础教育资源网</a></div></div><div class="link"><div><a href="http://yuer.cbern.gov.cn/"  title="科学育儿网"  target="_blank" >科学育儿网</a></div></div><div class="link"><div><a href="http://www.jyb.cn/"  title="中国教育新闻网"  target="_blank" >中国教育新闻网</a></div></div><div class="link"><div><a href="http://www.moe.gov.cn/business/htmlfiles/moe/s5174/index.html"  title="中华人民共和国教育部高等教育司"  target="_blank" >中华人民共和国教育部高等教育司</a></div></div>            </div>
+                                	
+        </div>
+                <div class="line7">
+            <div id="unit">
+                柳州微度网络科技<br>
+                地址：&nbsp;&nbsp;柳州市桂中大道 阳光100 二号楼 7-3室 &nbsp;&nbsp;&nbsp;微度网络服电话:&nbsp;&nbsp;15078252920           </div> 
+        </div> 
+    </div>
+</body>
+
+<script type="text/javascript" src="Scripts/tahiti.js"></script>	
+<script>
+//退出登录
+var loginUser = {uid:12, user_id:"lijia", user_name:"李佳"};
+var logoutText = "轻轻的您走了，正如您轻轻的来……";
+function logout()
+{  
+   var msg = "您确定要退出吗？";
+    confirm(msg,function(){
+        relogin=1;
+        window.location="/general/relogin.php";             
+    });
+}
+//进入OA
+//type 1：进入oa ； 2：领导空间；3：教师空间；4：任课教师空间
+function loginoa(type)
+{
+    if(type=="2")
+    {
+        window.location="/portal/school/leader/";
+    }
+    else if(type=="3")
+    {
+        window.location="/portal/school/teacher/";
+    }
+    else if(type=="4")
+    {
+        window.location="/portal/school/classroom_teacher/";
+    }
+    else
+    {
+        window.location="/general/";
+    }
+}
+//打开全部
+function view_more(name,label,url)
+{
+   openURL(url, name, label);
+}
+
+function openURL(url, name, label)
+{
+   if(window.top.bTabStyle)
+      window.top.openURL(name, label, url);
+   else if(window.top != self && typeof(window.top.openURL) == 'function')
+      window.top.openURL(url);
+   else
+      window.open(url,'name','height=600,width=800,status=1,toolbar=no,menubar=no,location=no,scrollbars=yes,top=0,left=(screen.availWidth-500)/2,resizable=yes');
+}
+
+</script>
+
+
+</html>

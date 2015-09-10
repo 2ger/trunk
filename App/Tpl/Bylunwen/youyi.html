@@ -1,0 +1,64 @@
+<layout name='Layout/ace_layout' />
+
+<div id="content" style="height:750px;">
+			
+				<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting" style="height:auto">
+				<div class="main">
+					<div class="div_title no_select">
+						毕业论文
+                        <span>
+ 								   <eq name="position_id" value="1">
+ 								  	 <a href="{:U('flow/add?type=90')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>答辩主任</a>
+ 								   </eq>
+								</span>
+					</div>
+					<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+						<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">评优异</a> 
+										<i class="fa fa-angle-double-right
+										"></i>
+										<switch name="step1" >
+										   <case value="1" ><a href="{:U('flow/read')}?id={$flowid}" class="btn btn-success">答辩主任</a></case>
+										   <default />
+										   <eq name="position_id" value="1">
+										  	 <a href="{:U('flow/add?type=90')}" class="btn btn-danger">答辩主任</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="btn">答辩主任</a>
+										   </eq>
+										   </switch>
+										
+										 <i class="fa fa-arrow-right"></i>
+										 <switch name="step2">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-danger">教务秘书</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-success">教务秘书</a> </case>
+										     <default />	<a class="btn  btn-default"> 教务秘书</a>	
+										 </switch>
+										 
+									 
+								    </div>
+								</div>
+
+                                
+						
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">工作记录</div>
+                	<ul>
+                <volist name="flow" id="vo">
+					<li>
+						<a href="{:U('flow/read')}?id={$vo.id}">【{$vo.user_name}】<font color="#000000">{$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d',###})
+					</li>
+               </volist>
+                        </ul>
+                </div>
+            </div>
+            
+         </div>
+			</div>
