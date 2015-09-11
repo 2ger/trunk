@@ -1767,7 +1767,7 @@ function allget_action_weekone($week, $one,$type){
  	if ($two !="") {
  		$string = " and two='$two' ";
  	}
-	if(get_user_id()!='84')
+	if(get_user_id()!='102')
 	{
 	$oneweek=M('document_syllabus')->where("week=$week and one='$one' ".$string)->select();
 	$coun=M('document_syllabus')->where("week=$week and one='$one' ".$string)->count();

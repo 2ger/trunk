@@ -1,0 +1,328 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<head>
+	<meta charset="utf-8" />
+	<title>体育学院教学工作OA-全部课程</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- basic styles -->
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css"  />
+
+		<script src="__PUBLIC__/v2/Scripts/jquery.min.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/trunk/Public/v2/Content/pure-min.css" type="text/css">
+
+
+	<!-- inline styles related to this page -->
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+	<!-- ace settings handler -->
+
+
+
+	<script type="text/javascript">
+	var upload_url = "__APP__/index.php/teaching/upload";
+	var del_url = "__APP__/index.php/teaching/del_file";
+	var _hmt = _hmt || [];
+	var app_path = "__APP__";
+
+</script>
+
+
+</head>
+
+
+				   <form class="form-horizontal no-margin" action="__SELF__" method="post">
+                  <!-- Modal -->
+                  <div id="a" class="modal  fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 500px;height: 485px;display: none;left: 40%;top: 10%;">
+                    <div class="modal-header"style="background: #EFF3F8;">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h3 id="myModalLabel">操作课程</h3>
+                    </div>
+                    <div class="modal-body" style="background: #EFF3F8;"> 
+                      <input type="hidden" id="week"  name="week" value=""/>
+                      <input type="hidden"  id="one"  name="one" value=""/>
+                      <input type="hidden"  id="uid"  name="uid" value=""/>
+                      <input type="hidden"  id="action"  name="action" value="1"/>
+					  <!--  <input type="hidden"  id="type"  name="type" value="1"/>-->
+    				 <div class="form-group"> 
+                        <!-- Select Basic -->
+                        <label class="col-sm-3 control-label">类型</label>
+                        <div class="col-sm-3">
+                          <select name="type" class="form-control">
+                              <option  value='1'  selected="selected">公体</option>
+							    <option value='2' >专业</option>
+                          </select>
+                        </div>
+                        <label class="col-sm-3 control-label">年级</label>
+                        <div class="col-sm-3">
+                          <select name="two" class="form-control">
+                              <option  value='1'  selected="selected">A1</option>
+							    <option  value='3' >A3</option>
+							    <option  value='2' >柳石校区</option>
+                          </select>
+                        </div>
+                      </div>
+					  <div class="form-group"> 
+	                        <label class="col-sm-3 control-label">老师</label>
+	                        <div class="col-sm-9">
+	                          <select name="teacher" class="form-control">
+	                            <?php if(is_array($teacher)): $i = 0; $__LIST__ = $teacher;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option  ><?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+	                          </select>
+	                        </div>
+                      </div>
+                      <div class="form-group"> 
+                        <!-- Select Basic -->
+                        <label class="col-sm-3 control-label">课程</label>
+                        <div class="col-sm-9">
+
+	                    	<input type="text" name="course" id="course" class="form-control" placeholder="如：篮球">
+                          <select name="" class="form-control hidden">
+                            <?php if(is_array($member)): $i = 0; $__LIST__ = $member;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option  ><?php echo ($vo["course"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                          </select>
+                        </div>
+                      </div>
+
+					  <div class="form-group"> 
+                        <!-- Select Basic -->
+                        <label class="col-sm-3 control-label">起止周</label>
+                        <!-- <label class="col-sm-1 control-label">从</label> -->
+                        <div class="col-sm-3">
+                        	<input type="text" name="wfs" id="wfs" class="form-control" placeholder="如：1-5">
+                        </div>
+                        <label class="col-sm-1 control-label">周</label>
+                      </div>
+
+					        <div class="form-group"> 
+                        <!-- Select Basic -->
+                        <label class="col-sm-3 control-label">总课时数</label>
+                        <div class="col-sm-3">
+                    	<input type="text" name="period" id="period" class="form-control" placeholder="如：50">
+                       
+                        </div>
+                      </div>
+
+					        <div class="form-group"> 
+                        <!-- Select Basic -->
+                        <label class="col-sm-3 control-label">上课地点</label>
+                        <div class="col-sm-9">
+						<input type="text" name="place" id="place" class="form-control" placeholder="如：4A202">
+                    
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer" style="margin-top:0 ;  background-color: #EFF3F8; ">
+                      <button class="btn btn-success">添加</button>
+                      <button class="btn btn-primary">修改</button>
+                      <button class="btn btn-danger">删除</button>
+                      <div class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</div>
+                    </div>
+                  </div>
+                </form>
+             <script type="text/javascript">
+        $(function(){
+		
+            //用jQuery获取table中td值
+            $("#mytable td a").click(function(){
+				
+				 $("#week").val($(this).attr('week'));
+				 $("#one").val($(this).attr('one'));
+				  $("#uid").val($(this).attr('uid'));
+              //  alert("table td value值："+$(this).attr('one'));
+            });
+
+
+			  $("#mysff td a").click(function(){
+				
+				// $("#week").val($(this).attr('week'));
+				//$("#one").val($(this).attr('one'));
+				  $("#mid").val($(this).attr('mid'));
+               // alert("table td value值："+$(this).attr('value'));
+            });
+
+
+			$(".btn-success").click(function(){
+				 $("#action").val('1');
+              
+            });
+				$(".btn-primary").click(function(){
+				 $("#action").val('2');
+              
+            });
+				$(".btn-danger").click(function(){
+				 $("#action").val('3');
+              
+            });
+			
+
+        });
+        </script>
+			 	<!-- basic styles -->
+			 	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css"  /> 
+				<style type="text/css" media="screen">
+				td{font-size:12px; text-align:center;}
+				</style>
+				<div class="container">
+					<div class="row">
+					    <div class="col-sm-12">
+							<br />
+					<a href="__APP__/teaching/allkechengbiao/type/" class="btn btn-info btn-sm">全部课程</a>
+					<a href="__APP__/teaching/allkechengbiao/type/1" class="btn btn-success btn-sm">公共体育</a>
+					<a href="__APP__/teaching/allkechengbiao/type/2" class="btn btn-warning btn-sm">体育专业</a>
+					<a href="__APP__/teaching/allkechengbiao/two/1" class="btn btn-success btn-sm">A1</a>
+					<a href="__APP__/teaching/allkechengbiao/two/3" class="btn btn-success btn-sm">A3</a>
+					<a href="__APP__/teaching/allkechengbiao/two/2" class="btn btn-success btn-sm">柳石校区</a>
+						<?php echo ($text); ?>
+					    </div>
+					   
+					</div>
+				</div>
+                       <table  class="table table-striped table-bordered table-condensed" style="margin:5px 20px; width:95%;clear:both;width" id="mytable">
+					                        <thead>
+					                          <tr>
+					                            <th class="">
+					                              时间
+					                            </th>
+					                            <th>
+					                              星期一
+					                            </th>
+					                            <th>
+					                              星期二
+					                            </th>
+					                            <th class="hidden-phone">
+					                             星期三
+					                            </th>
+					                            <th class="hidden-phone">
+					                             星期四
+					                            </th>
+					                            <th class="hidden-phone">
+					                              星期五
+					                            </th>
+					                          </tr>
+					                        </thead>
+					                        <tbody>
+					                          <tr class="">
+					                            <td>
+					                              1-2节
+					                            </td>
+					                            <td>
+					                              <?php echo allget_action_weekone(1,"1",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(2,"1",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(3,"1",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(4,"1",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(5,"1",$type);?>
+					                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               3-4节
+					                            </td>
+					                            <td>
+					                              <?php echo allget_action_weekone(1,"2",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(2,"2",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(3,"2",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(4,"2",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(5,"2",$type);?>
+					                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               5节
+					                            </td>
+					                            <td>
+					                              <?php echo allget_action_weekone(1,"6",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(2,"6",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(3,"6",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(4,"6",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(5,"6",$type);?>
+					                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               6-7节
+					                            </td>
+				                            <td>
+				                              <?php echo allget_action_weekone(1,"3",$type);?>
+				                            </td>
+				                            <td class="hidden-phone">
+				                              <?php echo allget_action_weekone(2,"3",$type);?>
+				                            </td>
+				                            <td class="hidden-phone">
+				                              <?php echo allget_action_weekone(3,"3",$type);?>
+				                            </td>
+				                            <td class="hidden-phone">
+				                              <?php echo allget_action_weekone(4,"3",$type);?>
+				                            </td>
+				                            <td class="hidden-phone">
+				                              <?php echo allget_action_weekone(5,"3",$type);?>
+				                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               8-9节
+					                            </td>
+					                            <td>
+					                              <?php echo allget_action_weekone(1,"4",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(2,"4",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(3,"4",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(4,"4",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(5,"4",$type);?>
+					                            </td>
+					                          </tr>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               11-12节
+					                            </td>
+					                            <td>
+					                              <?php echo allget_action_weekone(1,"5",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(2,"5",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(3,"5",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(4,"5",$type);?>
+					                            </td>
+					                            <td class="hidden-phone">
+					                              <?php echo allget_action_weekone(5,"5",$type);?>
+					                            </td>
+					                          </tr>
+					            
+					                        </tbody>
+					                      </table>                    
+							</table>

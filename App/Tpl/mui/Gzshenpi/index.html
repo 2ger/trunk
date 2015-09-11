@@ -1,0 +1,133 @@
+<layout name='Layout/ace_layout' />
+<div id="content" style="height:750px">
+	<style type="text/css" media="screen">
+	.btn{border-width:1px;}
+	.btn-lg{padding:5px 7px;}
+	.main .taskflow {
+	    height: 50px;
+	    overflow: hidden;
+	}
+	</style>
+		<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting">
+                      <div class="main">
+                	<div class="div_title no_select">审批流程图</div>
+                	<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+										 <a class="btn btn-lg  btn-success">请假审批流程</a>:
+									    <a  class="btn btn-danger" href="__APP__/flow/add/type/69.html">发起人</a> <i class="fa fa-arrow-right"></i>
+										
+										<a   class="btn  btn-default"> 教研室主任</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a   class="btn  btn-default">  副院长</a><i class="fa fa-arrow-right"></i>	
+										<a   class="btn  btn-default">  院长</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								 <div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+										 <a class="btn btn-lg  btn-success">调课审批流程</a>:
+									    <a  class="btn btn-danger " href="__APP__/flow/add/type/70.html">发起人</a> <i class="fa fa-arrow-right"></i>
+										
+										 <a   class="btn  btn-default"> 教研室主任</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a   class="btn  btn-default">  副院长</a><i class="fa fa-arrow-right"></i>	
+										<a   class="btn  btn-default">  院长</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+										<a class="btn btn-lg  btn-success">用印审批流程</a> :
+									    <a  class="btn btn-danger " href="__APP__/flow/add/type/71.html">发起人</a> <i class="fa fa-arrow-right"></i>
+										
+										 <a   class="btn  btn-default"> 办公室主任</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a   class="btn  btn-default">院长</a>
+										
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+										 <a class="btn btn-lg  btn-success">现金审批流程</a> :
+									    <a  class="btn btn-danger " href="__APP__/flow/add/type/72.html">发起人</a> <i class="fa fa-arrow-right"></i>
+										
+										 <a   class="btn  btn-default"> 办公室主任</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a   class="btn  btn-default">院长</a>
+										
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								 <div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+										 <a class="btn btn-lg  btn-success">报账审批流程</a>:
+									    <a  class="btn btn-danger " href="__APP__/flow/add/type/73.html">发起人</a> <i class="fa fa-arrow-right"></i>
+										
+										 <a   class="btn  btn-default"> 办公室主任</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a   class="btn  btn-default">院长</a>
+										
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								
+                </div>
+            </div>
+            <div class="block email">
+            	     	<div class="main">
+							<div class="div_title no_select">
+								待办事项
+                                </div>
+							<ul>
+                            <volist name="todo_flow_list" id="vo">
+								<li>
+                            <a href="{:U('flow/read')}?id={$vo.id}">       【{$vo.user_name}】<font color="#000000">{$vo.name}</font>({$vo.create_time|date='Y-m-d',###})</a>
+								</li>
+                                </volist>
+							
+							</ul>
+						</div>   
+            </div>
+			<div class="block meeting">
+            	<div class="main">
+							<div class="div_title no_select">
+								追踪流程
+                                </div>
+							<ul>
+                            <volist name="show" id="zzlc">
+								<li>
+                              <a href="{:U('flow/read')}?id={$zzlc.id}">    【{$zzlc.user_name}】<font color="#000000">{$zzlc.name}</font>({$zzlc.create_time|date='Y-m-d',###}) </a>
+								</li>
+                                </volist>
+							
+							</ul>
+						</div>               
+            </div>
+			
+
+            <div class="block email">
+            	<div class="main">
+							<div class="div_title no_select">
+								已审批
+							</div>
+							<ul>
+                            <volist name="show1" id="ysp">
+								<li>
+                             <a href="{:U('flow/read')}?id={$ysp.id}">  【{$ysp.user_name}】<font color="#000000">{$ysp.name}(审批通过)</font> </a> ( {$ysp.create_time|date='Y-m-d',###} )
+								</li>
+                             </volist>
+							</ul>
+						</div>
+            </div>
+			
+			
+			
+         </div>
+			</div>

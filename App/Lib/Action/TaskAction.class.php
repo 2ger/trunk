@@ -240,7 +240,7 @@ class TaskAction extends CommonAction {
 				
 		}
 		
-		$types_abc = array("1", "201","106","314","345","334","8");
+		$types_abc = array("1", "201","106","314","345","334","8","102");
 		if (in_array($vo['type'], $types_abc)) { // abc式
 	//	if ($vo['type'] == '106') { // abc式
 			$this->style = '
@@ -252,8 +252,18 @@ class TaskAction extends CommonAction {
 					$this -> zxnr = '说明';
 				if ($step ==1) { //第一步
 					
-					if($vo['type'] =='1' || $vo['type'] =='201'){
+					$this -> user=M("user")->where('id = '.$a)->select();
+					if($vo['type'] =='1' || $vo['type'] =='201'|| $vo['type'] =='102'){
 						$this -> forwordto = '要通知的老师';
+						if ($vo['type'] =='102') {
+								$this->style = '
+									<style>
+										.widget-toolbar,#working,#finish,.limit_time{display:none !important}
+										#forword{display:block!important}
+									</style>
+									';
+							//	$this -> user=M("user")->select(); //所有人
+						}
 					}
 					if($vo['type'] == 8 ){
 						$this->style = '
@@ -263,8 +273,6 @@ class TaskAction extends CommonAction {
 							</style>
 							';
 						$this -> user=M("user")->where('position_id = 16')->select();
-					}else{
-						$this -> user=M("user")->where('id = '.$a)->select();
 					}
 					$this -> status_name = 'forword';
 					$this -> tj = '完成';
@@ -580,10 +588,14 @@ class TaskAction extends CommonAction {
 			$list = M("TaskLog") -> save($data);
 
 			$task_id = M("TaskLog") -> where("id=$task_log_id") -> getField('task_id');
+			$task_type = M("TaskLog") -> where("id=$task_log_id") -> getField('task_type');
 			M("Task") -> where("id=$task_id") -> setField('status', 1);
 
 			if ($list != false) {
-				// $this->_add_to_schedule($task_id);
+				if ($task_type == "101" or $task_type == "102") {
+					 $this->_add_to_schedule($task_id);
+				}
+				
 				$return['info'] = '接受成功';
 				$return['status'] = 1;
 				$this -> ajaxReturn($return);
@@ -592,7 +604,22 @@ class TaskAction extends CommonAction {
 			}
 		}
 	}
-
+	
+	function save2(){
+		$model = D('task');
+		if (false === $model -> create()) {
+			$this -> error($model -> getError());
+		}
+		/*保存当前数据对象 */
+		$list = $model -> add();
+		if ($list !== false) {//保存成功
+			$this -> assign('jumpUrl', get_return_url());
+			$this -> success('新增成功');
+		} else {
+			$this -> error('新增失败!');
+			//失败提示
+		}
+	}
 	function reject() {
 		$widget['editor'] = true;
 		$this -> assign("widget", $widget);
@@ -700,16 +727,16 @@ class TaskAction extends CommonAction {
 	}
 
 	private function _add_to_schedule($task_id){
-		// $info=M("Task") -> where("id=$task_id")->find();
-// 		$data['name']=$info['name'];
-// 		$data['content']=$info['content'];
-// 		$data['start_time']=toDate(time());
-// 		$data['end_time']= $info['expected_time'];
-// 		$data['user_id']=get_user_id();
-// 		$data['user_name']=get_user_name();
-// 		$data['priority']=3;
-//
-// 		$list=M('Schedule')->add($data);
+		$info=M("Task") -> where("id=$task_id")->find();
+		$data['name']=$info['name'];
+		$data['content']=$info['content'];
+		$data['start_time']=$info['expected_time'];//toDate(time())
+		$data['end_time']= $info['expected_time'];
+		$data['user_id']=get_user_id();
+		$data['user_name']=get_user_name();
+		$data['priority']=5;
+
+		$list=M('Schedule')->add($data);
 	}
 	
 	function _send_mail_finish($task_id,$executor) {

@@ -7,6 +7,7 @@
 		'TMPL_NO_HAVE_AUTH'=>APP_PATH.'/Tpl/Public/no_have_auth.html',	
 		'TMPL_CACHE_ON' => false,
 		'TOKEN_ON'=>false, 
+		
 		'URL_CASE_INSENSITIVE' =>   true,
 		'TMPL_STRIP_SPACE'=>false,
 		'URL_HTML_SUFFIX' => '',
@@ -17,6 +18,11 @@
         'USER_AUTH_GATEWAY'=>'login/index',// 默认认证网关
         'DB_LIKE_FIELDS'            =>'content|remark',
 		'SAVE_PATH'=>"Data/Files/",
+		//多主题切换
+		'DEFAULT_THEME'   => 'default',
+		'THEME_LIST'        => 'default,mui',
+		'TMPL_DETECT_THEME' => true,
+		
      //  'SHOW_PAGE_TRACE'=>1, //显示调试信息
         'ADMIN_MAIL_ACCOUNT'=>array('smtpsvr'=>'smtp.qq.com','email'=>'smeoa@qq.com','mail_id'=>'smeoa@qq.com','mail_pwd'=>'xxxxx','mail_name'=>'教学评测OA')
     );

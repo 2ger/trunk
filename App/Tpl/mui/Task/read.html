@@ -1,0 +1,286 @@
+<layout name='Layout/ace_layout' />
+{:W('PageHeader',array('name'=>'任务详情','search'=>'N'))}
+<div class="operate panel panel-default">
+	<div class="panel-body">
+		<div class="pull-left">
+			<a onclick="window.history.back()" class="btn btn-sm btn-primary pull-left hidden-print">返回</a>
+		</div>
+
+		<div class="text-center">
+			<eq name="UID" value="$vo.user_id">
+				<a href="__APP__/task/del/id/{$task_id}" class="btn btn-md btn-danger">删除任务</a>
+			</eq>
+			<eq name="no_assign" value="1">
+				<a onclick="let_me_do({$task_id})" class="btn btn-md btn-primary">我来处理</a>
+			</eq>
+			<eq name="is_accept" value="1">
+				<a onclick="accept({$task_log_id})" class="btn btn-md btn-success">接受任务</a>
+				<a onclick="reject({$task_log_id});" class="btn btn-md btn-danger">不接受</a>
+			</eq>
+		</div>
+	</div>
+</div>
+
+
+<form method='post' id="form_data" name="form_data" enctype="multipart/form-data"   class="well form-horizontal">
+	<input type="hidden" id="ajax" name="ajax" value="0">
+	<input type="hidden" id="add_file" name="add_file">
+	<input type="hidden" id="executor" name="executor" value="{$vo.executor}">
+	<input type="hidden" id="opmode" name="opmode" value="add">
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="name">任务名称：</label>
+		<div class="col-sm-10">
+			<p class="form-control-static">
+				{$vo.name}
+			</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="name">发起人：</label>
+		<div class="col-sm-10">
+			<p class="form-control-static">
+			{$vo.user_name}
+			</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="name">执行人：</label>
+		<div class="col-sm-10">
+			<p class="form-control-static">
+			{$vo.executor|show_contact}
+			</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="expected_time">期望完成时间：</label>
+		<div class="col-sm-10">
+			<p class="form-control-static">
+				{$vo.expected_time}
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="content">任务说明：</label>
+		<div class="col-xs-10">
+			<p class="form-control-static">
+				<div class="task_content">
+					{$vo.content}	
+				</div>				
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="name">附件：</label>
+		<div class="col-sm-10">
+			{:W('File',array('add_file'=>$vo['add_file'],'mode'=>'show'))}
+		</div>
+	</div>
+</form>
+
+{:W('PageHeader',array('name'=>'任务执行情况','search'=>'N'))}
+<!-- 任务流程： {$vo.user_name}（发起人）
+		<volist name="task_log" id="item">
+		》 	 {$item.executor_name}
+	</volist> -->
+		<style type="text/css" media="screen">
+		.ke-insertfile{clear:right;float:left;width: 100%;}
+		</style>
+<div class="ul_table border-bottom">
+	<ul>
+		<li class="thead">
+			<span class="col-15 text-center">分配给</span>
+			<span class="col-9 text-center">状态</span>
+			<span class="col-9 text-center">执行人</span>
+						<span class="col-9 text-center">限定时间</span>
+			<span class="col-15 text-center">完成时间</span>
+			<!-- <span class="col-15 text-center">完成情况</span> -->
+			<eq name="item.assigner" value="$UID">
+			<span class="col-10 ">评价</span></eq>
+			<span class="auto">备注内容</span>
+		
+			 
+		</li>
+		<volist name="task_log" id="item">
+			<li class="tbody">
+				<span class="col-15 text-center">&nbsp;{$item.assigner|get_user_ssk} 分配给 {$item.executor_name}</span>
+				<span class="col-9 text-center">&nbsp;{$item.status|task_status}</span>
+				<span class="col-9 text-center">&nbsp;{$item.transactor_name}</span>
+		<span class="col-9 text-center">&nbsp; <eq name="item.limit_time" value="0000-00-00 00:00:00">
+			<else/>{$item.limit_time}
+		</eq>
+	</span>
+				<span class="col-15 text-center">&nbsp;{$item.finish_time}</span>
+				<span class="col-15 text-center hidden">
+					&nbsp;<eq name='item.status' value='2'>
+						{$item.finish_rate|finish_rate}
+					</eq>
+					<gt name='item.status' value='2'>
+						{$item.finish_time}
+					</gt></span>
+						<span class="col-10"> 
+					<eq name="item.assigner" value="$UID"> 
+							{$item.id|task_log_deel=###}
+					</eq>
+						</span>	
+				
+				<span class="auto">
+					<div style="overflow:hidden">
+						{$item.feed_back}
+							
+					</div> </span>
+					 
+			</li>
+		</volist>
+	</ul>
+</div>
+<eq name="is_working" value="1">
+	<div class="widget-box task_todo">
+		<div class="widget-header">
+			<h5 class="smaller">执行情况</h5>
+			<div class="widget-toolbar no-border">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="working active">
+						<a href="#working" data-toggle="tab">进行中</a>
+					</li>
+					<li class="finish">
+						<a href="#finish" data-toggle="tab">已完成</a>
+					</li>
+					<li class="forword">
+						<a href="#forword" data-toggle="tab">下发</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="widget-body">
+			<div class="widget-main no-padding">
+				<div class="tab-content">
+					<div class="tab-pane active" id="working">
+						<form method='post' id="form_data_working" name="form_data_working" >
+							<input type="hidden" name="status" value="2">
+							<input type="hidden" name="id" value="{$task_working.id}">
+							<input type="hidden" name="finish_time" id="finish_time" value="{$now|date='Y-m-d h:i:s',###}" >
+							<div class="form-group col-sm-12">
+								<label class="col-sm-2 control-label" >计划完成时间：</label>
+								<div class="col-sm-10">
+									<input class="input-date-time col-20" name="plan_time" value="{$task_working.plan_time}"  msg="请输入计划完成时间">
+								</div>
+							</div>
+							<div class="form-group col-sm-12">
+								<label class="col-sm-2 control-label" >完成率：</label>
+								<div class="col-sm-10">
+									<div class="form-control-static" >
+										<input type="hidden" id="finish_rate" name="finish_rate"/>
+										<div  class="slider_box" >
+											<div id="slider-range-priority"></div>
+											<div class="right" >
+												<span id="slider_val">{$task_working.finish_rate}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group panel-body">
+								<label class="col-sm-2 control-label" >执行内容：</label>
+								<div class="col-sm-10">
+									<textarea id="feed_back" name="feed_back" class="col-xs-12 simple" style="height:120px">{$task_working.feed_back}</textarea>
+								</div>
+								<label class="col-sm-2 control-label" >上传附件：</label>
+								<div class="col-sm-10">
+									<a href="#" class="btn btn-default btn-sm btn-success " id="upload0">点击上传</a>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="tab-pane" id="finish">
+						<form method='post' id="form_data_finish" name="form_data_finish" >
+							<input type="hidden" name="status" value="3">
+							<input type="hidden" name="id" value="{$task_working.id}">
+
+							<input type="hidden" name="finish_time" id="finish_time" value="{$now|date='Y-m-d h:i:s',###}" >
+							<!-- <div class="form-group col-sm-12">
+								<label class="col-sm-2 control-label" >完成时间：</label>
+								<div class="col-sm-10">
+								</div>
+							</div> -->
+							<div class="form-group panel-body">
+								<label class="col-sm-2 control-label" >说明：</label>
+								<div class="col-sm-10">
+									<textarea id="feed_back" name="feed_back" class="col-xs-12 simple" style="height:120px" >{$task_working.feed_back}</textarea>
+								</div>
+
+								<label class="col-sm-2 control-label" >上传附件：</label>
+								<div class="col-sm-10">
+									<a href="#" class="btn btn-default btn-sm btn-success " id="upload1">点击上传</a>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="forword">
+						<form method='post' id="form_data_forword" name="form_data_forword" >
+							<input type="hidden" name="id" value="{$task_working.id}">
+							<input type="hidden" name="task_id" value="{$task_working.task_id}">
+							<input type="hidden" name="status" value="4">
+							<input type="hidden" id="forword_executor" name="forword_executor" >
+							<input type="hidden" id="step" name="step" value="{$task_working.step}">
+							<input type="hidden" id="task_type" name="task_type" value="{$task_working.task_type}">
+							<input type="hidden" name="finish_time" id="finish_time" value="{$now|date='Y-m-d h:i:s',###}" >
+							<div class="form-group col-sm-12 forwordto">
+								<label class="col-sm-2 control-label" for="name">{$forwordto|default='传给'}：</label>
+								<div class="col-sm-10">
+									<div id="actor_wrap" class="inputbox">
+										<a class="pull-right btn btn-link text-center" onclick="popup_actor();"><i class="fa fa-user"></i> </a>
+										<div class="wrap" >
+											<span class="address_list">
+												<volist name="user" id="vo">
+													<span data="{$vo.id}" id="{$vo.id}"><nobr><b title="{$vo.id}">{$vo.name}</b><a class="del" title="删除"><i class="fa fa-times"></i></a></nobr></span>
+												</volist>
+											</span>
+											<span class="text" >
+												<input class="letter" type="text"  >
+											</span>
+										</div>
+										<div class="search dropdown ">
+											<ul class="dropdown-menu"></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+                             	<div class="form-group col-sm-12 limit_time">
+								<label class="col-sm-2 control-label" >限定时间：</label>
+								<div class="col-sm-10">
+									<input class="input-date-time col-20" name="limit_time" id="limit_time" value="{$task_working.plan_time}"  msg="请输入实际完成时间">
+								</div>
+							</div>
+
+							<div class="form-group panel-body">
+								<label class="col-sm-2 control-label" >{$zxnr|default='执行内容'}：</label>
+								<div class="col-sm-10">
+								<textarea id="feed_back" name="feed_back" class="col-xs-12 simple" style="height:120px" >{$task_working.feed_back}</textarea>
+								</div>
+							
+								<label class="col-sm-2 control-label" >上传附件：</label>
+								<div class="col-sm-10">
+									<a href="#" class="btn btn-default btn-sm btn-success " id="upload2">点击上传</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="widget-toolbox padding-8 clearfix">
+				<div class="text-center">
+					<a onclick="save_log();" class="btn btn-md btn-success">{$tj|default='提交'}</a>
+					<!-- <a onclick="go_return_url();" class="btn btn-sm btn-default">取消</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</eq>
+{$style}

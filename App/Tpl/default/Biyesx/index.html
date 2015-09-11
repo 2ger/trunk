@@ -1,0 +1,75 @@
+<layout name='Layout/ace_layout' />
+
+<div id="content" style="height:750px">
+			
+				<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting">
+            	<div class="main">
+                	<div class="div_title no_select">任务及审批
+                    	<span>
+                   			<!-- <select onChange="calenda.change()" id="calenda1">
+                            </select> -->
+                        </span>
+                    </div>
+          
+				 
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">通用任务</a> :
+										 <a href="{:U('task/add?type=Biyesx')}" class="btn  btn-danger">发起任务</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">执行人</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">通用审批</a> :
+										 <a href="{:U('flow/add?type=103')}" class="btn btn-danger ">发起请示</a>
+										 <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">审批人</a>
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    
+								</div><!-- #任务流程结束 -->
+                </div>               
+            </div>
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">申报加分记录 <span><a style="margin-left:200px;" href="{:U('flow/add?type=39')}">提交申报</a></span></div>
+                	<ul>
+                    	<volist name="shenbao" id="vo">
+						<li>
+							<a href="{:U('flow/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a></li>
+                        </volist>
+                        </ul>
+                </div>
+            </div> <!-- end block -->
+			
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">通用任务记录 </div>
+                	<ul>
+                    	<volist name="task" id="vo">
+						<li>
+							<a href="{:U('task/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a></li>
+                        </volist>
+                    </ul>
+                </div>
+            </div> <!-- end block -->
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">通用审批记录 </div>
+                	<ul>
+                    	<volist name="flow" id="vo">
+						<li>
+							<a href="{:U('flow/read')}?id={$vo.id}">【 {$vo.name} 】  <font color="#000000">{$vo.confirm_name}</font> ({$vo.create_time|date='Y-m-d',###})</a> </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div> <!-- end block -->
+            
+         </div>
+			</div>
