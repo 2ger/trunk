@@ -735,22 +735,31 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
     $flow=M('flow')->select();
 	$emp_no = get_emp_no();
 	$uid = get_user_id();
-		//领教材  流程图
-	$flow=M('task')->where('type = "7"')->select();
-	if (!empty($flow)) {
-	
-		$this->lisfa =1;//第一步
 		
-		$this->taskId= $flow[0]['id'];
-		$taskFrom= $flow[0]['user_id'];//发起人id
-		$taskId= $flow[0]['id'];
-		
-		$taskStatus=M('task_log')->where('task_id = "'.$taskId.'" and executor ='.$uid)->find();
-		if($taskStatus['status'] ==3) {
-			$this->liswan =1;//第三步， 完成
+		//教案
+		$flow=M("flow");
+		$data['type']=68;
+		$data['jiaoan']='';
+		$data['user_id']=get_user_id();
+		$show=$flow->where($data)->order('id desc')->find();
+		$this->flowId = $show['id'];
+		if(!empty($show)){ // 没有数据
+			$this->isfa =1;
 		}
+		if ($show['step'] == 40) {
+			$this->iswan =1;
+		}
+		//提交成绩  颜色判断
+	if ($this->isfa) {
+		$this->btn21 ="btn-success";
+		if ($this->iswan) {
+			$this->btn22 ="btn-success";
+		}else {
+			$this->btn22 ="btn-danger";
+		}
+	}else {
+		$this->btn21 ="btn-danger";
 	}
-
 
    	$emp_no = get_emp_no();
 		     /*流程开始*/

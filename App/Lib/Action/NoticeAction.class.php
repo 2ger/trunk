@@ -161,12 +161,18 @@ class NoticeAction extends CommonAction {
 		$uid = get_user_id();
 		$fid = $_GET['fid'];
 		if ($uid==84) {// 教务秘书
-			if ($fid ==72) { //教学公告
+			if ($fid ==73) { //教务公告
 				$this->hidden = "";
 			}
 		}
 		if ($uid==99) { // 吴静
-			if ($fid == 71 or $fid ==73) {//
+			if ($fid == 71) {//
+				$this->hidden = "";
+			
+			}
+		}
+		if ($uid==102) { // 教学秘书
+			if ($fid == 72) {//
 				$this->hidden = "";
 			
 			}

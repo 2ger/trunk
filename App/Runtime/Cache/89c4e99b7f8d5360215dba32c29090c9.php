@@ -249,7 +249,7 @@
 <div style="  width: 1024px;
   margin: auto;">
   <h3 class="text-center"><?php echo $vo['name'];?>
-	<?php if(($UID) == $vo["user_id"]): endif; ?>
+
 	
   </h3> 
   
@@ -263,7 +263,7 @@
 			<?php if(!empty($to_confirm)): ?><a href="#confirm"  class="btn btn-sm btn-primary">会签意见</a><?php endif; ?> -->
 		</div>
 		<div class="pull-right">
- 	   <a href="__APP__/flow/del/id/<?php echo ($vo["id"]); ?>" class="btn btn-danger btn-sm">删除</a>
+			<?php if(($UID) == $vo["user_id"]): ?><a href="__APP__/flow/del/id/<?php echo ($vo["id"]); ?>" class="btn btn-danger btn-sm">删除</a><?php endif; ?>
 			<!-- <a onclick="winprint();" class="btn btn-sm btn-primary">打印</a> -->
 			<?php if(($is_edit) == "1"): ?><a onclick="save();" class="btn btn-sm btn-primary">保存</a><?php endif; ?>
 		</div>
@@ -364,8 +364,30 @@ h1{text-align:center;}
 </form>
 
 <a id="flow_status"></a>
-<?php echo W('PageHeader',array('name'=>'会签','search'=>'N'));?>
-<div class="ul_table border-bottom">
+<?php echo W('PageHeader',array('name'=>'会签意见','search'=>'N'));?>
+
+		<table class="table table-striped table-bordered ">
+			<?php if(is_array($flow_log)): $i = 0; $__LIST__ = $flow_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr>
+		        <td> <strong>批注</strong> </td>
+		        <td colspan='4' style="min-height:50px"> 
+				<?php echo (show_result($item["result"])); ?> <?php echo ($item["comment"]); ?>
+				
+				 </td>
+		    </tr>
+		    <tr>
+		        <td width=20%><strong>审批人</strong></td>
+		        <td width=20%><?php echo ($item["user_name"]); ?></td>
+		        <td width=20%><strong>时间</strong></td>
+		        <td width=20%><?php echo (todate($item["create_time"],'Y-m-d h:i')); ?></td>
+		        <td width=20%>
+					 <?php if(($item["assigner"]) == $UID): ?><div class="hidden-print">
+						 	<?php echo (task_log_deel($item["id"])); ?>
+						 </div><?php endif; ?> 
+			</td>
+		    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+		</table>
+		
+<div class="ul_table border-bottom hidden">
 	<ul>
 		<li class="thead">
 			<span class="col-9 text-center">类型</span>

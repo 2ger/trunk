@@ -1,0 +1,370 @@
+[ 2015-09-21T16:29:08+08:00 ] 127.0.0.1 /trunk/index.php/push/client2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000609s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000682s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000459s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000514s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000188s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000230s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 399 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.047175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047236s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000275s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000231s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000139s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001029s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000451s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2015-09-21T16:29:12+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000422s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000482s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000265s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.008855s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824131 ) LIMIT 1   [ RunTime:0.006109s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824133 ) LIMIT 1   [ RunTime:0.001798s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824135 ) LIMIT 1   [ RunTime:0.003843s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824137 ) LIMIT 1   [ RunTime:0.004094s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824139 ) LIMIT 1   [ RunTime:0.010325s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824141 ) LIMIT 1   [ RunTime:0.002866s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824143 ) LIMIT 1   [ RunTime:0.002488s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824145 ) LIMIT 1   [ RunTime:0.002091s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824147 ) LIMIT 1   [ RunTime:0.002562s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824149 ) LIMIT 1   [ RunTime:0.001943s ]
+
+[ 2015-09-21T16:29:14+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000366s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000428s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000289s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.007512s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824133 ) LIMIT 1   [ RunTime:0.003147s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824135 ) LIMIT 1   [ RunTime:0.001880s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824137 ) LIMIT 1   [ RunTime:0.002018s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824139 ) LIMIT 1   [ RunTime:0.004465s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824141 ) LIMIT 1   [ RunTime:0.002126s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824143 ) LIMIT 1   [ RunTime:0.025157s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824145 ) LIMIT 1   [ RunTime:0.002118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824147 ) LIMIT 1   [ RunTime:0.003602s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824149 ) LIMIT 1   [ RunTime:0.004101s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824151 ) LIMIT 1   [ RunTime:0.002349s ]
+
+[ 2015-09-21T16:29:28+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000355s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000282s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.007588s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824147 ) LIMIT 1   [ RunTime:0.002575s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824149 ) LIMIT 1   [ RunTime:0.001993s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824151 ) LIMIT 1   [ RunTime:0.004789s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824153 ) LIMIT 1   [ RunTime:0.003872s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824155 ) LIMIT 1   [ RunTime:0.002869s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824157 ) LIMIT 1   [ RunTime:0.002424s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824159 ) LIMIT 1   [ RunTime:0.003679s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824161 ) LIMIT 1   [ RunTime:0.001838s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824163 ) LIMIT 1   [ RunTime:0.002118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824165 ) LIMIT 1   [ RunTime:0.001908s ]
+
+[ 2015-09-21T16:29:34+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000313s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000263s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.005407s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824153 ) LIMIT 1   [ RunTime:0.002277s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824155 ) LIMIT 1   [ RunTime:0.003266s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824157 ) LIMIT 1   [ RunTime:0.001987s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824159 ) LIMIT 1   [ RunTime:0.002087s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824161 ) LIMIT 1   [ RunTime:0.002686s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824163 ) LIMIT 1   [ RunTime:0.001913s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824165 ) LIMIT 1   [ RunTime:0.002188s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824167 ) LIMIT 1   [ RunTime:0.003155s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824169 ) LIMIT 1   [ RunTime:0.002382s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824171 ) LIMIT 1   [ RunTime:0.002778s ]
+
+[ 2015-09-21T16:29:48+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000324s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000280s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000332s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.007114s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824167 ) LIMIT 1   [ RunTime:0.002168s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824169 ) LIMIT 1   [ RunTime:0.003256s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824171 ) LIMIT 1   [ RunTime:0.003316s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824173 ) LIMIT 1   [ RunTime:0.001980s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824175 ) LIMIT 1   [ RunTime:0.001814s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824177 ) LIMIT 1   [ RunTime:0.003333s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824179 ) LIMIT 1   [ RunTime:0.003029s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824181 ) LIMIT 1   [ RunTime:0.002105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824183 ) LIMIT 1   [ RunTime:0.006185s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824185 ) LIMIT 1   [ RunTime:0.001968s ]
+
+[ 2015-09-21T16:29:54+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000740s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000804s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000286s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.005115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824173 ) LIMIT 1   [ RunTime:0.003065s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824175 ) LIMIT 1   [ RunTime:0.006098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824177 ) LIMIT 1   [ RunTime:0.003458s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824179 ) LIMIT 1   [ RunTime:0.002999s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824181 ) LIMIT 1   [ RunTime:0.001935s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824183 ) LIMIT 1   [ RunTime:0.013349s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824185 ) LIMIT 1   [ RunTime:0.002565s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824187 ) LIMIT 1   [ RunTime:0.001996s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824189 ) LIMIT 1   [ RunTime:0.002103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824191 ) LIMIT 1   [ RunTime:0.002150s ]
+
+[ 2015-09-21T16:30:14+08:00 ] 127.0.0.1 /trunk/index.php/push/server2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003268s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003316s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000254s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000253s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `onethink_push` [ RunTime:0.007120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824193 ) LIMIT 1   [ RunTime:0.003086s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824195 ) LIMIT 1   [ RunTime:0.002021s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824197 ) LIMIT 1   [ RunTime:0.008783s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824199 ) LIMIT 1   [ RunTime:0.004463s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824201 ) LIMIT 1   [ RunTime:0.003007s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824203 ) LIMIT 1   [ RunTime:0.002797s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824205 ) LIMIT 1   [ RunTime:0.002034s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824207 ) LIMIT 1   [ RunTime:0.001858s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824209 ) LIMIT 1   [ RunTime:0.003582s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Db.class.php 第 601 行.
+SQL: SELECT * FROM `onethink_push` WHERE ( `user_id` = 2 ) AND ( `time` <= 1442824211 ) LIMIT 1   [ RunTime:0.001939s ]
+

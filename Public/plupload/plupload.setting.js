@@ -5,7 +5,7 @@ var uploader = new plupload.Uploader({
 	url : upload_url,
 	flash_swf_url : app_path+'/Public/assets/plupload/Moxie.swf',	
 	filters : {
-		max_file_size : '32mb'
+		max_file_size : '100mb'
 	},
 	init: {
 		PostInit: function() {

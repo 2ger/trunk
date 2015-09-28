@@ -1,0 +1,168 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				发起任务（公体）
+		</li>
+					<li class="mui-table-view-cell">
+						<div class="col-sm-12">
+
+									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success">自评</a> :
+										
+										 <switch name="isfa" >
+										   <case value="1" ><a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn1}">分管院长</a></case>
+										   <default />
+											   <eq name="user_rank" value="2">
+											  	 <a href="{:U('task/add?type=74')}" class="mui-btn mui-btn-outlined {$btn1}">分管院长</a>
+											   <else/>
+											  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">分管院长</a>
+											   </eq>
+										   </switch>
+										 <span class="mui-icon mui-icon-arrowthinright"></span>
+
+										 	 	<eq name="iszhuan" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+									</eq>
+	  								  教研室主任</a>
+									  <span class="mui-icon mui-icon-arrowthinright"></span>
+
+
+											 	 	<eq name="zptplc" value="1">
+										<a href="{:U('flow/read')}?id={$lzidlog}" class="mui-btn mui-btn-outlined {$btn3}">
+										<else/>
+									 <a href="{:U('flow/add?type=54')}'" class="mui-btn mui-btn-outlined  {$btn3}">
+									</eq>
+	  								  老师填表</a>
+									  <span class="mui-icon mui-icon-arrowthinright"></span>
+											 	<eq name="lz" value="1">
+										<a href="{:U('flow/read')}/id/{$lzidlog}&fid=submit" class="mui-btn mui-btn-outlined {$btn4}">
+										<else/>
+									 <a href="{:U('flow/read')}?id={$lzidlog}" class="mui-btn mui-btn-outlined  {$btn4}">
+									</eq>
+	  								  教研室主任</a><span class="mui-icon mui-icon-arrowthinright"></span>
+
+
+
+											<eq name="ms" value="1">
+										<a href="{:U('flow/read')}/id/{$lzidlog}&fid=submit" class="mui-btn mui-btn-outlined {$btn5}">
+										<else/>
+									 <a href="{:U('flow/read')}?id={$lzidlog}" class="mui-btn mui-btn-outlined  {$btn5}">
+									</eq>
+	  								  教学秘书</a>
+								 </div>
+								 </li>
+								 <li class="mui-table-view-cell">
+								 	<div class="col-sm-12">
+
+									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success">听课表</a>:
+										
+										 <switch name="zpisfa" >
+										   <case value="1" ><a href="{:U('task/read')}?id={$zptaskId}" class="mui-btn mui-btn-outlined {$btn21}">分管院长</a></case>
+										   <default />
+										   <eq name="user_rank" value="2">
+										  	 <a href="{:U('task/add?type=75')}" class="mui-btn mui-btn-outlined {$btn21}">分管院长</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">分管院长</a>
+										   </eq>
+										   </switch>
+										 <span class="mui-icon mui-icon-arrowthinright"></span>
+								
+											 	 	<eq name="tkp" value="1">
+										<a href="{:U('task/read')}?id={$zptaskId}" class="mui-btn mui-btn-outlined {$btn22}">
+										<else/>
+										<a href="{:U('task/read')}?id={$zptaskId}" class="mui-btn mui-btn-outlined {$btn22}">
+									</eq>
+	  								  教研室主任</a>
+									  <span class="mui-icon mui-icon-arrowthinright"></span>
+
+
+
+											 	 	<eq name="lztb" value="1">
+										<a href="{:U('flow/read')}?id={$flowtkid}" class="mui-btn mui-btn-outlined {$btn23}">
+										<else/>
+									 <a href="{:U('flow/add?type=51')}'" class="mui-btn mui-btn-outlined  {$btn23}">
+									</eq>
+	  								  老师填表</a>
+									  
+									  <span class="mui-icon mui-icon-arrowthinright"></span>
+									    	<eq name="ktb" value="1">
+										<a href="{:U('flow/read')}/id/{$flowtkid}&fid=submit" class="mui-btn mui-btn-outlined {$btn24}">
+										<else/>
+									 <a href="{:U('flow/read')}?id={$flowtkid}" class="mui-btn mui-btn-outlined  {$btn25}">
+									</eq>
+	  								  教学秘书</a>
+								 </div>
+								 </li>
+								 <li class="mui-table-view-cell">
+								 	<div class="col-sm-12">
+
+		   									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success">学生评教</a> :
+										
+		   										 <switch name="pjisfa" >
+										   <case value="1" ><a href="{:U('task/read')}?id={$pjtaskId}" class="mui-btn mui-btn-outlined {$btn31}">分管院长</a></case>
+										   <default />
+											   <eq name="user_rank" value="2">
+											  	 <a href="{:U('task/add?type=76')}" class="mui-btn mui-btn-outlined {$btn31}">分管院长</a>
+											   <else/>
+											  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">分管院长</a>
+											   </eq>
+										   </switch>
+		   										 <span class="mui-icon mui-icon-arrowthinright"></span>
+										
+		   										    	<eq name="pjjw" value="1">
+										<a href="{:U('task/read')}/id/{$pjtaskId}" class="mui-btn mui-btn-outlined {$btn32}">
+										<else/>
+									 <a href="{:U('task/read')}?id={$pjtaskId}" class="mui-btn mui-btn-outlined  {$btn32}">
+									</eq>
+	  								  教学秘书</a>
+									  <span class="mui-icon mui-icon-arrowthinright"></span>
+		   										<switch name="fdy" >
+													<case value="1" >
+														<a href="{:U('task/read')}/id/{$pjtaskId}" class="mui-btn mui-btn-outlined {$btn33}"> 辅导员</a><span class="mui-icon mui-icon-arrowthinright"></span>
+					   									<a href="{:U('task/read')}/id/{$pjtaskId}" class="mui-btn mui-btn-outlined {$btn33}"> 教学秘书</a>
+													 </case>
+		 										   <default />
+				 									 	<a href="{:U('task/read')}?id={$pjtaskId}" class="mui-btn mui-btn-outlined  {$btn33}"> 辅导员</a>
+				 									  	<span class="mui-icon mui-icon-arrowthinright"></span>
+				 		   								<a href="{:U('task/read')}?id={$pjtaskId}" class="mui-btn mui-btn-outlined  {$btn33}">  教学秘书</a>
+		 										   </switch>
+												   
+	  								 
+									  
+		   								    </div>
+								 </li>
+	</ul>
+</div>
+<div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">
+				待办
+			</a>
+		<a class="mui-control-item" href="#item2mobile">
+				等待中
+			</a>
+		<a class="mui-control-item" href="#item3mobile">
+				完成任务
+			</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+			<ul class="mui-table-view">
+					{$todo}
+			</ul>
+		</div>
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$doing} 
+			</ul>
+		</div>
+		<div id="item3mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$done} 
+			</ul>
+		</div>
+	</div>
+</div>

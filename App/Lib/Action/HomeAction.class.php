@@ -45,7 +45,7 @@ class HomeAction extends CommonAction {
 		$where_log['status'] =  array("in","3,4");
 		$task_ids2 =M('task_log')->where($where_log)->getField("task_id id,task_id");
 		$where2['id'] =  array('in',$task_ids2);
-		$this->task_done=$task->where($where2)->order('id desc')->limit(50)->select();
+		$this->task_done = $task->where($where2)->order('id desc')->limit(50)->select();
 		
 		
 
@@ -87,6 +87,8 @@ class HomeAction extends CommonAction {
 	}
 
 	public function showall() {
+
+		$this -> _flow_list();
 		$this->show_all=M('flow')->where('confirm like "%'.get_emp_no().'%" or user_id ="'.(int) get_user_id().'"')->order('id desc')->select();
 		$this->taskall =M('task')->where('executor like "%'.get_user_id().'%" or user_id ="'.(int) get_user_id().'"')->order('id desc')->select();
 		
@@ -157,7 +159,7 @@ public function test(){
 		$log_list = $FlowLog -> where($where) -> getField('flow_id id,flow_id');
 		$map['id'] = array('in', $log_list);
 		$todo_flow_list = $model -> where($map) -> limit(6) -> order("create_time desc") -> select();
-		dump($todo_flow_list);
+	//	dump($todo_flow_list);
 			}
 	protected function _flow_list() {
 		$user_id = get_user_id();

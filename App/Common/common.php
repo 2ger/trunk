@@ -1473,9 +1473,10 @@ function flow_todo($flow_type){ //我的待办流程
 			$flow_todo_list = M("Flow") -> where($where) ->  getField('id name,id');
 			
 			
+			
 			$where_log['result'] = array("in","3"); // 未完成
 			$where_log['user_id'] = $uid;
-		//	$where_log['flow_id'] = array('in', $flow_todo_list);
+			$where_log['flow_id'] = array('in', $flow_todo_list);
 			$flow_list = M("FlowLog") -> where($where_log)->order('id desc') -> select();
 			$count = M("FlowLog") -> where($where_log) -> count();
 			for ($i=0; $i < $count; $i++) { 
@@ -1899,7 +1900,11 @@ function get_photo($url,$filename='',$savefile='test/')
 	 $sort = M("dept")->where("id=".$depid)->getField("sort");
 	 return $sort;
  }
- 
+ function get_attach_url($id){
+ 	$url =M('file')->where('id ='.$id)->getField("savename");
+	$url = 'http://officeweb365.com/o/?i=5435&furl=http://kdoa.vlldoo.com/Data/Files/'.$url;
+	return $url;
+ }
  function getToDoNum(){
 	$task=M('task');
 	$wherelog['executor'] =  get_user_id();

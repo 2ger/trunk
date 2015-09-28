@@ -1,0 +1,106 @@
+<layout name='Layout/ace_layout' />
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/chart.js"></script>
+<div id="content" style="height:750px">
+	<div class="blocks" style="width:100%;">
+	            <div class="block depmeting">
+	            	<div class="main">
+	                	<div class="div_title no_select">
+	                		工作异常
+	                		<span>更多</span> 
+	                	</div>
+						<canvas id="bara" style="height:250px !important;margin-top: 20px;" class="col-sm-12"></canvas>  
+    <script>  
+        var baraChartData = {  
+            labels : [{$timeline}],  
+            datasets : [ 
+                {  
+                    fillColor : "rgba(151,187,205,0.5)",  
+                    strokeColor : "rgba(151,187,205,1)",  
+                    pointColor : "rgba(151,187,205,1)",  
+                    pointStrokeColor : "#fff",  
+                    data : [{$results}]  
+                }  
+            ]  
+        };  
+  
+      
+        var ctx = document.getElementById("bara").getContext("2d");  
+        var myNewChart = new Chart(ctx).Bar(baraChartData);  
+        //new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);  
+    </script> 
+	                </div>
+	            </div> 
+	            <div class="block worknum">
+	            	<div class="main">
+	                	<div class="div_title no_select">考勤异常</div>			
+							    <canvas id="bar" style="height:250px !important;margin-top: 20px;" class="col-sm-12"></canvas>  
+    <script>  
+        var barChartData = {  
+		            labels : [{$timeline}],  
+		            datasets : [ 
+		                {  
+		                    fillColor : "rgba(151,187,205,0.5)",  
+		                    strokeColor : "rgba(151,187,205,1)",  
+		                    pointColor : "rgba(151,187,205,1)",  
+		                    pointStrokeColor : "#fff",  
+		                    data : [{$results}]  
+		                }  
+		            ]  
+        };  
+  
+      
+        var ctx = document.getElementById("bar").getContext("2d");  
+        var myNewChart = new Chart(ctx).Bar(barChartData);  
+        //new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);  
+    </script> 
+	                </div>
+	            </div>
+	            <div class="block hotnews">
+	            	<div class="main">
+	                	<div class="div_title no_select">获奖情况</div>
+						<canvas id="barb" style="height:250px !important;margin-top: 20px;" class="col-sm-12"></canvas>  
+    <script>  
+    var data = {  
+            labels : [{$timeline}],  
+            datasets : [ 
+                {  
+                    fillColor : "rgba(151,187,205,0.5)",  
+                    strokeColor : "rgba(151,187,205,1)",  
+                    pointColor : "rgba(151,187,205,1)",  
+                    pointStrokeColor : "#fff",  
+                    data : [{$results}]  
+                }  
+            ]  
+        };  
+        var ctx = document.getElementById("barb").getContext("2d");  
+        var myNewChart = new Chart(ctx).Line(data);  
+    </script> 
+	                </div>
+	            </div>
+	            <div class="block error">
+	            	<div class="main">
+	                	<div class="div_title no_select">违规率</div>
+						<canvas id="barc" style="height:250px !important;margin-top: 20px;" class="col-sm-12"></canvas>  
+    <script>  
+    var data = {  
+            labels : [{$timeline}],  
+            datasets : [ 
+                {  
+                    fillColor : "rgba(151,187,205,0.5)",  
+                    strokeColor : "rgba(151,187,205,1)",  
+                    pointColor : "rgba(151,187,205,1)",  
+                    pointStrokeColor : "#fff",  
+                    data : [{$results}]  
+                }  
+            ]  
+        }; 
+      
+        var ctx = document.getElementById("barc").getContext("2d");  
+        var myNewChart = new Chart(ctx).Line(data);  
+          
+    </script> 
+	                </div>
+	            </div>                                            
+	        </div>			
+</div>

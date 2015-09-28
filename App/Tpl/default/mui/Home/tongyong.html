@@ -1,0 +1,26 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				发起任务
+		</li>
+		
+                                    
+										<li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('task/add?type=104')}">AB式</a></li>
+                                        <li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('task/add?type=105')}">ABA式</a></li>
+                                        <li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('task/add?type=106')}">ABC式</a></li>
+                                        <li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('task/add?type=107')}">ABAB式</a></li>
+	</ul>
+</div>
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				任务记录
+		</li>
+		
+                                    <volist name="task" id="vo">
+					<li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('task/read')}?id={$vo.id}" title="">【{$vo.user_name}】{$vo.name}({$vo.create_time|date='Y-m-d',###})</a>
+					</li>
+	                </volist>
+	</ul>
+</div>

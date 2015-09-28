@@ -1,0 +1,248 @@
+<layout name='Layout/ace_layout' />
+<link rel="stylesheet" href="__PUBLIC__/css/handle.css">
+
+
+<div id="west" class="input-operation in smallsidebar hidden-print" style="width:50px;float:left;height:100%;margin-top: 0;">
+  <div id="workflow-switcher" class="communication-block">
+    <ul class="nav nav-tabs">
+      <li class=" active form_in" title="表单"><a href="#bd" hidefocus="true"> <i class="form"></i> 表单</a></li>
+      <li class="attach_in" title="附件"><a href="#pickfiles" hidefocus="true"> <i class="attach"></i>附件</a></li>
+      <li class="remark_in" title="会签"><a href="#flow_status" hidefocus="true"> <i class="remark"></i>会签</a></li>
+      <li class="remark_in" title="打印"><a  onclick="winprint();" hidefocus="true"> <i class="remark"></i>打印</a></li>
+    </ul>
+  </div>
+  <!-- <div class="operation-block communication-op-block">
+    <div class="op-block-container" title="分享"> <i class="com"></i>
+      <div class="op-block-title">分享</div>
+    </div>
+  </div>
+  <div class="operation-block fav-block">
+    <div class="op-block-container" id="to_print" title="打印"> <i class="print-icon"></i>
+      <div class="op-block-title">打印</div>
+    </div>
+  </div>
+  <div class="operation-block operation-op-block">
+    <div class="op-block-container" title="更多"> <i class="do-more"></i>
+      <div class="op-block-title">更多</div>
+    </div>
+  </div> -->
+</div>
+
+
+<style type="text/css" media="screen">
+#west {
+    border-right: 3px solid #169bf5;
+    z-index: 10;
+    color: rgba(83, 83, 83);
+    background: url(__PUBLIC__/v2/imges/left_bg.png) repeat-y;
+    margin-top: 20%;
+}
+.page-header,.ul_table,#form_confirm{  max-width: 1024px;
+  margin: auto;}
+
+#sidebar,#breadcrumbs{display:none;}
+.main-content {margin-left: 0;}
+</style>
+<div style="  width: 1024px;
+  margin: auto;">
+  <h3 class="text-center">{:$vo['name']}
+	<eq name="UID" value="$vo.user_id">
+	</eq>
+	
+  </h3> 
+  
+<div class="operate panel panel-default hidden-print "  name="bd" id="bd">
+	<div class="panel-body">
+		<div class="pull-left">
+			
+
+			<a onclick="window.history.back()" class="btn btn-sm btn-primary pull-left hidden-print">返回</a>
+			<!-- <a href="#flow_status"  class="btn btn-sm btn-primary">审批情况</a>
+			<notempty name="to_confirm">
+				<a href="#confirm"  class="btn btn-sm btn-primary">会签意见</a>
+			</notempty> -->
+		</div>
+		<div class="pull-right">
+ 	   <a href="__APP__/flow/del/id/{$vo.id}" class="btn btn-danger btn-sm">删除</a>
+			<!-- <a onclick="winprint();" class="btn btn-sm btn-primary">打印</a> -->
+			<eq name="is_edit" value="1">
+				<a onclick="save();" class="btn btn-sm btn-primary">保存</a>
+			</eq>
+		</div>
+	</div>
+</div>
+<form method='post' id="form_data" name="form_data" enctype="multipart/form-data"  class="well form-horizontal">
+	<input type="hidden" id="ajax" name="ajax" value="0">
+	<input type="hidden" id="opmode" name="opmode" value="edit">
+	<input type="hidden" id="name" name="name" value="{$vo.name}">
+	<input type="hidden" id="add_file" name="add_file" value="{$vo.add_file}" >
+	<input type="hidden" id="id" name="id" value="{$vo.id}">
+	<div class="form-group col-sm-6 hidden">
+		<label class="col-sm-4 control-label" >文件编号：</label>
+		<div class="col-sm-8">
+			<p class="form-control-static">
+				{$vo.doc_no}
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group col-sm-6">
+		<label class="col-sm-4 control-label" >日期：</label>
+		<div class="col-sm-8">
+			<p class="form-control-static">
+				{$vo.create_time|toDate='Y-m-d'}
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group  col-sm-6">
+		<label class="col-sm-4 control-label" >填写：</label>
+		<div class="col-sm-8">
+			<p class="form-control-static">
+				{$vo.user_name}
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group  col-sm-6">
+		<label class="col-sm-4 control-label" >部门：</label>
+		<div class="col-sm-8">
+			<p class="form-control-static">
+				{$vo.dept_name}
+			</p>
+		</div>
+	</div>
+
+	<div class="form-group  col-xs-6">
+		<label class="col-sm-2 control-label" >审批：</label>
+		<div class="col-sm-10">
+			<p id="confirm_wrap" class="form-control-static">
+				{$vo.confirm_name}
+			</p>
+		</div>
+	</div>
+<style type="text/css" media="screen">
+table{    border-spacing: 0;width: 100%!important;}
+h1{text-align:center;}
+</style>
+	<div class="form-group col-xs-12 hidden">
+		<label class="col-sm-2 control-label" >协商：</label>
+		<div class="col-sm-10">
+			<p id="consult_wrap" class="form-control-static address_list">
+				{$vo.consult_name}
+			</p>
+		</div>
+	</div>
+	<div class="form-group col-xs-12 hidden">
+		<label class="col-sm-2 control-label" >抄送：</label>
+		<div class="col-sm-10">
+			<p id="refer_wrap" class="form-control-static address_list">
+				{$vo.refer_name}
+			</p>
+		</div>
+	</div>
+	<volist name="field_list" id="field_vo">
+		{:W('FlowField',$field_vo)}
+	</volist>
+	
+	<neq name="is_edit" value="2">
+		<div class="form-group">
+			<div class="col-xs-12">
+				{$vo.content}
+				 <eq name = "is_edit" value="0">
+				<!--	<div class="content_wrap">
+						<iframe class="content_iframe"></iframe>
+						<textarea class="content display-none"  name="content" style="width:100%;height:300px;" >{$vo.content}</textarea>
+					</div> -->
+				</eq>
+				<eq name="is_edit" value="1">
+				<!--	<textarea class="editor content display-none"  name="content" style="width:100%;height:300px;" >{$vo.content}</textarea> -->
+				<eq>
+			</div>
+		</div>
+	</neq>
+	<notempty name="vo.add_file">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" >附件：</label>
+			<div class="col-sm-10">
+				<eq name="is_edit" value="0">
+					{:W('File',array('add_file'=>$vo['add_file'],'mode'=>'show'))}
+				</eq>
+				<eq name="is_edit" value="1">
+					{:W('File',array('add_file'=>$vo['add_file'],'mode'=>'edit'))}
+				</eq>
+			</div>
+		</div>
+	</notempty>
+	<div class="clearfix"></div>
+</form>
+
+<a id="flow_status"></a>
+{:W('PageHeader',array('name'=>'会签','search'=>'N'))}
+<div class="ul_table border-bottom">
+	<ul>
+		<li class="thead">
+			<span class="col-9 text-center">类型</span>
+			<span class="col-9 text-center">审批人</span>
+			<span class="col-9 text-center">日期</span>
+			<span class="col-9 text-center">结果</span>
+			<span class="auto">意见</span>
+		</li>
+		<volist name="flow_log" id="item">
+			<li class="tbody">
+				<span style="width:90px;" class="text-center">{$item.step|show_step_type}</span>
+				<span style="width:90px;" class="text-center">{$item.user_name}</span>
+				<span style="width:90px;" class="text-center">{$item.create_time|toDate='Y-m-d'}</span>
+				<span style="width:90px;" class="text-center">{$item.result|show_result}</span>
+				<span class="auto">
+					<div style="overflow:hidden">
+						{$item.comment}
+					</div> </span>
+			</li>
+		</volist>
+	</ul>
+</div>
+<notempty name="to_confirm">
+	<a id="confirm"></a>
+	{:W('PageHeader',array('name'=>'会签意见','search'=>'N'))}
+	<form method="post" action="" name="form_confirm" id="form_confirm">
+		<input type="hidden" name="id" value="{$to_confirm.id}">
+		<input type="hidden" name="flow_id" value="{$vo.id}">
+		<input type="hidden" name="step" value="{$to_confirm.step}">
+		<div class="operate panel panel-default ">
+			<div class="panel-heading clearfix">
+				<div class="pull-left">
+					<a onclick="go_return_url();" class="btn btn-sm btn-primary">返回</a>
+				</div>
+				<div class="pull-right">
+					<notempty name="is_edit">
+						<div class="btn-group">
+							<a class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown" href="#">退回到<span class="fa fa-caret-down"></span> </a>
+							<ul class="dropdown-menu col-5">
+								<volist name="confirmed" id="vo">
+									<li onclick="back_to('{$vo.emp_no}');">
+										<a>{$vo.user_name}</a>
+									</li>
+								</volist>
+								<li onclick="back_to('{$emp_no}');">
+									<a>{$user_name}</a>
+								</li>
+							</ul>
+						</div>
+					</notempty>
+					<a onclick="reject();" class="btn btn-sm btn-danger">否决</a>
+					|
+					<a onclick="approve();" class="btn btn-sm btn-primary">同意</a>
+				</div>
+			</div>
+			<div class="form-group panel-body">
+				<label class="col-sm-2 control-label" >会签意见：</label>
+				<div class="col-sm-10">
+					<textarea name="comment" class="col-xs-12" style="height:120px"></textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</notempty>
+
+</div>

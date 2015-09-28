@@ -33,6 +33,7 @@ class GrzhongxinAction extends CommonAction {
 		}
 		$this->userlist=M('user')->find($uid);
 		
+		$emp_no = $this->userlist['emp_no'];
 		$userName = $this->userlist['name'];
 		$position_id = $this->userlist['position_id'];
 		if ($position_id == 16) {
@@ -59,7 +60,7 @@ class GrzhongxinAction extends CommonAction {
         $this->assign('teacher',$teacher);
 
 		$task=M('task');
-		$taskgt=$task->where(' executor like "%'.get_user_name().'%"')->select();
+		$taskgt=$task->where(' executor like "%'.get_user_name().'%"')->order('id desc')->select();
 		$this->assign('taskgt',$taskgt);
 		
 	
@@ -77,7 +78,7 @@ class GrzhongxinAction extends CommonAction {
 		$this->data02=$flow->where('user_id ="'.$uid.'" and (type=50)')->limit(1)->select();
 		$this->data03=$flow->where('user_id ="'.$uid.'" and (type=53)')->limit(1)->select();
 		$this->data04=$flow->where('user_id ="'.$uid.'" and (type=55)')->limit(1)->select();
-		$this->data05=$flow->where('user_id ="'.$uid.'" and (type=68)')->limit(1)->select();
+		$this->data05=$flow->where('user_id ="'.$uid.'" and type=68')->limit(1)->select();// and jiaoan =""
 		$this->data06=$flow->where('user_id ="'.$uid.'" and (type=77)')->limit(1)->select();
 
 		$this->data11=$flow->where('user_id ="'.$uid.'" and (type=79)')->limit(1)->select();
@@ -89,21 +90,33 @@ class GrzhongxinAction extends CommonAction {
 		
 		$this->yichang=M('schedule')->where('user_id ="'.$uid.'" and priority = 5')->limit(6)->select();
 
+			//待办任务	
 		$task=M('task');
-		$task_ids =M('task_log')->where('executor = '.get_user_id().' and status =0')->getField("task_id id,task_id");
-		//	dump($task_ids);
+		$wherelog['executor'] =  $uid;
+		$wherelog['status'] =  array('in','0,1');
+		$task_ids =M('task_log')->where($wherelog)->getField("task_id id,task_id");
 		$where['id'] =  array('in',$task_ids);
-		$this->fabu=$task->where($where)->select();
-		
-		$where_log['executor|assigner|transactor'] =  get_user_id();
+		$this->fabu=$task->where($where)->order('id desc')->limit(50)->select();
+		//完成任务
+		$where_log['executor|assigner|transactor'] =  $uid;
 		$where_log['status'] =  array("in","3,4");
 		$task_ids2 =M('task_log')->where($where_log)->getField("task_id id,task_id");
 		$where2['id'] =  array('in',$task_ids2);
-		$this->jieshou=$task->where($where2)->select();
+		$this->jieshou = $task->where($where2)->order('id desc')->limit(50)->select();
 		
 
-		$this->faqi=$flow->where('user_id ="'.$uid.'"')->select();
-		$this->shenpi=$flow_log->where('user_id ="'.$uid.'"')->select();
+		//待审批的列表
+		$model = D('Flow');
+		$FlowLog = M("FlowLog");
+		$model = D('Flow');
+		$where['result'] = 3;
+		$where['emp_no'] = $emp_no;
+		$log_list = $FlowLog -> where($where) -> getField('flow_id id,flow_id');
+		$map['id'] = array('in', $log_list);
+		$todo_flow_list = $model -> where($map) -> limit(6) -> order("create_time desc") -> select();
+		$this -> assign("faqi", $todo_flow_list);
+		
+		$this->shenpi=$flow->where('(confirm like "%'.get_emp_no().'%" or user_id ="'.$uid.'") AND step=40 ')->order('id desc')->limit('50')->select();
 
 		//dump($jieshou);
 		//die();

@@ -1,0 +1,66 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				待办工作
+		</li>
+		
+                                    <div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">
+				待办工作
+			</a>
+		<a class="mui-control-item" href="#item2mobile">
+				已办工作
+			</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+			<ul class="mui-table-view">
+					<volist name="todo_flow_list" id="vo">
+										<li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('flow/read')}?id={$vo.id}" title=""><font color="#000000">【{$vo.user_name}】{$vo.name}({$vo.create_time|date='Y-m-d h:i',###})</font></a>
+										</li>
+                                        </volist>
+	                                    <volist name="taskgt" id="vo">
+											<li class="mui-table-view-cell"><a class="mui-navigate-right" href="{:U('flow/read')}?id={$vo.id}" title=""><font color="#000000">【{$vo.user_name}】{$vo.name}({$vo.create_time|date='Y-m-d h:i',###})</font></a>
+											</li>
+	                                   </volist>
+			</ul>
+		</div>
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				<volist name="show1" id="vo">
+										<li>
+											<a href="{:U('flow/read')}?id={$vo.id}">【{$vo.user_name}】<font color="#000000">{$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d h:i',###})
+										</li>
+                                        </volist>
+	                                    <volist name="task_done" id="vo">
+											<li>【{$vo.user_name}】<a href="{:U('task/read')}?id={$vo.id}" title=""><font color="#000000">{$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d h:i',###})
+											</li>
+	                                   </volist>
+			</ul>
+		</div>
+	</div>
+</div>
+	</ul>
+</div>
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				公告
+		</li>
+<volist name="new_notice_list" id="vo">
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right" onclick="open_url('{:U('notice/read')}?id={$vo.id}')" >
+<switch name="vo.folder" >
+<case value="71">【行政公告】</case>
+<case value="72">【教学公告】</case>
+<case value="73">【其他公告】</case>
+<default />
+</switch>
+<font color="#000000"> {$vo.name}</font>({$vo.create_time|date='Y-m-d',###}){$vo.id|notice_read=###}</a>&nbsp;
+								</li>
+                                </volist>
+	</ul>
+</div>

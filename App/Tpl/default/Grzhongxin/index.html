@@ -304,8 +304,8 @@ tr th{ text-align:center!important}
 											<div class="already switch_" style="left: 856px; opacity: 0;">
 												<ul>
 													<volist name="jieshou" id="vo">
-													<li>【{$vo.user_name}】<a href="{:U('task/read')}?id={$vo.task_id}"
-			><font color="#000000">({$vo.name})</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													<li>【{$vo.user_name}】<a href="{:U('task/read')}?id={$vo.id}"
+			 title=""><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
 													</li>
 			                                        </volist>
 												</ul>
@@ -319,7 +319,7 @@ tr th{ text-align:center!important}
 									<div class="main">
 										<div class="div_title1 no_select">
 											<div class="switch_btn divBG2 divBG1">
-												追踪流程								</div>
+												待审批流程								</div>
 											<div class="switch_btn divBG2">
 												完成流程
 											</div>
@@ -328,7 +328,7 @@ tr th{ text-align:center!important}
 											<div class="wait switch_">
 												<ul>
 			                                    <volist name="faqi" id="vo">
-													<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.flow_id}"><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.id}"><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
 													</li>
 			                                        </volist>
 												</ul>
@@ -336,8 +336,7 @@ tr th{ text-align:center!important}
 											<div class="already switch_" style="left: 856px; opacity: 0;">
 												<ul>
 													<volist name="shenpi" id="vo">
-													<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.flow_id}"
-			><font color="#000000">(已审批)</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+												<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.id}"><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
 													</li>
 			                                        </volist>
 												</ul>

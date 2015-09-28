@@ -1,0 +1,172 @@
+<layout name='Layout/ace_layout' />
+
+<style type="text/css" media="screen">
+/*.sidebar{display:none;}
+.main-content{margin-left:0}*/
+</style>
+<div id="content" style="height:750px;">
+			
+				<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting" style="height:auto">
+				<div class="main">
+					<div class="div_title no_select">
+						提交及申报
+                                <span>
+ 								  	 <a href="javascript:open_url('{:U('flow/addlw?type=60')}')" class="btn btn-info btn-xs"> 报课题</a>
+                                     <a href="javascript:open_url('{:U('flow/addlw?type=61')}')" class="btn btn-info btn-xs"> 任务书</a>
+                                     <a href="javascript:open_url('{:U('flow/addlw?type=62')}')" class="btn btn-info btn-xs"> 开题报告</a>
+                                     <a href="javascript:open_url('{:U('flow/addlw?type=63')}')" class="btn btn-info btn-xs"> 中期报表</a>
+                                     <a href="javascript:open_url('{:U('flow/addlw?type=64')}')" class="btn btn-info btn-xs"> 中期报表</a>
+								</span>
+					</div>
+					<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+						
+								
+                                
+								<div title="教师" style="clear:both">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">申报课题</a> <i class="fa fa-angle-double-right
+"></i>
+
+										<switch name="flow1step1">
+										    <case value="1">  <a href="{:U('flow/read')}?id={$flow1id}" class="btn btn-success">上报课题</a> </case>
+										    <default />	<a href="javascript:open_url('{:U('flow/addlw?type=60')}')" class="btn btn-danger"> 上报课题</a>
+										</switch>
+
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <switch name="flow1step2">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flow1id}" class="btn btn-danger">领导小组</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flow1id}" class="btn btn-success">领导小组</a> </case>
+										     <default />	<a class="btn  btn-default"> 领导小组</a>	
+										 </switch>
+										 
+										
+									 
+								    </div>
+								</div>
+                                
+								<div title="教师" style="clear:both">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">填任务书</a> <i class="fa fa-angle-double-right
+"></i>
+										<switch name="flow2step1">
+										    <case value="1">  <a href="{:U('flow/read')}?id={$flow2id}" class="btn {$btn1}">上报任务书</a> </case>
+										    <default />	<a href="javascript:open_url('{:U('flow/addlw?type=61')}')" class="btn {$btn1}"> 上报任务书</a>
+										</switch>
+										
+										 <i class="fa fa-arrow-right"></i>
+										 <switch name="flow2step2">
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flow2id}" class="btn {$btn2}">教研室主任</a> </case>
+										     <default />	<a href="{:U('flow/read')}?id={$flow2id}" class="btn {$btn2}">教研室主任</a> 
+										 </switch>
+										 
+										<i class="fa fa-arrow-right"></i>
+									 <switch name="flow2step3">
+									     <case value="0">  <a href="{:U('flow/read')}?id={$flow2id}" class="btn {$btn3}">分管副院长</a> </case>
+									     <case value="1">  <a href="{:U('flow/read')}?id={$flow2id}" class="btn {$btn3}">分管副院长</a> </case>
+									     <default />	<a class="btn  btn-default"> 分管副院长</a>	
+									 </switch>
+									 
+								    </div>
+								</div>
+								
+                                
+								<div title="教师" style="clear:both">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">开题报告</a> <i class="fa fa-angle-double-right
+"></i>
+
+										<switch name="flow3step1">
+										    <case value="1">  <a href="{:U('flow/read')}?id={$flow3id}" class="btn btn-success">上报开题报告</a> </case>
+										    <default />	<a href="javascript:open_url('{:U('flow/addlw?type=62')}')" class="btn btn-danger"> 上报开题报告</a>
+										</switch>
+
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <switch name="flow3step2">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flow3id}" class="btn btn-danger">领导小组</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flow3id}" class="btn btn-success">领导小组</a> </case>
+										     <default />	<a class="btn  btn-default"> 领导小组</a>	
+										 </switch>
+										
+										
+								    </div>
+								</div>
+                                
+                                
+								<div title="教师" style="clear:both">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">中期检查</a> <i class="fa fa-angle-double-right
+"></i>
+
+										<switch name="flow4step1">
+										    <case value="1">  <a href="{:U('flow/read')}?id={$flow4id}" class="btn btn-success">中期检查和每周的报表</a> </case>
+										    <default />	<a href="javascript:open_url('{:U('flow/addlw?type=63')}')" class="btn btn-danger"> 中期检查和每周的报表</a>
+										</switch>
+
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <switch name="flow4step2">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flow4id}" class="btn btn-danger">领导小组</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flow4id}" class="btn btn-success">领导小组</a> </case>
+										     <default />	<a class="btn  btn-default"> 领导小组</a>	
+										 </switch>
+										 
+									
+								    </div>
+								</div>
+                                
+                                
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">申报答辩</a> <i class="fa fa-angle-double-right
+"></i>
+										<switch name="flow5step1">
+										    <case value="1">  <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn21}">上报申请</a> </case>
+										    <default />	<a href="javascript:open_url('{:U('flow/addlw?type=64')}')" class="btn {$btn21}"> 中期检查和每周的报表</a>
+										</switch>
+										
+										 <i class="fa fa-arrow-right"></i>
+										 <switch name="flow5step2">
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn22}">论文领导小组</a> </case>
+										     <default />	<a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn22}">论文领导小组</a>	
+										 </switch>
+										 
+										<i class="fa fa-arrow-right"></i>
+										
+									 <switch name="flow5step3">
+									     <case value="1">  
+ 											 <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn23}">答辩主任</a> 
+                                       	   	<i class="fa fa-arrow-right"></i>
+ 											 <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn23}">秘书（抄送）</a> 
+										 </case>
+									     <default />	
+ 											 <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn23}">答辩主任</a> 
+                                       	   	<i class="fa fa-arrow-right"></i>
+ 											 <a href="{:U('flow/read')}?id={$flow5id}" class="btn {$btn23}">秘书（抄送）</a> 	
+									 </switch>
+									 
+								    </div>
+								</div>
+						
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">工作记录</div>
+                	<ul>
+                <volist name="flow" id="vo">
+					<li>
+						<a href="{:U('flow/read')}?id={$vo.id}">【{$vo.user_name}】<font color="#000000">{$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d',###})
+					</li>
+               </volist>
+                        </ul>
+                </div>
+            </div>
+            
+         </div>
+			</div>

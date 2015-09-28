@@ -1,0 +1,100 @@
+<layout name='Layout/ace_layout' />
+
+<style type="text/css" media="screen">
+/*.sidebar{display:none;}
+.main-content{margin-left:0}*/
+
+</style>
+<div id="content" style="height:750px;">
+			
+				<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting">
+				<div class="main">
+					<div class="div_title no_select">
+						资格审查
+                                <span>
+ 								   <eq name="position_id" value="24">
+ 								  	 <a href="{:U('flow/add?type=58')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
+ 								   </eq>
+ 								   <eq name="position_id" value="3">
+ 								  	 <a href="{:U('flow/add?type=59')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>论文领导小组</a>
+ 								   </eq>
+								</span>
+                                
+					</div>
+						<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">审查学生资格</a> <i class="fa fa-angle-double-right
+"></i>
+
+<switch name="step1" >
+									   <case value="1" > 
+                                       <a href="{:U('flow/read')}?id={$taskId}" class="btn btn-success">教务秘书</a>
+                                       
+                                        </case>
+									   <default />
+										   <eq name="position_id" value="24">
+										  	 <a href="{:U('flow/add?type=58')}" class="btn btn-danger">教务秘书</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="btn">教务秘书</a>
+										   </eq>
+									   </switch>
+                                       
+                                       
+								 
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <switch name="step2">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-danger">论文领导小组</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-success">论文领导小组</a> </case>
+										     <default />	<a class="btn  btn-default"> 论文领导小组</a>	
+										 </switch>
+								    </div>
+								</div>
+                                
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">教师指导资格</a> <i class="fa fa-angle-double-right
+"></i>
+
+<switch name="step21" >
+										   <case value="1" ><a href="{:U('flow/read')}?id={$flowid2}" class="btn btn-success">论文领导小组</a></case>
+										   <default />
+										   <eq name="position_id" value="3">
+										  	 <a href="{:U('flow/add?type=59')}" class="btn btn-danger">论文领导小组</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="btn">论文领导小组</a>
+										   </eq>
+										   </switch>
+
+
+
+										 <i class="fa fa-arrow-right"></i>
+										 <switch name="step22">
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flowid2}" class="btn btn-danger">院长</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flowid2}" class="btn btn-success">院长</a> </case>
+										     <default />	<a class="btn  btn-default"> 院长</a>	
+										 </switch>
+								    </div>
+								</div>
+								
+						
+				</div>
+			</div>
+
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">工作记录</div>
+                		<ul>
+
+                <volist name="flow" id="vo">
+					<li>
+						<a href="{:U('flow/read')}?id={$vo.id}">【{$vo.user_name}】<font color="#000000">{$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d',###})
+					</li>
+               </volist>
+                        </ul>
+                </div>
+            </div>
+            
+         </div>
+			</div>

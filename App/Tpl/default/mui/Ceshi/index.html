@@ -1,0 +1,77 @@
+<layout name='Layout/ace_layout' />
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				任务及审批
+		</li>
+		
+					<li class="mui-table-view-cell">
+						 <div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined  btn-success">通用任务</a> :
+										 <a href="{:U('task/add?type=ceshi')}" class="mui-btn mui-btn-negative">发起任务</a> <span class="mui-icon mui-icon-arrowthinright"></span>
+										  <a  class="mui-btn mui-btn-outlined  btn-default">执行人</a>
+								    </div>
+					</li>
+					<li class="mui-table-view-cell">
+					<div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined  btn-success">通用审批</a> :
+										 <a href="{:U('flow/add?type=100')}" class="mui-btn mui-btn-negative">发起请示</a>
+										 <span class="mui-icon mui-icon-arrowthinright"></span>
+										  <a  class="mui-btn mui-btn-outlined  btn-default">审批人</a>
+								    </div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined  btn-success">申报加分</a> :
+										 <a href="{:U('flow/add?type=48')}" class="mui-btn mui-btn-negative">填写申报</a>
+										 <span class="mui-icon mui-icon-arrowthinright"></span>
+										  <a  class="mui-btn mui-btn-outlined  btn-default">教务秘书审批</a>
+								    </div>
+					</li>
+	</ul>
+</div>
+
+<div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">
+				通用任务记录
+			</a>
+		<a class="mui-control-item" href="#item2mobile">
+				申报加分记录
+			</a>
+		<a class="mui-control-item" href="#item3mobile">
+				通用审批记录
+			</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+			<ul class="mui-table-view">
+					<volist name="task" id="vo">
+						<li>
+							<a href="{:U('task/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a>
+						</li>
+                        </volist>
+			</ul>
+		</div>
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				<volist name="shenbao" id="vo">
+						<li>
+							<a href="{:U('flow/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a>
+						</li>
+                        </volist>
+			</ul>
+		</div>
+		<div id="item3mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				<volist name="flow" id="vo">
+						<li>
+							<a href="{:U('flow/read')}?id={$vo.id}">【 {$vo.name} 】  <font color="#000000">{$vo.confirm_name}</font> ({$vo.create_time|date='Y-m-d',###})</a>
+						</li>
+                        </volist>
+			</ul>
+		</div>
+	</div>
+</div>

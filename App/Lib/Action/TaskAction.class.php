@@ -240,7 +240,7 @@ class TaskAction extends CommonAction {
 				
 		}
 		
-		$types_abc = array("1", "201","106","314","345","334","8","102");
+		$types_abc = array("1", "201","106","314","345","334","8","102","1022");
 		if (in_array($vo['type'], $types_abc)) { // abc式
 	//	if ($vo['type'] == '106') { // abc式
 			$this->style = '
@@ -253,9 +253,9 @@ class TaskAction extends CommonAction {
 				if ($step ==1) { //第一步
 					
 					$this -> user=M("user")->where('id = '.$a)->select();
-					if($vo['type'] =='1' || $vo['type'] =='201'|| $vo['type'] =='102'){
+					if($vo['type'] =='1' || $vo['type'] =='201'|| $vo['type'] =='102'|| $vo['type'] =='1022'){
 						$this -> forwordto = '要通知的老师';
-						if ($vo['type'] =='102') {
+						if ($vo['type'] =='102'|| $vo['type'] =='1022') {
 								$this->style = '
 									<style>
 										.widget-toolbar,#working,#finish,.limit_time{display:none !important}
@@ -313,7 +313,6 @@ class TaskAction extends CommonAction {
 					$this -> tj = '完成';
 				}
 		}
-		
 		// 第二步为转交的任务
 		$forword_types = array( "74", "75", "76", "2074", "2075", "2076", "8", "208", "105", "106");
 		if (in_array($vo['type'], $forword_types) and $step ==1)
@@ -734,6 +733,7 @@ class TaskAction extends CommonAction {
 		$data['end_time']= $info['expected_time'];
 		$data['user_id']=get_user_id();
 		$data['user_name']=get_user_name();
+		$data['actor']='huiyi';
 		$data['priority']=5;
 
 		$list=M('Schedule')->add($data);

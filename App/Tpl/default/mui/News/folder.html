@@ -1,0 +1,16 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				{$folder_name}
+		</li>
+		<foreach name="list" item="vo">
+					<li class="mui-table-view-cell">
+						 <a class="mui-navigate-right" href="{:U('read','id='.$vo['id'])}"><span class="col-8">{$vo.doc_no}</span> <span class="col-9">{$vo.name}</span> <span class="col-6">{$vo.create_time|toDate='Y-m-d'}</span>{$vo.user_name} 
+							<eq name="vo.name|strlen" value="0">
+								无标题
+							</eq> </a>
+					</li>
+				</foreach>
+	</ul>
+</div>

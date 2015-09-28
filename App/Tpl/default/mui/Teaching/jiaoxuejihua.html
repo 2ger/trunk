@@ -1,0 +1,77 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				发起任务（公体）
+		</li>
+					<li class="mui-table-view-cell">
+						<div class="col-sm-12">
+
+									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success" >提交教学进度</a>:
+											<switch name="isfa" >
+										   <case value="1" ><a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn1}">教研室主任</a></case>
+										   <default />
+										   <eq name="position_id" value="16">
+										  	 <a href="{:U('task/add?type=6')}" class="mui-btn mui-btn-outlined {$btn1}">教研室主任</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">教研室主任</a>
+										   </eq>
+										   </switch>
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+										 
+								 	<eq name="lc" value="1">
+								<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+									</eq>
+	  								  老师提交</a>
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+
+									  	<eq name="zr" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn3}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn3}">
+									</eq>
+	  								  教研室主任审核</a>
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+										<eq name="js" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn4}">
+										<else/>
+											<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn4}">
+									</eq>
+	  								  分管院长</a>
+								    </div>
+					</li>
+	</ul>
+</div>
+<div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">
+				待办
+			</a>
+		<a class="mui-control-item" href="#item2mobile">
+				等待中
+			</a>
+		<a class="mui-control-item" href="#item3mobile">
+				完成任务
+			</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+			<ul class="mui-table-view">
+					{$todo}
+			</ul>
+		</div>
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$doing} 
+			</ul>
+		</div>
+		<div id="item3mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$done} 
+			</ul>
+		</div>
+	</div>
+</div>

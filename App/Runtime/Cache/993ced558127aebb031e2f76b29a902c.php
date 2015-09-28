@@ -243,14 +243,14 @@
 								<div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
 									    <a  class="btn btn-lg  btn-success">会议召开AB式</a> :
-										 <a href="<?php echo U('task/add?type=101');?>" class="btn  btn-danger">发起通知</a> <i class="fa fa-arrow-right"></i>
+										 <a href="<?php echo U('task/add?type=1012');?>" class="btn  btn-danger">发起通知</a> <i class="fa fa-arrow-right"></i>
 										  <a  class="btn  btn-default">参会人员收到</a>
 								    </div>
 								</div><!-- #任务流程结束 -->
 								<div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
 									    <a  class="btn btn-lg  btn-success">会议召开ABC式</a> :
-										 <a href="<?php echo U('task/add?type=102');?>" class="btn  btn-danger">发起任务</a> <i class="fa fa-arrow-right"></i>
+										 <a href="<?php echo U('task/add?type=1022');?>" class="btn  btn-danger">发起任务</a> <i class="fa fa-arrow-right"></i>
 										  <a  class="btn  btn-default">主任转通知</a><i class="fa fa-arrow-right"></i>
 										  <a  class="btn  btn-default">参会人员收到</a>
 								    </div>

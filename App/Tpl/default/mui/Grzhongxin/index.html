@@ -1,0 +1,350 @@
+<layout name='Layout/ace_layout' />
+<style type="text/css" media="screen">
+#sidebar{display:none;}
+.main-content{margin-left:0;}
+	.sidebars{ min-width: 190px;float: left;}
+.sidebars li a .menu-text{ font-size:16px!important;}
+</style>
+<div class="sidebars">				
+	<ul id="left_menu" class="nav nav-list">
+		<li class="active open">
+		<a node="{$vo.id}" href="{:U('grzhongxin/index')}?tasktype={$userlist['id']}" >
+		<i class="fa fa-angle-right"></i><span class="menu-text">{$userlist['name']}个人中心</span></a>
+		</li>
+		<volist name="leftMenu" id="vo">
+			<li>
+				{:left_menu_status($vo['type'],$userlist['id'])}
+			<!--<a href="{:U('grzhongxin/myjob')}?id={$userlist['id']}&tasktype={$vo.type}">
+			<i class="fa fa-angle-right"></i><span class="menu-text">{$vo.name} </span></a>-->
+			</li>
+		</volist>
+	</ul>
+</div>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+				
+<div id="content" style="height:1120px">
+				
+				<div class="blocks" style="left:0;  width: 100%;">
+			<div class="block meeting">
+            	<div class="main">
+                	<div class="div_title no_select">个人信息
+                    	<span>
+                   		<a href="{:U('task/add')}?type=104&uid={$userlist['id']}" class="btn btn-xs btn-success">给他/她发布任务</a>
+                        </span>
+                    </div>
+				 <table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+				     <thead>
+				           <tr>
+				               <th>头像</th>
+                               <th>员工编号</th>
+				               <th>{$userlist['emp_no']}</th>
+				           </tr>
+<style type="text/css" media="screen">
+tr th{ text-align:center!important}
+</style>
+				       </thead>
+				                  <tbody>     
+                                
+				                     <tr>
+                                         <td class="" rowspan="3"><img width="100" onerror="this.src='__PUBLIC__/v2/ico/3.png'" src="__PUBLIC__/people/{$userlist['id']}.jpg">
+										 <br /> <a href="{:U('profile/index')}" title="">修改个人信息</a> <br /> <a href="{:U('profile/password')}" title="">修改密码</a>
+										 </td>
+	                                      <td class="">姓名</td>
+	                                      <td class="">{$userlist['name']}</td>
+									 </tr>   
+									 <tr>
+                                         <td class="">职务</td>
+                                         <td class="">{$userlist['rank_id']|get_rank_name=###}</td>
+									 </tr>  
+									 <tr>
+                                         <td class="">电话</td>
+                                         <td class="">{$userlist['tel']|default="未填写"}</td>
+									 </tr>  
+							</tbody></table> 
+							
+                  
+                </div>               
+            </div>
+            <div class="block email">
+            	<div class="main">
+                	<div class="div_title no_select">教学工作</div>
+                	<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+                    <tr>
+    <td>专业</td>
+    <td></td>
+    <td>公体</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>教材</td>
+    <td><volist name="data01" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>教材</td>
+    <td><volist name="data11" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+  <tr>
+    <td>计划</td>
+    <td><volist name="data02" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>计划</td>
+    <td><volist name="data12" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+  <tr>
+    <td>试卷</td>
+    <td><volist name="data03" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>试卷</td>
+    <td><volist name="data13" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+  <tr>
+    <td>大纲</td>
+    <td><volist name="data04" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>大纲</td>
+    <td><volist name="data14" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+  <tr>
+    <td>教案</td>
+    <td><volist name="data05" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>教案</td>
+    <td><volist name="data15" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+  <tr>
+    <td>总结</td>
+    <td><volist name="data06" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+    <td>总结</td>
+    <td><volist name="data16" id="vo"><a href="{:U('flow/read')}?id={$vo.id}"
+>{$vo.name}</a>
+</volist></td>
+  </tr>
+                     </table>
+                     
+                </div>
+            </div>
+
+			
+					
+					
+					
+					<div class="block meeting" style="height:400px">
+		            	<div class="main">
+					        <div class="div_title no_select">异常指标</div>
+							<ul>
+                            <volist name="yichang" id="vo">
+								<li>【{$vo.user_id|get_user_ssk}】<font color="#000000">{$vo.name}</font> &nbsp;{$vo.start_time}
+								</li>
+                            </volist>
+							</ul>
+							<!-- <iframe src="{:U('schedule/index')}" id="8" name="40" frameBorder=0 scrolling=no height=400 width="100%"></iframe> -->
+						
+						</div>
+					           
+					</div> <!-- end block -->
+					
+					
+					
+					
+					
+					<div class="block email" style="height:400px">
+					            	<div class="main" >
+					                	<div class="div_title no_select">课程表</div>
+          
+                       <table  class="table table-striped table-bordered table-condensed" style="margin:30px 20px; width:95%;clear:both;width" id="mytable">
+					                        <thead>
+					                          <tr>
+					                            <th class="">
+					                              时间
+					                            </th>
+					                            <th>
+					                              星期一
+					                            </th>
+					                            <th>
+					                              星期二
+					                            </th>
+					                            <th class="hidden-phone">
+					                             星期三
+					                            </th>
+					                            <th class="hidden-phone">
+					                             星期四
+					                            </th>
+					                            <th class="hidden-phone">
+					                              星期五
+					                            </th>
+					                          </tr>
+					                        </thead>
+					                        <tbody>
+					                          <tr class="">
+					                            <td>
+					                              1-2节
+					                            </td>
+					                            <td>
+					                              {:get_action_weekone(1,"1")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(2,"1")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(3,"1")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(4,"1")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(5,"1")}
+					                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               3-4节
+					                            </td>
+					                            <td>
+					                              {:get_action_weekone(1,"2")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(2,"2")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(3,"2")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(4,"2")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(5,"2")}
+					                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               6-7节
+					                            </td>
+				                            <td>
+				                              {:get_action_weekone(1,"3")}
+				                            </td>
+				                            <td class="hidden-phone">
+				                              {:get_action_weekone(2,"3")}
+				                            </td>
+				                            <td class="hidden-phone">
+				                              {:get_action_weekone(3,"3")}
+				                            </td>
+				                            <td class="hidden-phone">
+				                              {:get_action_weekone(4,"3")}
+				                            </td>
+				                            <td class="hidden-phone">
+				                              {:get_action_weekone(5,"3")}
+				                            </td>
+					                          </tr>
+					                          <tr class="">
+					                            <td>
+					                               8-9节
+					                            </td>
+					                            <td>
+					                              {:get_action_weekone(1,"4")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(2,"4")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(3,"4")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(4,"4")}
+					                            </td>
+					                            <td class="hidden-phone">
+					                              {:get_action_weekone(5,"4")}
+					                            </td>
+					                          </tr>
+					            
+					                        </tbody>
+					                      </table>
+                                         
+				                                                    
+							</table>
+									 
+					                </div>               
+					</div> <!-- end block -->
+			
+						<div class="block work" id="switchdiv1" style="overflow: hidden; z-index: 3;">
+									<div class="main">
+										<div class="div_title1 no_select">
+											<div class="switch_btn divBG2 divBG1">
+												待办任务
+											</div>
+											<div class="switch_btn divBG2">
+												完成任务
+											</div>
+										</div>
+										<div class="worklist">
+											<div class="wait switch_">
+												<ul>
+			                                    <volist name="fabu" id="vo">
+													<li>【{$vo.user_name}】<a href="{:U('task/read')}?id={$vo.id}"
+			 title=""><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													</li>
+			                                    </volist>
+												</ul>
+											</div>
+											<div class="already switch_" style="left: 856px; opacity: 0;">
+												<ul>
+													<volist name="jieshou" id="vo">
+													<li>【{$vo.user_name}】<a href="{:U('task/read')}?id={$vo.task_id}"
+			><font color="#000000">({$vo.name})</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													</li>
+			                                        </volist>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+
+			            <div class="block work" id="switchdiv2" style="overflow: hidden; z-index: 3;">
+									<div class="main">
+										<div class="div_title1 no_select">
+											<div class="switch_btn divBG2 divBG1">
+												追踪流程								</div>
+											<div class="switch_btn divBG2">
+												完成流程
+											</div>
+										</div>
+										<div class="worklist">
+											<div class="wait switch_">
+												<ul>
+			                                    <volist name="faqi" id="vo">
+													<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.flow_id}"><font color="#000000">{$vo.name}</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													</li>
+			                                        </volist>
+												</ul>
+											</div>
+											<div class="already switch_" style="left: 856px; opacity: 0;">
+												<ul>
+													<volist name="shenpi" id="vo">
+													<li>【{$vo.user_name}】<a href="{:U('flow/read')}?id={$vo.flow_id}"
+			><font color="#000000">(已审批)</font></a>&nbsp;{$vo.create_time|date='Y-m-d',###}
+													</li>
+			                                        </volist>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+         </div>
+			</div>

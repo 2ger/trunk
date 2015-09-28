@@ -1114,7 +1114,7 @@ ul.tree_menu i {
 	position: absolute;
 	z-index: 2;
 	height: 35px;	
-	background: rgb(241, 245, 250);
+	background: rgb(167, 250, 215);
 	border-bottom:1px solid #ccc;
 }
 #uploader .data {

@@ -1,0 +1,563 @@
+[ 2015-09-24T09:12:29+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000707s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000893s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.016119s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016194s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:12:29+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000339s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000432s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000277s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:12:32+08:00 ] 127.0.0.1 /trunk/index.php/home/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000401s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000955s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001049s ]
+
+[ 2015-09-24T09:12:32+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000321s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000254s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:12:36+08:00 ] 127.0.0.1 /trunk/index.php/home/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000281s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000226s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000256s ]
+
+[ 2015-09-24T09:12:36+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000286s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000229s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:17:30+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000299s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000247s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000286s ]
+
+[ 2015-09-24T09:17:31+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000286s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:17:35+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000328s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000377s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000262s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000306s ]
+
+[ 2015-09-24T09:17:35+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000382s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000427s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:30+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000306s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000249s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000581s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000651s ]
+
+[ 2015-09-24T09:21:30+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000293s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000254s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:33+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000539s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000284s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000331s ]
+
+[ 2015-09-24T09:21:33+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000366s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:33+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000383s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000233s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000264s ]
+
+[ 2015-09-24T09:21:33+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000287s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000230s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:34+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000426s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000271s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000316s ]
+
+[ 2015-09-24T09:21:34+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000387s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000260s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:34+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000362s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000405s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000469s ]
+
+[ 2015-09-24T09:21:34+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000289s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000356s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000485s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000324s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000370s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000274s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000305s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000374s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000262s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000299s ]
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000285s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000325s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000228s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000347s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000526s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000267s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000311s ]
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000336s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000228s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000316s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000234s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000268s ]
+
+[ 2015-09-24T09:21:35+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000282s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000228s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:36+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000531s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000609s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000446s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000513s ]
+
+[ 2015-09-24T09:21:36+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000299s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000256s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000305s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000235s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000267s ]
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000279s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000233s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000293s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000225s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000254s ]
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000290s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000291s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/bylunwen/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000353s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000403s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000247s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000232s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000262s ]
+
+[ 2015-09-24T09:21:37+08:00 ] 127.0.0.1 /trunk/index.php/login/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000290s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Core/Dispatcher.class.php 第 125 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/common.php 第 171 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000219s ]
+INFO: [ action_begin ] --START--
+INFO: Run AuthCheck Behavior [ RunTime:0.000229s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Connection refused /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+ERR: Connection refused
+NOTIC: [2] include(): Filename cannot be empty /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.::/Library/WebServer/Documents/test/16/trunk/ThinkPHP/Extend/Vendor/') /Library/WebServer/Documents/test/16/trunk/ThinkPHP/Common/functions.php 第 52 行.
+

@@ -202,30 +202,66 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 									
-<?php echo W('PageHeader',array('name'=>'任务详情','search'=>'N'));?>
-<div class="operate panel panel-default">
+<div class="page-header">
+	<h1><?php echo ($vo["name"]); ?></h1>
+</div>
+<div class="operate panel panel-default hidden-print">
 	<div class="panel-body">
 		<div class="pull-left">
-			<a onclick="window.history.back()" class="btn btn-sm btn-primary pull-left hidden-print">返回</a>
+			<a onclick="window.history.back()" class="btn btn-sm btn-primary hidden-print">返回</a>
+			<a onclick="winprint();" class="btn pull-left btn-sm btn-success hidden-print">打印</a>
+			
 		</div>
+			<?php if(($UID) == $vo["user_id"]): ?><a href="__APP__/task/del/id/<?php echo ($task_id); ?>" class="btn pull-right btn-sm btn-danger">删除任务</a><?php endif; ?>
 
 		<div class="text-center">
-			<?php if(($UID) == $vo["user_id"]): ?><a href="__APP__/task/del/id/<?php echo ($task_id); ?>" class="btn btn-md btn-danger">删除任务</a><?php endif; ?>
 			<?php if(($no_assign) == "1"): ?><a onclick="let_me_do(<?php echo ($task_id); ?>)" class="btn btn-md btn-primary">我来处理</a><?php endif; ?>
 			<?php if(($is_accept) == "1"): ?><a onclick="accept(<?php echo ($task_log_id); ?>)" class="btn btn-md btn-success">接受任务</a>
-				<a onclick="reject(<?php echo ($task_log_id); ?>);" class="btn btn-md btn-danger">不接受</a><?php endif; ?>
+				<!-- <a onclick="reject(<?php echo ($task_log_id); ?>);" class="btn btn-md btn-danger">不接受</a> --><?php endif; ?>
 		</div>
 	</div>
 </div>
 
 
-<form method='post' id="form_data" name="form_data" enctype="multipart/form-data"   class="well form-horizontal">
+<form method='post' id="form_data" name="form_data" enctype="multipart/form-data"   class=" form-horizontal">
 	<input type="hidden" id="ajax" name="ajax" value="0">
 	<input type="hidden" id="add_file" name="add_file">
 	<input type="hidden" id="executor" name="executor" value="<?php echo ($vo["executor"]); ?>">
 	<input type="hidden" id="opmode" name="opmode" value="add">
 
-	<div class="form-group">
+<style type="text/css" media="screen">
+td{text-align:left;}
+</style>
+<table class="table table-striped table-bordered text-left">
+   
+    <tr>
+        <td width="20%"> 任务名称 </td>
+        <td> <?php echo ($vo["name"]); ?> </td>
+    </tr>
+   
+    <tr>
+        <td> 发起人 </td>
+        <td> <?php echo ($vo["user_name"]); ?> </td>
+    </tr>
+    <tr>
+        <td> 执行人 </td>
+        <td> <?php echo (show_contact($vo["executor"])); ?></td>
+    </tr>
+    <tr>
+        <td> 期望完成时间 </td>
+        <td> 	<?php echo ($vo["expected_time"]); ?></td>
+    </tr>
+    <tr>
+        <td> 任务说明 </td>
+        <td> 	<?php echo ($vo["content"]); ?>	
+			<br />
+			<?php echo W('File',array('add_file'=>$vo['add_file'],'mode'=>'show'));?>
+		</td>
+    </tr>
+</table>
+<div class="hidden">
+	
+	<div class="form-group " >
 		<label class="col-sm-2 control-label" for="name">任务名称：</label>
 		<div class="col-sm-10">
 			<p class="form-control-static">
@@ -275,6 +311,8 @@
 			<?php echo W('File',array('add_file'=>$vo['add_file'],'mode'=>'show'));?>
 		</div>
 	</div>
+	
+	</div><!-- .hidden -->
 </form>
 
 <?php echo W('PageHeader',array('name'=>'任务执行情况','search'=>'N'));?>
@@ -282,8 +320,30 @@
 		<?php if(is_array($task_log)): $i = 0; $__LIST__ = $task_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>》 	 <?php echo ($item["executor_name"]); endforeach; endif; else: echo "" ;endif; ?> -->
 		<style type="text/css" media="screen">
 		.ke-insertfile{clear:right;float:left;width: 100%;}
+		td{font-size:14px;}
 		</style>
-<div class="ul_table border-bottom">
+		<table class="table table-striped table-bordered ">
+			<?php if(is_array($task_log)): $i = 0; $__LIST__ = $task_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr>
+		        <td> <strong>批注</strong> </td>
+		        <td colspan='4' style="min-height:50px"> 
+				<!-- <?php echo (task_status($item["status"])); ?>  --><?php echo ($item["feed_back"]); ?>
+				
+				 </td>
+		    </tr>
+		    <tr>
+		        <td width=20%><strong>执行人</strong></td>
+		        <td width=20%><?php echo ($item["executor_name"]); ?></td>
+		        <td width=20%><strong>时间</strong></td>
+		        <td width=20%><?php echo ($item["finish_time"]); ?></td>
+		        <td width=20%>
+					 <?php if(($item["assigner"]) == $UID): ?><div class="hidden-print">
+						 	<?php echo (task_log_deel($item["id"])); ?>
+						 </div><?php endif; ?> 
+			</td>
+		    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+		</table>
+		
+<div class="ul_table border-bottom hidden">
 	<ul>
 		<li class="thead">
 			<span class="col-15 text-center">分配给</span>

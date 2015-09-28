@@ -1,0 +1,108 @@
+<layout name='Layout/ace_layout' />
+<div class="mui-card">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-divider">
+				发起任务（公体）
+		</li>
+					<li class="mui-table-view-cell">
+						<div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined" >订教材</a> :
+										
+										  <switch name="isfa" >
+										   <case value="1" ><a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn1}">分管院长</a></case>
+										   <default />
+										   <eq name="user_rank" value="2">
+										  	 <a href="{:U('task/add?type=1')}" class="mui-btn mui-btn-outlined {$btn1}">分管院长</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">分管院长</a>
+										   </eq>
+										   </switch>
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+ 										<eq name="iszhuan" value="1">
+ 											<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+ 											<else/>
+ 											<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn2}">
+ 										</eq>
+										 教研室主任通知老师</a>
+										 
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+										
+									<eq name="iswan" value="1">
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn3}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId}" class="mui-btn mui-btn-outlined {$btn3}">
+									</eq>
+	  								  老师去教务系统填写</a>
+								    </div>
+								    <li class="mui-table-view-cell">
+								    <div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success" >领教材</a> :
+										
+									  <switch name="lisfa" >
+									   <case value="1" > <a href="{:U('task/edit')}?id={$taskId2}" class="mui-btn mui-btn-outlined {$btn21}">教学秘书</a> </case>
+									   <default />
+										   <eq name="user_rank" value="23">
+										  	 <a href="{:U('task/add?type=2')}" class="mui-btn mui-btn-outlined {$btn21}">教学秘书</a>
+										   <else/>
+										  	 <a onclick="alert('权限不足')" class="mui-btn mui-btn-outlined ">教学秘书</a>
+										   </eq>
+									   </switch>
+									   
+										<span class="mui-icon mui-icon-arrowthinright"></span>
+										 
+										 	<eq name="liswan" value="1">
+										<a href="{:U('task/read')}?id={$taskId2}" class="mui-btn mui-btn-outlined {$btn22}">
+										<else/>
+										<a href="{:U('task/read')}?id={$taskId2}" class="mui-btn mui-btn-outlined {$btn22}">
+									</eq>
+	  								  老师领教材</a>
+										 
+								    </div>
+								    </li>
+								    <li class="mui-table-view-cell">
+								    <div class="col-sm-12">
+									    <a  class="mui-btn mui-btn-outlined btn-lg  btn-success" >填写教材</a> :
+            							<eq name="tian" value="1">					
+										<a href="{:U('flow/edit')}?id={$jiaoid}" class="mui-btn mui-btn-outlined  btn-success">我的教材</a>		
+											<else/>
+								                                        								
+										<a href="{:U('/flow/add/type/79')}" class="mui-btn mui-btn-outlined  btn-default">我的教材</a>			
+										</eq>
+
+										 
+								    </div>
+								    </li>
+					</li>
+	</ul>
+</div>
+<div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">
+				待办
+			</a>
+		<a class="mui-control-item" href="#item2mobile">
+				等待中
+			</a>
+		<a class="mui-control-item" href="#item3mobile">
+				完成任务
+			</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+			<ul class="mui-table-view">
+					{$todo}
+			</ul>
+		</div>
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$doing} 
+			</ul>
+		</div>
+		<div id="item3mobile" class="mui-slider-item mui-control-content">
+			<ul class="mui-table-view">
+				{$done} 
+			</ul>
+		</div>
+	</div>
+</div>

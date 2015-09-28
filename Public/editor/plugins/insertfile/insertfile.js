@@ -133,7 +133,7 @@ KindEditor.plugin('insertfile', function(K) {
 	self.clickToolbar(name, function() {
 		self.plugin.fileDialog({
 			clickFn : function(url, title) {
-				var html = '<p class="ke-insertfile"> 附件：' + title + ' <a class=" btn btn-xs btn-info" href="' + url + '" data-ke-src="' + url + '" target="_blank">下载</a></p><br/>';
+				var html = '<p class="ke-insertfile"> 附件：' + title + ' <a class="hidden-print btn btn-xs btn-info" href="' + url + '" data-ke-src="' + url + '" target="_blank">下载</a>  <a class="hidden-print btn btn-xs btn-success" href="http://officeweb365.com/o/?i=5435&furl=http://kdoa.vlldoo.com' + url + '" target="_blank">预览</a></p><br/>';
 				self.insertHtml(html).hideDialog().focus();
 			}
 		});

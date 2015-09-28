@@ -54,6 +54,8 @@ class BylunwenAction extends CommonAction {
 		}
 	} // end
 	
+	$where_flow['type'] = array("in","58,59");
+	$this->flow=M('flow')->where($where_flow)->limit(6)->order('id desc')->select();
 	
 		$this -> display();
 	}

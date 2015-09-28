@@ -15,13 +15,13 @@
 			prev_date = '';
 			if (data != null) {
 				$.each(data, function(i) {
-			
+			<?php echo get_user_ssk('+data[i].user_id+'); ?>
 					html = '<li id=li_' + data[i].id + ' style=background-color:' + schedule_bg(data[i].priority) + ">";
 					html += '<i class="ico_square"></i>';
 					html += '<span class="event_time">' + data[i].start_time + '</span>';//data[i].start_time.substr(0,10)
-					html += ' <p id=' + data[i].id + ' class="" title="' + data[i].name + '">' +user_name(data[i].user_id) +' ' ; //event_msg
+					html += ' <p id=' + data[i].id + ' class="" title="' + data[i].name + '">' + data[i].user_name +' : '; //event_msg
 					html += data[i].name;
-					html += '<a href="__APP__/Schedule/update/id/' + data[i].id + '/p/3" class="btn  btn-success btn-xs">标记为正常</a> <a href="__APP__/Schedule/update/id/' + data[i].id + '/p/5" class="btn btn-danger btn-xs">标记为异常</a> ';
+					html += '<a  href="__APP__/Schedule/update/id/' + data[i].id + '/p/3" class="btn  btn-success btn-xs {$hidde}">标记为正常</a> <a href="__APP__/Schedule/update/id/' + data[i].id + '/p/5" class="{$hidde} btn btn-danger btn-xs">标记为异常</a> ';
 					html += ' </p>';
 					html += "</li>";
 					prev_date = data[i].start_date;
@@ -30,10 +30,7 @@
 			}
 		});
 	}
-	function user_name(id){
-		name = "{:get_user_kk(69)}";
-		return name;
-	}
+	
 	function add() {
 		window.open("{:U('add')}", "_self");
 	}

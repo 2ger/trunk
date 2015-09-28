@@ -12,6 +12,26 @@ td{cursor: pointer;}
 								我的教案（公体）
 								<span>请点击下面方格进行提交教案<!-- （绿：已审核、红：未审核、白：未提交） --></span>
 							</div>
+							
+							<div title="任务流程开始" class="taskflow">
+							    <div class="col-sm-12">
+								    <a  class="btn btn-lg  btn-success" >教案</a> :
+								 <eq name="isfa" value="1">
+  										<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn21}">提交全年教案</a> 
+  									<else/>
+									 	<a href="{:U('flow/add')}?type=68" class="btn {$btn21}">提交全年教案</a> 
+  								</eq>
+									 <i class="fa fa-arrow-right"></i>
+								<eq name="iswan" value="1">
+									<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn22}">
+									<else/>
+									<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn22}">
+								</eq>
+  								  审核</a>
+									 
+							    </div>
+							</div><!-- #任务流程结束 -->
+							
 							{:jiao_an(68)}
 						</div>
 					</div>
@@ -25,6 +45,26 @@ td{cursor: pointer;}
 								我的教案(专业)
 									<span>请点击下面方格进行提交教案<!-- （绿：已审核、红：未审核、白：未提交） --></span>
 								</div>
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success" >教案</a> :
+									 <eq name="isfa" value="1">
+	  										<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn21}">提交全年教案</a> 
+	  									<else/>
+										 	<a href="{:U('flow/add')}?type=68" class="btn {$btn21}">提交全年教案</a> 
+	  								</eq>
+										 <i class="fa fa-arrow-right"></i>
+									<eq name="iswan" value="1">
+										<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn22}">
+										<else/>
+										<a href="{:U('flow/read')}?id={$flowId}" class="btn {$btn22}">
+									</eq>
+	  								  审核</a>
+									 
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
 								{:jiao_an(85)}
 						</div>
 					</div>
