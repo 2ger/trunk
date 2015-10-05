@@ -328,8 +328,8 @@ class TaskAction extends CommonAction {
 					$this -> status_name = 'forword';
 					$this -> tj = '下一步';
 		}
-		//教学大岗 、  总结
-		$types_abac = array("5",'205',"6",'206','9','209');
+		//教学大岗 、计划、  总结
+		$types_abac = array("5",'205','2052',"6",'206','2062','9','209','2092');
 		if (in_array($vo['type'], $types_abac)) { // abac式
 			$this->style = '
 				<style>
@@ -356,8 +356,8 @@ class TaskAction extends CommonAction {
 							#forword{display:block!important}
 						</style>
 						';
-					$this -> forwordto = '传给';
-					$this -> user=M("user")->where('position_id = 12')->select();
+					$this -> forwordto = '传给分管';
+					$this -> user=M("user")->where('id = 74')->select();// 苏龙
 					$this -> status_name = 'forword';
 					$this -> tj = '下一步';
 				}else if ($step ==3){
@@ -372,50 +372,7 @@ class TaskAction extends CommonAction {
 				}
 				
 		}
-		//教学 总结
-		$types_abac = array('9','209');
-		if (in_array($vo['type'], $types_abac)) { // abac式
-			$this->style = '
-				<style>
-					.widget-toolbar,#working,#finish{display:none !important}
-					#forword,#limit_time{display:block!important}
-				</style>
-				';
-					$this -> zxnr = '说明';
-				if ($step ==1) { //第一步
-					$this->style = '
-						<style>
-							.widget-toolbar,.limit_time,#working,#finish{display:none !important}
-							#forword{display:block!important}
-						</style>
-						';
-					$this -> forwordto = '传给';
-					$this -> user=M("user")->where('position_id = 16')->select();
-					$this -> status_name = 'forword';
-					$this -> tj = '下一步';
-				}else if ($step ==2) { //第一步
-					$this->style = '
-						<style>
-							.widget-toolbar,.limit_time,#working,#finish{display:none !important}
-							#forword{display:block!important}
-						</style>
-						';
-					$this -> forwordto = '传给';
-					$this -> user=M("user")->where('id = '.$a)->select();
-					$this -> status_name = 'forword';
-					$this -> tj = '下一步';
-				}else if ($step ==3){
-					$this -> status_name = 'finish';
-					$this->style = '
-						<style>
-							.widget-toolbar,#working,#forword{display:none !important}
-							#finish{display:block!important}
-						</style>
-						';
-					$this -> tj = '通过';
-				}
-				
-		}
+		
 		
 		
 		// 第二步为 完成 的任务   /// 还需添加 哪种type 且第几步 为完成的情况
@@ -476,7 +433,11 @@ class TaskAction extends CommonAction {
 		$where_working['task_id'] = $id;
 		$where_working['transactor'] = array('eq', get_user_id());
 		$task_working = M("TaskLog") -> where($where_working) -> find();
-
+		
+		// 获得上一步的id
+		$last_log = M("TaskLog") -> where('task_id = '.$id.' and transactor = '.$task_working['assigner'])->order('id desc') -> find(); 
+		$this->last_log_id = $last_log['id'];
+		
 		if ($task_working) {
 			$this -> assign('is_working', 1);
 			$this -> assign('task_working', $task_working);

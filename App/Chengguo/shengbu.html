@@ -51,59 +51,39 @@
           
 		   
 				 <table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
-				     <thead>
-				           <tr>
-				               <th>任务</th>
-				               <th>操作</th>
-				               <th>说明</th>
-				               <th>状态</th>
-				           </tr>
-				       </thead>
-				                  <tbody>     
-								
-				                     <tr height="30">
-										 <td class="">领取教材</td>
+				    <div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
 
-										 <td class=""><a class="button-success pure-button" href="/index.php?s=/Admin/Teaching/textteacheradd/id/{$textbooks.id}.html">完成</a></td>
-										 <td class="">需在{$textbooks.createdate|date='Y-m-d',###}前领取</td>
+									    <a  class="btn  btn-primary">组织成果</a> :
+										
+										 <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn btn-danger ">院长</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn  btn-default">分管院长</a> <i class="fa fa-arrow-right"></i>
+										  <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn  btn-default">通知公告</a>
+								    </div>
+								</div><!-- #任务流程结束 -->							
 								
-										 <td class="">已领取</td>
-									 </tr>     
 								
-								
-				                     <tr height="30">
-										 <td class="">教学大岗</td>
-										 <td class=""><a class="button-error pure-button" href="javascript:openURL('/index.php?s=/Admin/Teaching/syllabus/id/{$syllabus.id}.html')">上传</a></td>
-										  <td class="">需在{$syllabus.createdate|date='Y-m-d',###}前上传</td>
-										 <td class="">未上传</td>
-									 </tr>           
-							
-				                     <tr height="30">
-										 <td class="">教学计划</td>
-										 <td class=""><a class="button-error pure-button"  href="javascript:openURL('/index.php?s=/Admin/Teaching/programme/id/{$programme.id}.html')">上传</a></td>
-										 <td class="">需在{$programme.createdate|date='Y-m-d',###}前上传</td>
-										 <td class="">未上传</td>
-									 </tr>                                          
-				                     <tr height="30">
-										 <td class="">试卷及试卷分析</td>
-										 <td class=""><a class="button-error pure-button"  href="javascript:openURL('/index.php?s=/Admin/Teaching/Papers/id/{$Papers.id}.html')">上传</a></td>
-										 <td class="">需在{$Papers.createdate|date='Y-m-d',###}前上传</td>
-										 <td class="">未上传</td>
-									 </tr>                                           
-				                     <tr height="30">
-										 <td class="">教案</td>
-										 <td class=""><a class="button-error pure-button"  href="javascript:openURL('/index.php?s=/Admin/Teaching/programme/id/{$syllabus.id}.html')">提交</a></td>
-										 <td class="">本周提交下周</td>
-										 <td class="">本周未提交</td>
-									 </tr>   
-							</tbody></table>
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+
+									    <a  class="btn  btn-primary">组织成果</a> :
+										
+										 <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn btn-danger ">老师</a>
+										 <i class="fa fa-arrow-right"></i>
+										 
+										 <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn  btn-default">教学工作委员会主任</a> <i class="fa fa-arrow-right"></i>
+										  <a href="javascript:open_url('{:U('task/addSimple?type=74')}')" class="btn  btn-default">院长</a>
+								    </div>
+								</div><!-- #任务流程结束 --></table>
 									 
                   
                 </div>               
             </div>
             <div class="block email">
             	<div class="main">
-                	<div class="div_title no_select">我的申报记录<a style="margin-left:200px;" href="__APP__/flow/add/type/39">提交申报</a></div>
+                	<div class="div_title no_select">我的申报记录<a style="margin-left:200px;" href="/__APP__/index.php/flow/add/type/39">提交申报</a></div>
                 	<ul>
                     	<volist name="score" id="vo">
 						<li><a href="/general/notify/show/notify.php?TYPE=04">【{$vo.uid|get_test}】</a><a href="javascript:open_notify(19,0);" title=""><font color='#000000'>【{$vo.title}】</font></a>(总分:{$vo.Total}分) {$vo.position|date='Y-m-d',###}</li>

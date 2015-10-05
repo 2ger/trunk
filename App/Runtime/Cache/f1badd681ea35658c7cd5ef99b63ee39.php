@@ -232,11 +232,12 @@
 <style type="text/css" media="screen">
 td{text-align:left;}
 </style>
+		   <!-- <?php echo show_bottons_status('task',$vo.type,$uid);?>
+						<?php echo flow_bottons($vo.type);?>	 -->
 <table class="table table-striped table-bordered text-left">
-   
     <tr>
         <td width="20%"> 任务名称 </td>
-        <td> <?php echo ($vo["name"]); ?> </td>
+        <td> <?php echo ($vo["name"]); ?> </td> 
     </tr>
    
     <tr>
@@ -321,25 +322,33 @@ td{text-align:left;}
 		<style type="text/css" media="screen">
 		.ke-insertfile{clear:right;float:left;width: 100%;}
 		td{font-size:14px;}
+		.tr<?php echo ($last_log_id); ?>{background-color: #fcf8e3;
+    border-color: #fbeed5;}
 		</style>
-		<table class="table table-striped table-bordered ">
-			<?php if(is_array($task_log)): $i = 0; $__LIST__ = $task_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr>
+		<table class="table  table-bordered ">
+			<?php if(is_array($task_log)): $i = 0; $__LIST__ = $task_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr class="tr<?php echo ($item["id"]); ?> " id ="<?php echo ($item["id"]); ?>">
+		        <td width=20%> 第<?php echo ($item["step"]); ?>步 <strong>执行人</strong></td>
+		        <td width=20%><?php echo ($item["executor_name"]); ?></td>
+		        <td width=20%><strong>时间</strong></td>
+		        <td width=20%><?php echo ($item["finish_time"]); ?></td>
+		        <td width=20% class="deel">
+					 <?php if(($item["assigner"]) == $UID): ?><div class="hidden-print">
+						 	<?php echo (task_log_deel($item["id"])); ?>
+						 </div><?php endif; ?> 
+					 <?php if(($item["executor"]) == $UID): ?><style type="text/css" media="screen">
+						 .deel .btn-success{display:none;}
+						 </style>
+						 <div class="hidden-print">
+						 	<?php echo (task_log_deel($item["id"])); ?>
+						 </div><?php endif; ?>
+			</td>
+		    </tr>
+		    <tr  class="tr<?php echo ($item["id"]); ?>" style="border-bottom: 2px solid #333;">
 		        <td> <strong>批注</strong> </td>
 		        <td colspan='4' style="min-height:50px"> 
 				<!-- <?php echo (task_status($item["status"])); ?>  --><?php echo ($item["feed_back"]); ?>
 				
 				 </td>
-		    </tr>
-		    <tr>
-		        <td width=20%><strong>执行人</strong></td>
-		        <td width=20%><?php echo ($item["executor_name"]); ?></td>
-		        <td width=20%><strong>时间</strong></td>
-		        <td width=20%><?php echo ($item["finish_time"]); ?></td>
-		        <td width=20%>
-					 <?php if(($item["assigner"]) == $UID): ?><div class="hidden-print">
-						 	<?php echo (task_log_deel($item["id"])); ?>
-						 </div><?php endif; ?> 
-			</td>
 		    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		</table>
 		
@@ -382,7 +391,7 @@ td{text-align:left;}
 </div>
 <?php if(($is_working) == "1"): ?><div class="widget-box task_todo">
 		<div class="widget-header">
-			<h5 class="smaller">执行情况</h5>
+			<h5 class="smaller">反馈 <a class="pull-right text-warning" href="#<?php echo ($last_log_id); ?>">查看上一步  </a></h5>
 			<div class="widget-toolbar no-border">
 				<ul class="nav nav-tabs" id="myTab">
 					<li class="working active">

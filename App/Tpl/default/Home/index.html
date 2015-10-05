@@ -57,7 +57,7 @@
 <switch name="vo.folder" >
 <case value="71">【行政公告】</case>
 <case value="72">【教学公告】</case>
-<case value="73">【其他公告】</case>
+<case value="73">【教务公告】</case>
 <default />
 </switch>
 <font color="#000000"> {$vo.name}</font></a>&nbsp;({$vo.create_time|date='Y-m-d',###}){$vo.id|notice_read=###}
@@ -232,7 +232,7 @@
 							<ul>
 								
 							<volist name="schedule" id="vo">
-								<li>【{$vo.user_id|get_user_ssk}】<font color="#000000">{$vo.name}</font>&nbsp;({$vo.start_time})
+								<li>【{$vo.user_name}】<font color="#000000">{$vo.name}</font>&nbsp;({$vo.start_time})
 								</li>
                                	</volist>
 							

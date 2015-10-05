@@ -9,15 +9,15 @@
 								发起任务(公体)
                                 <span>
  								   <eq name="position_id" value="16">
- 								  	 <a href="{:U('task/add?type=6')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教研室主任</a>
+ 								  	 <a href="{:U('task/add?type=6')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>公体教学进度</a>
+ 								  	 <a href="{:U('task/add?type=2062')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>综合类教学进度</a>
  								   </eq>
 								</span>
 							</div>
-								<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
 				           <div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
 
-									    <a  class="btn btn-lg  btn-success" >提交教学进度</a>:
+									    <a  class="btn btn-lg  btn-success" >公体课</a>:
 											<switch name="isfa" >
 										   <case value="1" ><a href="{:U('task/read')}?id={$taskId}" class="btn {$btn1}">教研室主任</a></case>
 										   <default />
@@ -52,8 +52,47 @@
 	  								  分管院长</a>
 								    </div>
 								</div><!-- #任务流程结束 -->                                   
-				                                                    
-							</tbody></table>
+				            
+							
+													   				           <div title="任务流程开始" class="taskflow">
+													   								    <div class="col-sm-12">
+
+													   									    <a  class="btn btn-lg  btn-success" >综合类</a>:
+													   											<switch name="isfa202" >
+													   										   <case value="1" ><a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2201}">教研室主任</a></case>
+													   										   <default />
+													   										   <eq name="position_id" value="16">
+													   										  	 <a href="{:U('task/add?type=2062')}" class="btn {$btn2201}">教研室主任</a>
+													   										   <else/>
+													   										  	 <a onclick="alert('权限不足')" class="btn ">教研室主任</a>
+													   										   </eq>
+													   										   </switch>
+													   										 <i class="fa fa-arrow-right"></i>
+						 
+													   								 	<eq name="lc202" value="1">
+													   								<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+													   										<else/>
+													   										<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+													   									</eq>
+													   	  								  老师提交</a>
+													   	<i class="fa fa-arrow-right"></i>
+
+													   									  	<eq name="zr202" value="1">
+													   										<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+													   										<else/>
+													   										<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+													   									</eq>
+													   	  								  教研室主任审核</a>
+													   										<i class="fa fa-arrow-right"></i>
+													   										<eq name="js202" value="1">
+													   										<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+													   										<else/>
+													   											<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+													   									</eq>
+													   	  								  分管院长</a>
+													   								    </div>
+													   								</div><!-- #任务流程结束 -->
+														
 						</div>
 					</div>
 		   			<div class="block email zhuan">
@@ -62,11 +101,11 @@
 		   								发起任务(专业)
 		                                   <span>
 		    								   <eq name="position_id" value="16">
-		    								  	 <a href="{:U('task/add?type=206')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教研室主任</a>
+		    								  	 <a href="{:U('task/add?type=206')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>专业教学进度</a>
 		    								   </eq>
 		   								</span>
 		   							</div>
-		   							<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
+		   						
 		   				           <div title="任务流程开始" class="taskflow">
 		   								    <div class="col-sm-12">
 
@@ -105,8 +144,7 @@
 		   	  								  分管院长</a>
 		   								    </div>
 		   								</div><!-- #任务流程结束 -->                                   
-		                                                    
-		   							</tbody></table>
+		                                               
 		   						</div>
 		   					</div>
 					

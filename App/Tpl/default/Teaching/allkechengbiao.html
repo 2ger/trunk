@@ -33,7 +33,7 @@
 
 				   <form class="form-horizontal no-margin" action="__SELF__" method="post">
                   <!-- Modal -->
-                  <div id="a" class="modal  fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 500px;height: 485px;display: none;left: 40%;top: 10%;">
+                  <div id="a" class="modal  fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 500px;height:650px;display: none;left: 40%;top: 10%;">
                     <div class="modal-header"style="background: #EFF3F8;">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                       <h3 id="myModalLabel">操作课程</h3>
@@ -49,14 +49,15 @@
                         <label class="col-sm-3 control-label">类型</label>
                         <div class="col-sm-3">
                           <select name="type" class="form-control">
-                              <option  value='1'  selected="selected">公体</option>
-							    <option value='2' >专业</option>
+                              <option  value='1'>公体</option>
+							  <option value='2'   selected="selected">专业</option>
                           </select>
                         </div>
                         <label class="col-sm-3 control-label">年级</label>
                         <div class="col-sm-3">
                           <select name="two" class="form-control">
-                              <option  value='1'  selected="selected">A1</option>
+                              <option  value='0'  selected="selected">体育学院</option>
+                              <option  value='1'>A1</option>
 							    <option  value='3' >A3</option>
 							    <option  value='2' >柳石校区</option>
                           </select>
@@ -64,12 +65,10 @@
                       </div>
 					  <div class="form-group"> 
 	                        <label class="col-sm-3 control-label">老师</label>
-	                        <div class="col-sm-9">
-	                          <select name="teacher" class="form-control">
-	                            <volist name="teacher" id="vo">
-	                              <option  >{$vo.name}</option>
+	                        <div class="col-sm-9"><volist name="teacher" id="vo">
+									<input type="radio" name="teacher" value="{$vo.name}"/>{$vo.name}
 	                            </volist>
-	                          </select>
+	                       
 	                        </div>
                       </div>
                       <div class="form-group"> 
@@ -172,10 +171,10 @@
 							<br />
 					<a href="__APP__/teaching/allkechengbiao/type/" class="btn btn-info btn-sm">全部课程</a>
 					<a href="__APP__/teaching/allkechengbiao/type/1" class="btn btn-success btn-sm">公共体育</a>
-					<a href="__APP__/teaching/allkechengbiao/type/2" class="btn btn-warning btn-sm">体育专业</a>
-					<a href="__APP__/teaching/allkechengbiao/two/1" class="btn btn-success btn-sm">A1</a>
-					<a href="__APP__/teaching/allkechengbiao/two/3" class="btn btn-success btn-sm">A3</a>
-					<a href="__APP__/teaching/allkechengbiao/two/2" class="btn btn-success btn-sm">柳石校区</a>
+					<a href="__APP__/teaching/allkechengbiao/type/2/two/0" class="btn btn-warning btn-sm">体育专业</a>
+					<a href="__APP__/teaching/allkechengbiao/type/1/two/1" class="btn btn-success btn-sm">A1</a>
+					<a href="__APP__/teaching/allkechengbiao/type/1/two/3" class="btn btn-success btn-sm">A3</a>
+					<a href="__APP__/teaching/allkechengbiao/type/2/two/2" class="btn btn-success btn-sm">柳石校区</a>
 						{$text}
 					    </div>
 					   

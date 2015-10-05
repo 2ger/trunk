@@ -133,11 +133,38 @@ class ScheduleAction extends CommonAction {
 		}else{
 			$this->hidde = "hidden";
 		}
-			
-		//取得上次最大数
 		
+		
+		// 体育学院时间表
+// 		1-2 8:00-9:25
+// 		3-4 9:50-11:15
+// 		5   11:20-12:00
+// 		6-7   14:30-15:55
+// 		8-9  16:10-17:35
+// 		11-12   19:30-20:55
+//
+// 		柳石
+// 		1-2    8:10-9:40
+// 		3-4  9:50-11:20
+// 		5  11:30-12:10
+// 		6-7   14:30-16:00
+// 		8-9  16:10-17:30
+// 		晚自习 19:30-21:30
+//
+// 		行政  吴静99   张振华84   刘柏100   宋海霞75   苏龙74   黄海73   吴俊杰120  罗革79  梁然116 张辉明72  蒋钢强 69
+		$xingzheng = array(99,84,100,75,74,73,120,79,116,72,69);
+// 		80：30 -12：00
+// 		3：00-18：00
+//
+// 		训练
+// 		16：30-18：30
+		
+		//取得上次最大数
 		$model = M('Schedule');
 		$lastmax = M('Schedule')->max('net_id');
+		if ( $lastmax==NULL) {
+			$lastmax =0;
+		}
 		//dump($lastmax);
 		// 连接网上数据库
 		$icon = new PDO("mysql:host=lzcpcnet.gotoftp5.com;dbname=lzcpcnet","lzcpcnet","lzc.com"); 
@@ -156,9 +183,8 @@ class ScheduleAction extends CommonAction {
 			// 存入本地数据库
 			$max = count($list);
 			for ($i=0; $i < $max; $i++) { 
-			//	$emp = M('schedule_user')->where(" location = ".$list[$i]['location']." and lid = ".$list[$i]['user_id'])->getField('emp');//比对ACCESS表得到emp
-				// $emp = M('user')->where(" id = ".$list[$i]['id'])->getField('emp');
 				$userinfo = M('user')->where('emp_no = '.$list[$i]['emp_no'])->find(); // 得到用户真实信息
+				$uid = $userinfo['id'];
 				
 				// 会议判断
 				for ($y=0; $y < $huiyi_count; $y++) { 
@@ -166,15 +192,13 @@ class ScheduleAction extends CommonAction {
 	  			//	dump($hyid);
 					$huiyi = strtotime($huiyi_today[$y]['start_time']); // 会议时间转成 截
 					$daka = strtotime($list[$i]['start_time']); // 打卡时间转成 截
-					// dump($huiyi);
 					// 判断是否 在会议前后0.5小时内
   					   $huiyi_before = $huiyi -1800;
   					   $huiyi_after = $huiyi + 1800;
 
   					   if ( $daka > $huiyi_before and  $daka < $huiyi_after) {
 					//   echo $userinfo['id'].'在会议前后0.5小时内-------------------!!!'.$huiyi_today[$y]['user_id'].'<br/>';
-						   if ($huiyi_today[$y]['user_id'] == $userinfo['id'] ) { // uid = uid 
-							   	   		   				
+						   if ($huiyi_today[$y]['user_id'] == $uid ) { // uid = uid    				
 	   		   				 $data2['net_id'] = $list[$i]['id'];
 	   		   				 $data2['user_id'] = $userinfo['user_id'];
 	   		   				 $data2['user_name'] = $userinfo['name'];
@@ -198,25 +222,40 @@ class ScheduleAction extends CommonAction {
 			$daka = strtotime($list[$i]['start_time']); // 打卡时间转成 截
 			$ifend_time = date('His',$daka);
 			
-				// 上课上卡
-				if( (80000 < $ifend_time and  $ifend_time < 80030) or (95000 < $ifend_time and  $ifend_time < 95030) or (112000 < $ifend_time and  $ifend_time < 112030)  or (143000 < $ifend_time and  $ifend_time < 143030) or (161000 < $ifend_time and  $ifend_time < 161030) or (193000 < $ifend_time and  $ifend_time < 193030))
-				{
-	//			dump('上课上卡');
-				$data['priority'] =3;
-				$data['name'] ='上课上卡';
-	
-				}else if( (80030 < $ifend_time and  $ifend_time < 92500) or (95030 < $ifend_time and  $ifend_time < 111500) or (112030 < $ifend_time and  $ifend_time < 120000)  or (143030 < $ifend_time and  $ifend_time < 155500) or (161000 < $ifend_time and  $ifend_time < 173500) or (193030 < $ifend_time and  $ifend_time < 205500))
-		{ 	 	// 迟到或早退
-		//	dump('迟到或早退');
-			$data['priority'] =5;
-			$data['name'] ='迟到或早退';
-		}else{
-		//	dump('正常上卡');
-				$data['priority'] =3;
-				$data['name'] ='上课上卡';
-		}
-
-				
+			if(in_array($uid,$xingzheng)) { // 行政打卡
+				// 		80：30 -12：00
+				// 		3：00-18：00
+						$data['actor'] ='xingzheng';
+						if( (80000 < $ifend_time and  $ifend_time < 83000) or (120000 < $ifend_time and  $ifend_time < 150000) or (180000 < $ifend_time and  $ifend_time < 183000))// 上班、下班
+						{
+							$data['priority'] =3;
+							$data['name'] ='行政上卡';
+						}else if( (83000 < $ifend_time and  $ifend_time < 120000) or (150000 < $ifend_time and  $ifend_time < 180000))
+						{ 	 	// 迟到或早退
+							$data['priority'] =5;
+							$data['name'] ='行政迟到或早退';
+						}else {
+							//	未判断的时间内打卡   算作正常
+							$data['priority'] =3;
+							$data['name'] ='正常上卡ud';
+						}
+			}else{ // 上课打卡   下课打卡未算到  只算 34 67 89三节课
+						if( (92000 < $ifend_time and  $ifend_time < 95000) or (140000 < $ifend_time and  $ifend_time < 143000) or (154000 < $ifend_time and  $ifend_time < 161000))
+						{// 上课
+						$data['priority'] =3;
+						$data['name'] ='正常打卡';
+						}else if( (95000 < $ifend_time and  $ifend_time < 111500) or (143000 < $ifend_time and  $ifend_time < 154000) or (161000 < $ifend_time and  $ifend_time < 173000) )
+						{ 	 	// 迟到或早退
+							$data['priority'] =5;
+							$data['name'] ='迟到或早退';
+						}else {
+							//	未判断的时间内打卡   算作正常
+							$data['priority'] =3;
+							$data['name'] ='正常上卡ud';
+						}
+			}
+			
+			
 				$data['net_id'] = $list[$i]['id'];
 				$data['user_id'] = $userinfo['id'];
 				$data['user_name'] = $userinfo['name'];
@@ -236,7 +275,6 @@ class ScheduleAction extends CommonAction {
 	// 	$list3 = M("Schedule") -> where('start_time between "2015-09-05 08:29:00" and "2015-09-05 09:30:00"') -> order('start_time,priority desc') -> getField('user_id id,user_id');
 	// 	$list4 = M("Schedule") -> where('start_time between "2015-09-05 09:30:00" and "2015-09-05 10:00:00"') -> order('start_time,priority desc') -> getField('user_id id,user_id');
 	// 	$ids = array_diff($list, $list1);
-	//
 		
 		$this -> index();
 	}
@@ -272,6 +310,7 @@ class ScheduleAction extends CommonAction {
 
 		//$where['user_id'] = $user_id;
 		// $where['is_del']=array('eq',0);
+		$where['user_id']=array('neq',0);
 		$where['priority']=array('in','3,5');
 		$where['start_time'] = array( array('egt', $start_date), array('elt', $end_date)); //原来
 	//	$where['start_time'] = array('elt',mktime); // 修改为小于当前时间显示

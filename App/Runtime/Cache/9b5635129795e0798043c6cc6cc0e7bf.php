@@ -244,6 +244,8 @@
 #sidebar,#breadcrumbs{display:none;}
 .main-content {margin-left: 0;}
 </style>
+
+
 <form method='post' id="form_data" name="form_data" enctype="multipart/form-data" class="well form-horizontal " style="width:1000px;margin:20px auto">
 	<input type="hidden" id="ajax" name="ajax" value="0">
 	<input type="hidden" id="add_file" name="add_file" >
@@ -257,20 +259,14 @@
 	<input type="hidden" id="refer_name" name="refer_name" value="">
 	<input type="hidden" id="step" name="step" value="">
 	<input type="hidden" id="jiaoan" name="jiaoan" value="<?php echo ($jiaoan); ?>">
-
-<a onclick="window.history.back()" class="btn btn-sm btn-primary pull-left hidden-print">返回</a>
-	<?php if(($flow_type["is_edit"]) != "2"): ?><div class="form-group">
-			<div class="col-xs-12">
-				<div class=" alert alert-success">
-					<?php echo ($flow_type["content"]); ?>
-				</div><!-- .name -->
-			</div>
-		</div><?php endif; ?>	
+	
+	
 	
 	<div class="form-group ">
-		<label class="col-sm-2 control-label" for="name">标题：</label>
+		<label class="col-sm-2 control-label" for="name"><a onclick="window.history.back()" class="btn btn-sm btn-primary pull-left hidden-print">返回</a></label>
 		<div class="col-sm-10">
-			<input class="form-control" type="text" id="name" name="name" check="require" value="<?php echo get_user_name();?> -<?php echo ($jiaoantxt); ?> <?php echo ($flow_type['name']); ?>">
+			<h4><?php echo get_user_name();?> -<?php echo ($jiaoantxt); ?> <?php echo ($flow_type['name']); ?></h4>
+			<input class="form-control" type="hidden" id="name" name="name" check="require" value="<?php echo get_user_name();?> -<?php echo ($jiaoantxt); ?> <?php echo ($flow_type['name']); ?>">
 		</div>
 	</div>
 
@@ -322,6 +318,15 @@
 		<!-- <a onclick="save(10);"  class="btn btn-sm btn-primary">保存</a> -->
 		<a onclick="save(20);"  class="btn btn-lg btn-success">提交</a>
 	</div>
+	
+		<div class="form-group">
+			<div class="col-xs-12">
+				<div class=" alert alert-info">
+					<?php echo ($flow_type["content"]); ?>
+				</div><!-- .name -->
+			</div>
+		</div>
+	<?php if(($flow_type["is_edit"]) != "2"): endif; ?>
 	
 </form>
 

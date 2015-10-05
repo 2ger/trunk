@@ -251,8 +251,14 @@ class FlowAction extends CommonAction {
 
 		$jiaoan = $_REQUEST['jiaoan'];
 		if(!empty($jiaoan)){
-			$this->jiaoan =$jiaoan;
-			$this->jiaoantxt ="第".$jiaoan."周";
+			if ($jiaoan == 100) {
+				$this->jiaoan =$jiaoan;
+				$this->jiaoantxt ="综合类 ";
+			}else{
+				$this->jiaoan =$jiaoan;
+				$this->jiaoantxt ="第".$jiaoan."周";
+			}
+			
 		}
 		
 		$type_id = $_REQUEST['type'];

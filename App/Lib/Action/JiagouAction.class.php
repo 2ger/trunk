@@ -51,7 +51,7 @@ class JiagouAction extends CommonAction {
 	public function jiagou() {
 		$user=M('user');
 		$yuanzhang=$user->where('dept_id = 30')->order('emp_no')->select();
-		$lingdao=$user->where('dept_id = 32 ')->order('emp_no')->select();
+		$lingdao=$user->where('rank_id = 2 ')->order('emp_no')->select();
 		$ybzrtw=$user->where('dept_id = 40 or dept_id=39')->order('emp_no')->select();
 
 		$zhuren=$user->where('dept_id = 24 ')->order('emp_no')->select();

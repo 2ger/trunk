@@ -17,7 +17,7 @@
  								  	 <a href="{:U('flow/add?type=58')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
  								   </eq>
  								   <eq name="position_id" value="3">
- 								  	 <a href="{:U('flow/add?type=59')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>论文领导小组</a>
+ 								  	 <a href="{:U('flow/add?type=59')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>论文领导小组(苏龙)</a>
  								   </eq>
 								</span>
                                 
@@ -45,9 +45,9 @@
 										 <i class="fa fa-arrow-right"></i>
 										 
 										 <switch name="step2">
-										     <case value="0">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-danger">论文领导小组</a> </case>
-										     <case value="1">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-success">论文领导小组</a> </case>
-										     <default />	<a class="btn  btn-default"> 论文领导小组</a>	
+										     <case value="0">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-danger">论文领导小组(苏龙)</a> </case>
+										     <case value="1">  <a href="{:U('flow/read')}?id={$flowid}" class="btn btn-success">论文领导小组(苏龙)</a> </case>
+										     <default />	<a class="btn  btn-default"> 论文领导小组(苏龙)</a>	
 										 </switch>
 								    </div>
 								</div>
@@ -58,12 +58,12 @@
 "></i>
 
 <switch name="step21" >
-										   <case value="1" ><a href="{:U('flow/read')}?id={$flowid2}" class="btn btn-success">论文领导小组</a></case>
+										   <case value="1" ><a href="{:U('flow/read')}?id={$flowid2}" class="btn btn-success">论文领导小组(苏龙)</a></case>
 										   <default />
 										   <eq name="position_id" value="3">
-										  	 <a href="{:U('flow/add?type=59')}" class="btn btn-danger">论文领导小组</a>
+										  	 <a href="{:U('flow/add?type=59')}" class="btn btn-danger">论文领导小组(苏龙)</a>
 										   <else/>
-										  	 <a onclick="alert('权限不足')" class="btn">论文领导小组</a>
+										  	 <a onclick="alert('权限不足')" class="btn">论文领导小组(苏龙)</a>
 										   </eq>
 										   </switch>
 

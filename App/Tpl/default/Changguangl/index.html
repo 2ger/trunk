@@ -5,67 +5,114 @@
 				<div class="blocks" style="left:0;  width: 100%;">
 			<div class="block meeting">
             	<div class="main">
-                	<div class="div_title no_select">任务及审批
-                    	<span>
-                   			<!-- <select onChange="calenda.change()" id="calenda1">
-                            </select> -->
-                        </span>
+                	<div class="div_title no_select"> 申请需求
                     </div>
-          
-				 
-								
 								<div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
-									    <a  class="btn btn-lg  btn-success">通用任务</a> :
-										 <a href="{:U('task/add?type=Changguangl')}" class="btn  btn-danger">发起任务</a> <i class="fa fa-arrow-right"></i>
-										  <a  class="btn  btn-default">执行人</a>
+									    <a  class="btn btn-lg  btn-success">运动队训练场地申请</a> :
+										 <a href="{:U('flow/add?type=102')}" class="btn  btn-danger">申请</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">罗革</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">黄海</a> 
 								    </div>
 								</div><!-- #任务流程结束 -->
 								
 								<div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
-									    <a  class="btn btn-lg  btn-success">通用审批</a> :
-										 <a href="{:U('flow/add?type=102')}" class="btn btn-danger ">发起请示</a>
-										 <i class="fa fa-arrow-right"></i>
-										  <a  class="btn  btn-default">审批人</a>
+									    <a  class="btn btn-lg  btn-success">教学器械设备购买申请</a> :
+										 <a href="{:U('flow/add?type=110')}" class="btn btn-danger ">申请</a><i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">教研室主任</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">黄位明</a>  <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">分管</a>  <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">院长</a>  <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">吴俊杰</a> 
 								    </div>
 								</div><!-- #任务流程结束 -->
 								
 								<div title="任务流程开始" class="taskflow">
-								    
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">场馆会议室使用申请</a> :
+										 <a href="{:U('flow/add?type=111')}" class="btn btn-danger ">申请</a><i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">吴静</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">罗革</a> 
+								    </div>
+								</div><!-- #任务流程结束 -->
+								
+								<div title="任务流程开始" class="taskflow">
+								    <div class="col-sm-12">
+									    <a  class="btn btn-lg  btn-success">上报维修需求</a> :
+										 <a href="{:U('flow/add?type=114')}" class="btn btn-danger ">黄位明</a><i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">罗革</a> <i class="fa fa-arrow-right"></i>
+										  <a  class="btn  btn-default">黄海</a> 
+								    </div>
 								</div><!-- #任务流程结束 -->
                 </div>               
             </div>
             <div class="block email">
             	<div class="main">
-                	<div class="div_title no_select">申报加分记录 <span><a style="margin-left:200px;" href="{:U('flow/add?type=39')}">提交申报</a></span></div>
-                	<ul>
-                    	<volist name="shenbao" id="vo">
-						<li>
-							<a href="{:U('flow/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a></li>
-                        </volist>
-                        </ul>
+                	<div class="div_title no_select">场管工作 <span></div>
+                	
+
+					<div title="任务流程开始" class="taskflow">
+					    <div class="col-sm-12">
+						    <a  class="btn btn-lg  btn-success">场馆器械安全排查</a> :
+							 <a href="{:U('flow/add?type=112')}" class="btn btn-danger ">黄位明</a><i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">罗革</a> <i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">黄海</a> 
+					    </div>
+					</div><!-- #任务流程结束 -->
+					<div title="任务流程开始" class="taskflow">
+					    <div class="col-sm-12">
+						    <a  class="btn btn-lg  btn-success">上月场馆收入情况</a> :
+							 <a href="{:U('flow/add?type=113')}" class="btn btn-danger ">吴俊杰</a><i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">蒋钢强</a> 
+					    </div>
+					</div><!-- #任务流程结束 -->
+
+					<div title="任务流程开始" class="taskflow">
+					    <div class="col-sm-12">
+						    <a  class="btn btn-lg  btn-success">场馆临聘人员管理</a> :
+							 <a href="{:U('flow/add?type=115')}" class="btn btn-danger ">吴俊杰</a><i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">黄海</a> <i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">吴俊杰</a> 
+					    </div>
+					</div><!-- #任务流程结束 -->
+					<div title="任务流程开始" class="taskflow">
+					    <div class="col-sm-12">
+						    <a  class="btn btn-lg  btn-success">开学准备工作</a> :
+							 <a href="{:U('flow/add?type=116')}" class="btn btn-danger ">吴俊杰</a><i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">罗革</a> <i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">黄海</a> <i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">张辉明</a> 
+					    </div>
+					</div><!-- #任务流程结束 -->
+					<div title="任务流程开始" class="taskflow">
+					    <div class="col-sm-12">
+						    <a  class="btn btn-lg  btn-success">固定资产入库管理</a> :
+							 <a href="{:U('flow/add?type=117')}" class="btn btn-danger ">黄海</a><i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">罗革</a> <i class="fa fa-arrow-right"></i>
+							  <a  class="btn  btn-default">黄位明</a>
+					    </div>
+					</div><!-- #任务流程结束 -->
+					
                 </div>
             </div> <!-- end block -->
 			
             <div class="block email">
             	<div class="main">
-                	<div class="div_title no_select">通用任务记录 </div>
+                	<div class="div_title no_select">待办中 </div>
                 	<ul>
-                    	<volist name="task" id="vo">
-						<li>
-							<a href="{:U('task/read')}?id={$vo.id}">{$vo.name} ({$vo.create_time|date='Y-m-d',###})</a></li>
+                    	<volist name="todo" id="vo">
+							<li><a href="{:U('flow/read')}?id={$vo.id}">【 {$vo.user_name} 】  <font color="#000000">{$vo.name}</font> ({$vo.create_time|date='Y-m-d',###})</a> </li>
                         </volist>
                     </ul>
                 </div>
             </div> <!-- end block -->
             <div class="block email">
             	<div class="main">
-                	<div class="div_title no_select">通用审批记录 </div>
+                	<div class="div_title no_select">已完成 </div>
                 	<ul>
                     	<volist name="flow" id="vo">
-						<li>
-							<a href="{:U('flow/read')}?id={$vo.id}">【 {$vo.name} 】  <font color="#000000">{$vo.confirm_name}</font> ({$vo.create_time|date='Y-m-d',###})</a> </li>
+						<li><a href="{:U('flow/read')}?id={$vo.id}">【 {$vo.user_name} 】  <font color="#000000">{$vo.name}</font> ({$vo.create_time|date='Y-m-d',###})</a> </li>
                         </volist>
                     </ul>
                 </div>

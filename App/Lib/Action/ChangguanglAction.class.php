@@ -28,20 +28,17 @@ class ChangguanglAction extends CommonAction {
 		$uid = get_user_id();
 		$deptid = get_dept_id();
 		$username =  get_user_name();
-		//dump($deptid);
 
-
-		// 通用流程
-		$this->flow=M('flow')->where('type = 102 and (user_id='.$uid.' or confirm like "%'.$deptid.'%" or confirm like "%'.$uid.'%")')->select();
-		//通用任务
-		$this->task=M('task')->where('type = "Changguangl" and (user_id='.$uid.' or executor like "%'.$username.'%")')->select();
-		//申报加分
-		$this->shenbao=M('flow')->where('type = 39 and user_id='.$uid)->select();
+		// 完成
+		$where['type'] =array('in','102,110,111,112,113,114,115,116,117');
+		$where['step'] =array('egt','40');
+		$this->flow=M('flow')->where($where)->order('id desc')->select();
+		//待办
+		$where2['type'] =array('in','102,110,111,112,113,114,115,116,117');
+		$where2['step'] =array('lt','40');
+		$this->todo=M('flow')->where($where2)->order('id desc')->select();
 		
 		
-		
-		$config = D("UserConfig") -> get_config();
-		$this -> assign("home_sort", $config['home_sort']);
 		$this -> display();
 	}
 

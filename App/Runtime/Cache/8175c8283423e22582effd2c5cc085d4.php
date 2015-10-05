@@ -217,7 +217,7 @@
 						资格审查
                                 <span>
  								   <?php if(($position_id) == "24"): ?><a href="<?php echo U('flow/add?type=58');?>" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a><?php endif; ?>
- 								   <?php if(($position_id) == "3"): ?><a href="<?php echo U('flow/add?type=59');?>" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>论文领导小组</a><?php endif; ?>
+ 								   <?php if(($position_id) == "3"): ?><a href="<?php echo U('flow/add?type=59');?>" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>论文领导小组(苏龙)</a><?php endif; ?>
 								</span>
                                 
 					</div>
@@ -236,9 +236,9 @@
 								 
 										 <i class="fa fa-arrow-right"></i>
 										 
-										 <?php switch($step2): case "0": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid); ?>" class="btn btn-danger">论文领导小组</a><?php break;?>
-										     <?php case "1": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid); ?>" class="btn btn-success">论文领导小组</a><?php break;?>
-										     <?php default: ?>	<a class="btn  btn-default"> 论文领导小组</a><?php endswitch;?>
+										 <?php switch($step2): case "0": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid); ?>" class="btn btn-danger">论文领导小组(苏龙)</a><?php break;?>
+										     <?php case "1": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid); ?>" class="btn btn-success">论文领导小组(苏龙)</a><?php break;?>
+										     <?php default: ?>	<a class="btn  btn-default"> 论文领导小组(苏龙)</a><?php endswitch;?>
 								    </div>
 								</div>
                                 
@@ -247,11 +247,11 @@
 									    <a  class="btn btn-lg  btn-success">教师指导资格</a> <i class="fa fa-angle-double-right
 "></i>
 
-<?php switch($step21): case "1": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid2); ?>" class="btn btn-success">论文领导小组</a><?php break;?>
+<?php switch($step21): case "1": ?><a href="<?php echo U('flow/read');?>?id=<?php echo ($flowid2); ?>" class="btn btn-success">论文领导小组(苏龙)</a><?php break;?>
 										   <?php default: ?>
-										   <?php if(($position_id) == "3"): ?><a href="<?php echo U('flow/add?type=59');?>" class="btn btn-danger">论文领导小组</a>
+										   <?php if(($position_id) == "3"): ?><a href="<?php echo U('flow/add?type=59');?>" class="btn btn-danger">论文领导小组(苏龙)</a>
 										   <?php else: ?>
-										  	 <a onclick="alert('权限不足')" class="btn">论文领导小组</a><?php endif; endswitch;?>
+										  	 <a onclick="alert('权限不足')" class="btn">论文领导小组(苏龙)</a><?php endif; endswitch;?>
 
 
 

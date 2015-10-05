@@ -35,11 +35,12 @@
 <style type="text/css" media="screen">
 td{text-align:left;}
 </style>
+		   <!-- {:show_bottons_status('task',$vo.type,$uid)}
+						{:flow_bottons($vo.type)}	 -->
 <table class="table table-striped table-bordered text-left">
-   
     <tr>
         <td width="20%"> 任务名称 </td>
-        <td> {$vo.name} </td>
+        <td> {$vo.name} </td> 
     </tr>
    
     <tr>
@@ -126,30 +127,40 @@ td{text-align:left;}
 		<style type="text/css" media="screen">
 		.ke-insertfile{clear:right;float:left;width: 100%;}
 		td{font-size:14px;}
+		.tr{$last_log_id}{background-color: #fcf8e3;
+    border-color: #fbeed5;}
 		</style>
-		<table class="table table-striped table-bordered ">
+		<table class="table  table-bordered ">
 			<volist name="task_log" id="item">
-		    <tr>
+		    <tr class="tr{$item.id} " id ="{$item.id}">
+		        <td width=20%> 第{$item.step}步 <strong>执行人</strong></td>
+		        <td width=20%>{$item.executor_name}</td>
+		        <td width=20%><strong>时间</strong></td>
+		        <td width=20%>{$item.finish_time}</td>
+		        <td width=20% class="deel">
+					 <eq name="item.assigner" value="$UID"> 
+						 <div class="hidden-print">
+						 	{$item.id|task_log_deel=###}
+						 </div>
+					</eq> 
+					 <eq name="item.executor" value="$UID"> 
+						 <style type="text/css" media="screen">
+						 .deel .btn-success{display:none;}
+						 </style>
+						 <div class="hidden-print">
+						 	{$item.id|task_log_deel=###}
+						 </div>
+					</eq>
+			</td>
+		    </tr>
+		    <tr  class="tr{$item.id}" style="border-bottom: 2px solid #333;">
 		        <td> <strong>批注</strong> </td>
 		        <td colspan='4' style="min-height:50px"> 
 				<!-- {$item.status|task_status}  -->{$item.feed_back}
 				
 				 </td>
 		    </tr>
-		    <tr>
-		        <td width=20%><strong>执行人</strong></td>
-		        <td width=20%>{$item.executor_name}</td>
-		        <td width=20%><strong>时间</strong></td>
-		        <td width=20%>{$item.finish_time}</td>
-		        <td width=20%>
-					 <eq name="item.assigner" value="$UID"> 
-						 <div class="hidden-print">
-						 	{$item.id|task_log_deel=###}
-						 </div>
-						
-					</eq> 
-			</td>
-		    </tr>
+		   
 			</volist>
 		</table>
 		
@@ -204,7 +215,7 @@ td{text-align:left;}
 <eq name="is_working" value="1">
 	<div class="widget-box task_todo">
 		<div class="widget-header">
-			<h5 class="smaller">执行情况</h5>
+			<h5 class="smaller">反馈 <a class="pull-right text-warning" href="#{$last_log_id}">查看上一步  </a></h5>
 			<div class="widget-toolbar no-border">
 				<ul class="nav nav-tabs" id="myTab">
 					<li class="working active">

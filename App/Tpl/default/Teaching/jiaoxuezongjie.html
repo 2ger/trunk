@@ -9,7 +9,9 @@
 								发起任务(公体)
                                 <span>
  								   <eq name="user_rank" value="22">
- 								  	 <a href="{:U('task/add?type=9')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
+ 								  	 <a href="{:U('task/add?type=9')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>公体总结</a>
+
+ 								  	 <a href="{:U('task/add?type=2092')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>综合类总结</a>
  								   </eq>
 								</span>
 							</div>
@@ -17,7 +19,7 @@
 								      <div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
 
-									    <a  class="btn btn-lg  btn-success" >组织总结</a>:
+									    <a  class="btn btn-lg  btn-success" >公体总结</a>:
 											<switch name="isfa" >
 									   <case value="1" > <a href="{:U('task/read')}?id={$taskId20}" class="btn {$btn1}">教务秘书</a> </case>
 									   <default />
@@ -52,7 +54,47 @@
 	  								  教务秘书</a>
 								    </div>
 								</div><!-- #任务流程结束 -->       
-				                                                    
+				                           
+			   															<div title="任务流程开始" class="taskflow">
+			   														    <div class="col-sm-12">
+
+			   															    <a  class="btn btn-lg  btn-success" >综合类总结</a>:
+			   																	<switch name="isfa202" >
+			   															   <case value="1" > <a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2201}">教务秘书</a> </case>
+			   															   <default />
+			   																   <eq name="user_rank" value="22">
+			   																  	 <a href="{:U('task/add?type=2092')}" class="btn {$btn2201}">教务秘书</a>
+			   																   <else/>
+			   																  	 <a onclick="alert('权限不足')" class="btn ">教务秘书</a>
+			   																   </eq>
+			   															   </switch>
+			   																 <i class="fa fa-arrow-right"></i>
+						 
+			   															 	<eq name="lc202" value="1">
+			   														<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+			   																<else/>
+			   																<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+			   															</eq>
+			   							  								  老师</a>
+			   							<i class="fa fa-arrow-right"></i>
+
+			   															  	<eq name="zr202" value="1">
+			   																<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+			   																<else/>
+			   																<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+			   															</eq>
+			   							  								  教研室主任</a>
+					
+			   																<i class="fa fa-arrow-right"></i>
+			   																<eq name="js202" value="1">
+			   																<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+			   																<else/>
+			   																	<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+			   															</eq>
+			   							  								  教务秘书</a>
+			   														    </div>
+			   														</div><!-- #任务流程结束 -->
+																	                         
 							</table>
 						</div>
 					</div>
@@ -64,7 +106,7 @@
 												发起任务(专业)
 				                                <span>
 				 								   <eq name="user_rank" value="22">
-				 								  	 <a href="{:U('task/add?type=209')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教务秘书</a>
+				 								  	 <a href="{:U('task/add?type=209')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>专业总结</a>
 				 								   </eq>
 												</span>
 											</div>

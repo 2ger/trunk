@@ -9,15 +9,16 @@
 								发起任务(公体)
 								<span>
  								   <eq name="position_id" value="16">
- 								  	 <a href="{:U('task/add?type=5')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教研室主任</a>
+ 								  	 <a href="{:U('task/add?type=5&pid=1')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i> 新公体课大纲任务</a>
+									 <a href="{:U('task/add?type=2052')}" class="btn btn-info btn-xs"><i class="fa fa-plus"></i> 新综合类大纲任务</a>
  								   </eq>
 								</span>
 							</div>
-								<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
-				     <div title="任务流程开始" class="taskflow">
+									
+				    				<div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
 
-									    <a  class="btn btn-lg  btn-success" >提交教学大纲</a>:
+									    <a  class="btn btn-lg  btn-success" >公体课大纲</a>:
 															<switch name="isfa" >
 										   <case value="1" ><a href="{:U('task/read')}?id={$taskId}" class="btn {$btn1}">教研室主任</a></case>
 										   <default />
@@ -36,7 +37,6 @@
 									</eq>
 	  								  老师提交</a>
 									  <i class="fa fa-arrow-right"></i>
-
 									  	<eq name="zr" value="1">
 										<a href="{:U('task/read')}?id={$taskId}" class="btn {$btn3}">
 										<else/>
@@ -51,9 +51,45 @@
 									</eq>
 	  								  分管院长</a>
 								    </div>
-								</div><!-- #任务流程结束 -->                                   
-				                                                    
-							</tbody></table>
+								</div><!-- #任务流程结束 -->    
+								
+											     <div title="任务流程开始" class="taskflow">
+															    <div class="col-sm-12">
+																    <a  class="btn btn-lg  btn-success" >综合类大纲</a>:
+																	<switch name="isfa202" >
+																	   <case value="1" ><a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2201}">教研室主任</a></case>
+																	   <default />
+																	   <eq name="position_id" value="16">
+																	  	 <a href="{:U('task/add?type=2052')}" class="btn {$btn2201}">教研室主任</a>
+																	   <else/>
+																	  	 <a onclick="alert('权限不足')" class="btn ">教研室主任</a>
+																	   </eq>
+																	   </switch>
+																	 <i class="fa fa-arrow-right"></i>
+									 
+															 	<eq name="lc202" value="1">
+															<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+																	<else/>
+																	<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2202}">
+																</eq>
+								  								  老师提交</a>
+								<i class="fa fa-arrow-right"></i>
+																  	<eq name="zr202" value="1">
+																	<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+																	<else/>
+																	<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2203}">
+																</eq>
+								  								  教研室主任审核</a>
+																	<i class="fa fa-arrow-right"></i>
+																	<eq name="js202" value="1">
+																	<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+																	<else/>
+																		<a href="{:U('task/read')}?id={$taskId202}" class="btn {$btn2204}">
+																</eq>
+								  								  分管院长</a>
+															    </div>
+															</div><!-- #任务流程结束 -->
+															
 						</div>
 					</div>
 					
@@ -64,14 +100,13 @@
 								发起任务(专业)
                                 <span>
  								   <eq name="position_id" value="16">
- 								  	 <a href="{:U('task/add?type=205')}" class="btn btn-info btn-xs"> <i class="fa fa-plus"></i>教研室主任</a>
+									 <a href="{:U('task/add?type=205')}" class="btn btn-info btn-xs"><i class="fa fa-plus"></i> 新综合类大纲任务</a>
  								   </eq>
 								</span>
 							</div>
-								<table class="pure-table pure-table-bordered" style="width: 90%;margin: 30px 20px;">
 				     <div title="任务流程开始" class="taskflow">
 								    <div class="col-sm-12">
-									    <a  class="btn btn-lg  btn-success" >提交教学大纲</a>:
+									    <a  class="btn btn-lg  btn-success" >专业课大纲</a>:
 										<switch name="isfa20" >
 										   <case value="1" ><a href="{:U('task/read')}?id={$taskId20}" class="btn {$btn201}">教研室主任</a></case>
 										   <default />
@@ -104,8 +139,10 @@
 									</eq>
 	  								  分管院长</a>
 								    </div>
-								</div><!-- #任务流程结束 -->                          
-							</tbody></table>
+								</div><!-- #任务流程结束 -->         
+								
+												 
+								
 						</div>
 					</div>
 					
@@ -148,7 +185,7 @@
 
 
 
-				<div class="block work zhuan" id="switchdiv1" style="overflow: hidden; z-index: 3;">
+				<div class="block work zhuan" id="switchdiv2" style="overflow: hidden; z-index: 3;">
 						<div class="main">
 							<div class="div_title1 no_select">
 								<div class="switch_btn divBG2 divBG1">

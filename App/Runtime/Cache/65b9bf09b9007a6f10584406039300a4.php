@@ -250,7 +250,7 @@
 									<a onclick="open_url('<?php echo U('notice/read');?>?id=<?php echo ($vo["id"]); ?>')" >
 <?php switch($vo["folder"]): case "71": ?>【行政公告】<?php break;?>
 <?php case "72": ?>【教学公告】<?php break;?>
-<?php case "73": ?>【其他公告】<?php break;?>
+<?php case "73": ?>【教务公告】<?php break;?>
 <?php default: endswitch;?>
 <font color="#000000"> <?php echo ($vo["name"]); ?></font></a>&nbsp;(<?php echo (date('Y-m-d',$vo["create_time"])); ?>)<?php echo (notice_read($vo["id"])); ?>
 								</li><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -422,7 +422,7 @@
 							</div>
 							<ul>
 								
-							<?php if(is_array($schedule)): $i = 0; $__LIST__ = $schedule;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>【<?php echo (get_user_ssk($vo["user_id"])); ?>】<font color="#000000"><?php echo ($vo["name"]); ?></font>&nbsp;(<?php echo ($vo["start_time"]); ?>)
+							<?php if(is_array($schedule)): $i = 0; $__LIST__ = $schedule;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>【<?php echo ($vo["user_name"]); ?>】<font color="#000000"><?php echo ($vo["name"]); ?></font>&nbsp;(<?php echo ($vo["start_time"]); ?>)
 								</li><?php endforeach; endif; else: echo "" ;endif; ?>
 							
 							

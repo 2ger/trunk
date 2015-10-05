@@ -257,7 +257,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label" for="content">任务说明：</label>
 		<div class="col-xs-10">
-			<textarea class="editor" id="content" name="content" style="width:100%;height:300px;" ><?php echo ($vo["content"]); ?></textarea>
+			<textarea class="editor" id="content" name="content" style="width:100%;height:300px;" ><?php echo ($detail); echo ($vo["content"]); ?></textarea>
 		</div>
 	</div>
 

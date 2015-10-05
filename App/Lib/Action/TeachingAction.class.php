@@ -197,24 +197,10 @@ class TeachingAction extends CommonAction {
 	   $this->lc=task_step_status($this->taskId,1);
 	   $this->zr=task_step_status($this->taskId,2);
 	   $this->js=task_step_status($this->taskId,3);
-
-		// $jslist=M('flow')->where('type = "55" and user_id='.$uid)->order('id desc')->select();
-// 		$jslist2=M('flow')->where('type = "55" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
-//
-// 	   if(!empty($jslist) or !empty($jslist2)){
-// 		   if (!empty($jslist)) {
-// 			   $this->idaa = $jslist[0]['id'];
-// 		   }else {
-// 		   		 $this->idaa = $jslist2[0]['id'];
-// 		   }
-// 		   $this->lc=1;
-// 		   $this->zr=flow_step_status($this->idaa,1);
-// 		   $this->js=flow_step_status($this->idaa,2);
-// 	   }
-	}
+	   }
 
 
-		//订教材  颜色判断
+		// 颜色判断
 	if ($this->isfa) {
 		$this->btn1 ="btn-success";//第二步开始
 		if ($this->lc) {
@@ -245,10 +231,49 @@ class TeachingAction extends CommonAction {
 		$this->btn1 ="btn-danger";
 	}
 
+	// 综合类 －－－－－－ 
+		$flow=M('task')->where('type = "2052" ')->order('id desc')->select();
+		if (!empty($flow)) {
+			$this->isfa202 =1;//第一步
+			$this->taskId202 =$flow[0]['id'];//第一步
+	 	   $this->lc202=task_step_status($this->taskId202,1);
+	 	   $this->zr202=task_step_status($this->taskId202,2);
+	 	   $this->js202=task_step_status($this->taskId202,3);
+		   }
 
+			// 颜色判断
+		if ($this->isfa202) {
+			$this->btn2201 ="btn-success";//第二步开始
+			if ($this->lc202) {
+				$this->btn2202 ="btn-success";//第三步开始
+				if ($this->zr202) {
+					$this->btn2203 ="btn-success";
+
+					//第四步开始
+	              	if ($this->js202) {
+					$this->btn2204 ="btn-success";
+				}else {
+					$this->btn2204 ="btn-danger";
+				}//第四步结束
+
+				}else {
+					$this->btn2203 ="btn-danger";
+				}//第三步结束
+
+			}
+
+			else {
+				$this->btn2202 ="btn-danger";
+			}
+			//第二步开始
+		}
+
+		else {
+			$this->btn2201 ="btn-danger";
+		}
 
 // 教学大纲
-$task_type = "5"; //任务类型
+$task_type = "5,2052"; //任务类型
 $flow_type = "55"; //流程类型
 $this->todo = task_todo($task_type).flow_todo($flow_type);// 未完成
 $this->doing = task_ing($task_type).flow_ing($flow_type);// 等待中
@@ -262,24 +287,9 @@ $this->done = task_done($task_type).flow_done($flow_type);// 已完成
  	   $this->lc20=task_step_status($this->taskId20,1);
  	   $this->zr20=task_step_status($this->taskId20,2);
  	   $this->js20=task_step_status($this->taskId20,3);
-		
-		
-		// $jslist20=M('flow')->where('type = "82" and user_id='.$uid)->order('id desc')->select();// 自己已发
-	// 	$jslist202=M('flow')->where('type = "82" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
-	//
-	//    if(!empty($jslist20) or !empty($jslist202)){
-	// 	   if (!empty($jslist20)) {
-	// 		   $this->idaa20 = $jslist20[0]['id'];
-	// 	   }else {
-	// 	   		 $this->idaa20 = $jslist202[0]['id'];
-	// 	   }
-	// 	   $this->lc20=1;
-	// 	   $this->zr20=flow_step_status($this->idaa20,1);
-	// 	   $this->js20=flow_step_status($this->idaa20,2);
-	//    }
-	}
+	   }
 
-		//订教材  颜色判断
+		// 颜色判断
 	if ($this->isfa20) {
 		$this->btn201 ="btn-success";//第二步开始
 		if ($this->lc20) {
@@ -339,24 +349,9 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
  	   $this->lc=task_step_status($this->taskId,1);
  	   $this->zr=task_step_status($this->taskId,2);
  	   $this->js=task_step_status($this->taskId,3);
-		
-		// $jssql=M('flow')->where('type = "50" and user_id='.$uid)->order('id desc')->select();
-// 		$jslist2=M('flow')->where('type = "50" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
-//
-// 	   if(!empty($jssql) or !empty($jslist2)){
-// 		   if (!empty($jssql)) {
-// 			   $this->idaa = $jssql[0]['id'];
-// 		   }else {
-// 		   		 $this->idaa = $jslist2[0]['id'];
-// 		   }
-// 		   $this->lc=1;
-// 		   $this->zr=flow_step_status($this->idaa,1);
-// 		   $this->js=flow_step_status($this->idaa,2);
-// 	   }
+	
 	}
-
-
-		//订教材  颜色判断
+// 颜色判断
 	if ($this->isfa) {
 		$this->btn1 ="btn-success";//第二步开始
 		if ($this->lc) {
@@ -386,15 +381,45 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 		$this->btn1 ="btn-danger";
 	}
 
+	// 综合类 教学计划
+	$flow=M('task')->where('type = "2062" ')->order('id desc')->select();
+	if (!empty($flow)) {
+		$this->isfa202 =1;//第一步
+		$this->taskId202 =$flow[0]['id'];//第一步
+  	   $this->lc202=task_step_status($this->taskId202,1);
+  	   $this->zr202=task_step_status($this->taskId202,2);
+  	   $this->js202=task_step_status($this->taskId202,3);
+	}
+	//  颜色判断
+	if ($this->isfa202) {
+		$this->btn2201 ="btn-success";//第二步开始
+		if ($this->lc202) {
+			$this->btn2202 ="btn-success";//第三步开始
+			if ($this->zr202) {
+				$this->btn2203 ="btn-success";
+              	if ($this->js202) {
+				$this->btn2204 ="btn-success";
+			}else {
+				$this->btn2204 ="btn-danger";
+			}//第四步结束
+			}else {
+				$this->btn2203 ="btn-danger";
+			}//第三步结束
+		}else {
+			$this->btn2202 ="btn-danger";
+		}//第二步开始
+	}else {
+		$this->btn2201 ="btn-danger";
+	}
+	
 	   // 教学计划
-	   $task_type = "6"; //任务类型
+	   $task_type = "6,2062"; //任务类型
 	   $flow_type = "50"; //流程类型
 	   $this->todo = task_todo($task_type).flow_todo($flow_type);// 未完成
 	   $this->doing = task_ing($task_type).flow_ing($flow_type);// 等待中
 	   $this->done = task_done($task_type).flow_done($flow_type);// 已完成
 
-	   // 专业 －－－－－ ---------------------------------------
-
+	// 专业教学计划
 	$flow=M('task')->where('type = "206" ')->order('id desc')->select();
 	if (!empty($flow)) {
 		$this->isfa20 =1;//第一步
@@ -402,52 +427,28 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
   	   $this->lc20=task_step_status($this->taskId20,1);
   	   $this->zr20=task_step_status($this->taskId20,2);
   	   $this->js20=task_step_status($this->taskId20,3);
-		// $jslist=M('flow')->where('type = "80" and user_id='.$uid)->order('id desc')->select();
-// 		$jslist202=M('flow')->where('type = "80" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
-//
-// 			   if(!empty($jslist) or !empty($jslist202)){
-// 				   if (!empty($jslist)) {
-// 					   $this->idaa20 = $jslist[0]['id'];
-// 				   }else {
-// 				   		 $this->idaa20 = $jslist202[0]['id'];
-// 				   }
-// 		   $this->lc20=1;
-// 		   $this->zr20=flow_step_status($this->idaa20,1);
-// 		   $this->js20=flow_step_status($this->idaa20,2);
-// 	   }
 	}
-
-
-		//订教材  颜色判断
+	//  颜色判断
 	if ($this->isfa20) {
 		$this->btn201 ="btn-success";//第二步开始
 		if ($this->lc20) {
 			$this->btn202 ="btn-success";//第三步开始
 			if ($this->zr20) {
 				$this->btn203 ="btn-success";
-
-				//第四步开始
               	if ($this->js20) {
 				$this->btn204 ="btn-success";
 			}else {
 				$this->btn204 ="btn-danger";
 			}//第四步结束
-
 			}else {
 				$this->btn203 ="btn-danger";
 			}//第三步结束
-
-		}
-
-		else {
+		}else {
 			$this->btn202 ="btn-danger";
 		}//第二步开始
-	}
-
-	else {
+	}else {
 		$this->btn201 ="btn-danger";
 	}
-
 	   // 教学计划
 	   $task_type20 = "206"; //任务类型
 	   $flow_type20 = "80"; //流程类型
@@ -761,29 +762,31 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 		$this->btn21 ="btn-danger";
 	}
 
-   	$emp_no = get_emp_no();
-		     /*流程开始*/
-        //待办中
-       	$flow_sql1 = "SELECT * FROM onethink_flow WHERE find_in_set('".$emp_no."', confirm) and step = 20  and type=68; ";
-		$flow_list1 = M() -> query($flow_sql1);
-		
+	//综合教案
+		$flow2=M("flow");
+		$data2['type']=68;
+		$data2['jiaoan']='100';
+		$data2['user_id']=get_user_id();
+		$show2=$flow2->where($data2)->order('id desc')->find();
+		$this->flowId22 = $show2['id'];
+		if(!empty($show2)){ // 没有数据
+			$this->isfa22 =1;
+		}
+		if ($show2['step'] == 40) {
+			$this->iswan22 =1;
+		}
+		//提交成绩  颜色判断
+	if ($this->isfa22) {
+		$this->btn2212 ="btn-success";
+		if ($this->iswan22) {
+			$this->btn2222 ="btn-success";
+		}else {
+			$this->btn2222 ="btn-danger";
+		}
+	}else {
+		$this->btn2212 ="btn-danger";
+	}
 	
-          //已经接受等待中
-		$flow_sql2 = "SELECT * FROM onethink_flow WHERE find_in_set('".$emp_no."', confirm) and step > 20  and step  <40  and type=68; ";
-		$flow_list2 = M() -> query($flow_sql2);
-	
-		$flow_sql3= "SELECT * FROM onethink_flow WHERE find_in_set('".$emp_no."', confirm) and step = 40 and type=68; ";
-		$flow_list3 = M() -> query($flow_sql3);
-       /*流程结束*/
-
-	   			//流程
-        $this->assign('flow_list1',$flow_list1);
-        $this->assign('flow_list2',$flow_list2);
-        $this->assign('flow_list3',$flow_list3);
-
-	$flow=M('flow');
-	$flowjn = $flow ->where(' type = 68 ') -> select();
-	$this->assign('flowjn',$flowjn);
 	
 	// 教案
 	$task_type = "0"; //任务类型
@@ -793,15 +796,40 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 	$this->done = task_done($task_type).flow_done($flow_type);// 已完成
 	
 	
+	
 	// 教案 专业
+	$flow2=M("flow");
+	$data2['type']=85;
+	$data2['jiaoan']='';
+	$data2['user_id']=get_user_id();
+	$show2=$flow2->where($data2)->order('id desc')->find();
+	$this->flowId2 = $show2['id'];
+	if(!empty($show2)){ // 没有数据
+		$this->isfa2 =1;
+	}
+	if ($show2['step'] == 40) {
+		$this->iswan2 =1;
+	}
+	//提交成绩  颜色判断
+if ($this->isfa2) {
+	$this->btn212 ="btn-success";
+	if ($this->iswan2) {
+		$this->btn222 ="btn-success";
+	}else {
+		$this->btn222 ="btn-danger";
+	}
+}else {
+	$this->btn212 ="btn-danger";
+}
 	$task_type20 = "0"; //任务类型
-	$flow_type20 = "68"; //流程类型
+	$flow_type20 = "85"; //流程类型
 	$this->todo20 = task_todo($task_type20).flow_todo($flow_type20);// 未完成
 	$this->doing20 = task_ing($task_type20).flow_ing($flow_type20);// 等待中
 	$this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 	
     $this->display();
 	}
+	
 	
 
 
@@ -1140,20 +1168,6 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 	   $this->lc=task_step_status($this->taskId,1);
 	   $this->zr=task_step_status($this->taskId,2);
 	   $this->js=task_step_status($this->taskId,3);
-	   // $jslist=M('flow')->where('type = "77" and user_id='.$uid)->order('id desc')->select();
- // 	   $jslist2=M('flow')->where('type = "77" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
- //
- // 	   	   if(!empty($jslist) or !empty($jslist2)){
- // 	   		   if (!empty($jslist)) {
- // 	   			   $this->idaa = $jslist[0]['id'];
- // 	   		   }else {
- // 	   		   		 $this->idaa = $jslist2[0]['id'];
- // 	   		   }
- // 			 //  dump($this->idaa);
- // 	  	 $this->lc=1;
- // 		 $this->zr=flow_step_status($this->idaa,1);
- // 		  $this->js=flow_step_status($this->idaa,2);
- // 	   }
 	}
 
 	//订教材  颜色判断
@@ -1187,15 +1201,59 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
 		$this->btn1 ="btn-danger";
 	}
 
+	// 综合类  总结
+	$task=M('task')->where('type = "2092" ')->order('id desc')->select();
+	if (!empty($task)) {
+		//dump($flow);
+		$this->isfa202 =1;//第一步
+		$this->taskId202= $task[0]['id'];
+		$taskId202= $task[0]['id'];
+
+   	   $this->lc202=task_step_status($this->taskId202,1);
+   	   $this->zr202=task_step_status($this->taskId202,2);
+   	   $this->js202=task_step_status($this->taskId202,3);
+	}
+
+
+		//订教材  颜色判断
+	if ($this->isfa202) {
+		$this->btn2201 ="btn-success";//第二步开始
+		if ($this->lc202) {
+			$this->btn2202 ="btn-success";//第三步开始
+			if ($this->zr202) {
+				$this->btn2203 ="btn-success";
+
+				//第四步开始
+              	if ($this->js202) {
+				$this->btn2204 ="btn-success";
+			}else {
+				$this->btn2204 ="btn-danger";
+			}//第四步结束
+
+			}else {
+				$this->btn2203 ="btn-danger";
+			}//第三步结束
+
+		}
+		
+		else {
+			$this->btn2202 ="btn-danger";
+		}
+		//第二步开始
+	}
+	
+	else {
+		$this->btn2201 ="btn-danger";
+	}
+	
 	// 教学总结
-	$task_type = "9"; //任务类型
+	$task_type = "9,2092"; //任务类型
 	$flow_type = "77"; //流程类型
 	$this->todo = task_todo($task_type).flow_todo($flow_type);// 未完成
 	$this->doing = task_ing($task_type).flow_ing($flow_type);// 等待中
 	$this->done = task_done($task_type).flow_done($flow_type);// 已完成
 	
 	// 专业
-	//订教材  流程图
 	$task=M('task')->where('type = "209" ')->order('id desc')->select();
 	if (!empty($task)) {
 		//dump($flow);
@@ -1206,19 +1264,6 @@ $this->done20 = task_done($task_type20).flow_done($flow_type20);// 已完成
    	   $this->lc20=task_step_status($this->taskId20,1);
    	   $this->zr20=task_step_status($this->taskId20,2);
    	   $this->js20=task_step_status($this->taskId20,3);
-	   // $jslist20=M('flow')->where('type = "89" and user_id='.$uid)->order('id desc')->select();;
- // 	   $jslist202=M('flow')->where('type = "89" and confirm like "%'.$emp_no.'%"')->order('id desc')->select();// 自己是审批人
- //
- // 	   	   if(!empty($jslist20) or !empty($jslist202)){
- // 	   		   if (!empty($jslist20)) {
- // 	   			   $this->idaa20 = $jslist20[0]['id'];
- // 	   		   }else {
- // 	   		   		 $this->idaa20 = $jslist202[0]['id'];
- // 	   		   }
- // 	  	 $this->lc20=1;
- // 		 $this->zr20=flow_step_status($this->idaa20,1);
- // 		  $this->js20=flow_step_status($this->idaa20,2);
- // 	   }
 	}
 
 
